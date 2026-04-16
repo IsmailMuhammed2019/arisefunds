@@ -1,0 +1,35 @@
+
+> arisefunds@0.1.0 build
+> next build
+
+▲ Next.js 16.2.2 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.9s
+  Running TypeScript ...
+Failed to type check.
+
+./components/AnimatedWrapper.tsx:60:7
+Type error: Type '{ hidden: { opacity: number; y: number; x: number; scale: number; rotateX: number; perspective: number; }; visible: { opacity: number; y: number; x: number; scale: number; rotateX: number; transition: { duration: number; delay: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; x: number; scale: number; rotateX: number; transition: { duration: number; delay: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; x: number; scale: number; rotateX: number; transition: { duration: number; delay: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; x: number; scale: number; rotateX: number; transition: { duration: number; delay: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; delay: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; delay: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; delay: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+
+  [90m58 |[0m       whileInView=[32m"visible"[0m
+  [90m59 |[0m       viewport={{ once: [36mtrue[0m, margin: [32m"-50px"[0m }}
+[31m[1m>[0m [90m60 |[0m       variants={variants}
+  [90m   |[0m       [31m[1m^[0m
+  [90m61 |[0m       [90m// 2. Hover & 8. Performance-Friendly Enhancements (GPU accelerated by default in Fr...[0m
+  [90m62 |[0m       whileHover={
+  [90m63 |[0m         hover && !shouldReduceMotion
+Next.js build worker exited with code: 1 and signal: null
