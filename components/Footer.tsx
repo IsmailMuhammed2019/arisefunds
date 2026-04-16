@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar: Copyright */}
         <div className="border-t border-white/10 mt-16 pt-8 text-center">
           <p className="text-slate-400 text-xs">
-            © 2023 All Right Reserved Arisefunds
+            © 2026 All Right Reserved Arisefunds
           </p>
         </div>
       </div>
