@@ -84,97 +84,95 @@ const TeamSection = () => {
           </section>
         </AnimatedWrapper>
 
-        {/* SECOND ROW: LATONYA & LAURA */}
-        <div className="grid md:grid-cols-2 gap-16 pt-12 border-t border-white/5">
-          {/* LATONYA (Image Right) */}
-          <AnimatedWrapper type="fade-up" delay={0.4}>
-            <section className="flex flex-col sm:flex-row gap-6">
-              <div className="flex-1 order-2 sm:order-1">
-                <h2 className="text-2xl font-bold">LaTonya Blakes</h2>
-                <p className="text-slate-400 font-medium mb-4 text-xs uppercase tracking-widest">
-                  Vice President, Human Resources
+        {/* SECOND ROW: LATONYA */}
+        <AnimatedWrapper type="fade-up" delay={0.4}>
+          <section className="flex flex-col sm:flex-row gap-6 pt-12 border-t border-white/5">
+            <div className="flex-1 order-2 sm:order-1">
+              <h2 className="text-2xl font-bold">LaTonya Blakes</h2>
+              <p className="text-slate-400 font-medium mb-4 text-xs uppercase tracking-widest">
+                Vice President, Human Resources
+              </p>
+              <div className="text-slate-300 text-sm space-y-3 leading-relaxed">
+                <p>
+                  When Arise Funds deploys capital into a portfolio company,
+                  LaTonya Blakes is the person who goes in to build it.
+                  Seconded from Arise Funds to SBTS Group LLC, she leads the
+                  HR infrastructure, compliance frameworks, talent systems,
+                  and organizational design.
                 </p>
-                <div className="text-slate-300 text-sm space-y-3 leading-relaxed">
-                  <p>
-                    When Arise Funds deploys capital into a portfolio company,
-                    LaTonya Blakes is the person who goes in to build it.
-                    Seconded from Arise Funds to SBTS Group LLC, she leads the
-                    HR infrastructure, compliance frameworks, talent systems,
-                    and organizational design.
-                  </p>
-                  <p>
-                    Her career spans more than three decades in human capital
-                    leadership, including a decade at Booz Allen Hamilton where
-                    she directed HR for the National Defense University.
-                  </p>
-                </div>
-                <div className="flex gap-4 mt-4 text-slate-400">
-                  {/* <AnimatedWrapper hover tap type="scale" delay={0.5}>
-                    <FaFacebookF className="hover:text-white cursor-pointer" />
-                  </AnimatedWrapper> */}
-                  <AnimatedWrapper hover tap type="scale" delay={0.55}>
-                    <FaLinkedinIn className="hover:text-white cursor-pointer" />
-                  </AnimatedWrapper>
-                  {/* <AnimatedWrapper hover tap type="scale" delay={0.6}>
-                    <FaTwitter className="hover:text-white cursor-pointer" />
-                  </AnimatedWrapper> */}
-                </div>
+                <p>
+                  Her career spans more than three decades in human capital
+                  leadership, including a decade at Booz Allen Hamilton where
+                  she directed HR for the National Defense University.
+                </p>
               </div>
-              <div className="w-full sm:w-1/3 order-1 sm:order-2">
-                <img
-                  src="/latonya.png"
-                  alt="LaTonya"
-                  className="rounded-xl w-full aspect-square object-cover"
-                />
+              <div className="flex gap-4 mt-4 text-slate-400">
+                <AnimatedWrapper hover tap type="scale" delay={0.55}>
+                  <FaLinkedinIn className="hover:text-white cursor-pointer transition-colors" />
+                </AnimatedWrapper>
               </div>
-            </section>
+            </div>
+            <div className="w-full sm:w-1/3 order-1 sm:order-2">
+              <img
+                src="/latonya.png"
+                alt="LaTonya"
+                className="rounded-xl w-full aspect-square object-cover"
+              />
+            </div>
+          </section>
+        </AnimatedWrapper>
 
-            {/* LAURA (Image Right) */}
-            <section className="flex flex-col sm:flex-row gap-6">
-              <div className="flex-1">
-                <h2 className="text-2xl font-bold">Laura C. Rudert</h2>
-                <p className="text-slate-400 font-medium mb-4 text-xs uppercase tracking-widest">
-                  Global Strategy & Delivery Leader
+        {/* ADVISORY HEADER */}
+        <AnimatedWrapper
+          type="fade-up"
+          className="text-center max-w-3xl mx-auto pt-24 mb-16"
+        >
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+            <span className="text-[#4fb3e8]">Advisory</span>
+          </h1>
+          <p className="text-slate-300 text-lg leading-relaxed">
+            Our advisors provide strategic guidance and deep industry expertise to 
+            support Arise Funds' mission and global impact initiatives.
+          </p>
+        </AnimatedWrapper>
+
+        {/* ADVISORY SECTION: LAURA */}
+        <AnimatedWrapper type="fade-up" delay={0.2}>
+          <section className="flex flex-col sm:flex-row gap-6 pt-12 border-t border-white/5">
+            <div className="flex-1">
+              <h2 className="text-2xl font-bold">Laura C. Rudert</h2>
+              <p className="text-slate-400 font-medium mb-4 text-xs uppercase tracking-widest">
+                Global Strategy & Delivery Leader
+              </p>
+              <div className="text-slate-300 text-sm space-y-3 leading-relaxed">
+                <p>
+                  Laura C. Rudert has spent more than 20 years deploying over
+                  $4 billion across climate, infrastructure, and development
+                  programs in 30+ countries. She led a $525M compact in Côte
+                  d&apos;Ivoire and helped design Power Africa.
                 </p>
-                <div className="text-slate-300 text-sm space-y-3 leading-relaxed">
-                  <p>
-                    Laura C. Rudert has spent more than 20 years deploying over
-                    $4 billion across climate, infrastructure, and development
-                    programs in 30+ countries. She led a $525M compact in Côte
-                    d&apos;Ivoire and helped design Power Africa.
-                  </p>
-                  <p>
-                    At the Bill & Melinda Gates Foundation, she served as Deputy
-                    Director of Strategy & Management. An HKS MPP alumna — she
-                    has operated on both sides of the capital table.
-                  </p>
-                </div>
-                <div className="flex gap-4 mt-4 text-slate-400">
-                  {/* <AnimatedWrapper hover tap type="scale" delay={0.7}>
-                    <FaFacebookF className="hover:text-white cursor-pointer" />
-                  </AnimatedWrapper> */}
-                  <AnimatedWrapper hover tap type="scale" delay={0.75}>
-                    <FaLinkedinIn className="hover:text-white cursor-pointer" />
-                  </AnimatedWrapper>
-                  {/* <AnimatedWrapper hover tap type="scale" delay={0.8}>
-                    <FaTwitter className="hover:text-white cursor-pointer" />
-                  </AnimatedWrapper> */}
-                </div>
+                <p>
+                  At the Bill & Melinda Gates Foundation, she served as Deputy
+                  Director of Strategy & Management. An HKS MPP alumna — she
+                  has operated on both sides of the capital table.
+                </p>
               </div>
-              <AnimatedWrapper
-                type="fade-in"
-                delay={0.65}
-                className="w-full sm:w-1/3"
-              >
-                <img
-                  src="/laura.png"
-                  alt="Laura"
-                  className="rounded-xl w-full aspect-square object-cover"
-                />
-              </AnimatedWrapper>
-            </section>
-          </AnimatedWrapper>
-        </div>
+              <div className="flex gap-4 mt-4 text-slate-400">
+                <AnimatedWrapper hover tap type="scale" delay={0.35}>
+                  <FaLinkedinIn className="hover:text-white cursor-pointer transition-colors" />
+                </AnimatedWrapper>
+              </div>
+            </div>
+            <div className="w-full sm:w-1/3">
+              <img
+                src="/laura.png"
+                alt="Laura"
+                className="rounded-xl w-full aspect-square object-cover"
+              />
+            </div>
+          </section>
+        </AnimatedWrapper>
+
       </main>
     </div>
   );
