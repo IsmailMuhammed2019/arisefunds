@@ -1,9 +1,14 @@
-import React from "react";
+"use client";
+
 import { ShieldCheck, Code2, Database, Play } from "lucide-react";
 import AnimatedWrapper from "./AnimatedWrapper";
 import { ParallaxImage } from "./AdvancedEffects";
+import VideoModal from "./VideoModal";
+import { useState } from "react";
 
 const StrategicPartnerships = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   const categories = [
     {
       icon: <ShieldCheck className="w-5 h-5 text-white" />,
@@ -14,7 +19,7 @@ const StrategicPartnerships = () => {
     },
     {
       icon: <Code2 className="w-5 h-5 text-white" />,
-      iconBg: "bg-[#22c55e]", // Green
+      iconBg: "bg-[#22c55e]", // Green",
       title: "Software Development · Global Teams",
       description: "Replace with: South/East Asian professionals, mixed group",
       subtext:
@@ -67,7 +72,7 @@ const StrategicPartnerships = () => {
           delay={0.2}
           className="w-full lg:w-1/2 relative group"
         >
-          <div className="relative rounded-[40px] overflow-hidden aspect-video shadow-2xl">
+          <div className="relative rounded-[40px] overflow-hidden aspect-video shadow-2xl overflow-hidden">
             <ParallaxImage
               src="/classroom-placeholder.jpg" // The computer lab image
               alt="Arise Funds Lab"
@@ -77,7 +82,10 @@ const StrategicPartnerships = () => {
             <div className="absolute inset-0 bg-black/20" />
 
             {/* Central Play Button */}
-            <button className="absolute inset-0 m-auto w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
+            <button 
+              onClick={() => setIsVideoModalOpen(true)}
+              className="absolute inset-0 m-auto w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform z-10"
+            >
               <Play className="w-8 h-8 text-[#011627] fill-current ml-1" />
             </button>
           </div>
@@ -132,6 +140,12 @@ const StrategicPartnerships = () => {
           </div>
         </div>
       </div>
+
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoSrc="/videos/strategic-partnerships.mp4"
+      />
     </section>
   );
 };

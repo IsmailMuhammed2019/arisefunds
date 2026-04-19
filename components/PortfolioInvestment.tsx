@@ -1,7 +1,13 @@
+"use client";
+
 import AnimatedWrapper from "./AnimatedWrapper";
 import { ParallaxImage } from "./AdvancedEffects";
+import VideoModal from "./VideoModal";
+import { useState } from "react";
 
 export default function PortfolioInvestment() {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   return (
     <section className="py-24 bg-[#03112c] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,8 +67,9 @@ export default function PortfolioInvestment() {
             />
             <div className="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
             <button
+              onClick={() => setIsVideoModalOpen(true)}
               aria-label="Play investment video"
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-lg shadow-slate-950/20"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-lg shadow-slate-950/20 z-10"
             >
               <svg
                 className="h-10 w-10"
@@ -79,6 +86,12 @@ export default function PortfolioInvestment() {
           </AnimatedWrapper>
         </div>
       </div>
+
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoSrc="/videos/proven-model.mp4"
+      />
     </section>
   );
 }

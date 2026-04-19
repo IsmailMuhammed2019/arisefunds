@@ -1,7 +1,14 @@
+"use client";
+
 import AnimatedWrapper from "./AnimatedWrapper";
 import { ParallaxImage } from "./AdvancedEffects";
+import VideoModal from "./VideoModal";
+import { useState } from "react";
+import { ShieldCheck, Code2, Database, Play } from "lucide-react";
 
 export default function Partnerships() {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   const items = [
     {
       title: "Cybersecurity + SOC Operations",
@@ -50,8 +57,9 @@ export default function Partnerships() {
             />
             <div className="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
             <button
+              onClick={() => setIsVideoModalOpen(true)}
               aria-label="Play partnership video"
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex h-20 w-20 items-center justify-center rounded-full bg-cyan-500/95 text-slate-950 shadow-2xl shadow-cyan-500/20 transition hover:bg-cyan-400"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex h-20 w-20 items-center justify-center rounded-full bg-cyan-500/95 text-slate-950 shadow-2xl shadow-cyan-500/20 transition hover:bg-cyan-400 z-10"
             >
               <svg
                 className="h-10 w-10"
@@ -99,6 +107,12 @@ export default function Partnerships() {
           </div>
         </div>
       </div>
+
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoSrc="/videos/partnerships-practice.mp4"
+      />
     </section>
   );
 }
