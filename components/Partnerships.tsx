@@ -35,7 +35,7 @@ export default function Partnerships() {
             Strategic Partnerships
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white">
-            The work, in practice.
+            The work infrastructure, in practice.
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-slate-300 leading-8">
             We partner with employer networks and operating companies to build
