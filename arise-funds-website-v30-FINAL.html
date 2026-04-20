@@ -476,7 +476,11 @@
   .ms-label { font-size: 12px; font-weight: 500; color: var(--cream); }
   .ms-sub { font-family: "DM Mono", monospace; font-size: 9px; letter-spacing: 0.06em; color: var(--cfaint); line-height: 1.4; }
   .modal-cta { display: inline-flex; align-items: center; gap: 8px; font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sky); text-decoration: none; border-bottom: 1px solid rgba(110,198,240,0.25); padding-bottom: 3px; transition: color 0.2s, border-color 0.2s; margin-top: 8px; }
-  .modal-cta:hover { color: var(--cream); border-color: var(--cream-dim); }
+  .partner-modal.contact-mode { max-width: 720px; border-top-color: var(--sky); }
+  .contact-modal-body .modal-intro { font-size: 15px; color: var(--cdim); margin-bottom: 32px; line-height: 1.7; }
+  .contact-cta-box { background: var(--navy3); border: 1px solid var(--rule); border-radius: 4px; padding: 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .cta-mini-text { font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sky); }
+  .cta-note { font-family: "DM Mono", monospace; font-size: 9px; color: var(--cfaint); opacity: 0.6; }
 
   @media (max-width: 900px) {
     .imagery-grid { grid-template-columns: 1fr; }
@@ -1405,64 +1409,11 @@ DEVELOPER HANDOFF CHECKLIST
       </div>
 
       <div class="contact-right reveal reveal-delay">
-        <form class="contact-form" id="arise-contact-form" novalidate>
-
-          <div class="cf-row">
-            <div class="cf-group">
-              <label class="cf-label" for="cf-first">First Name</label>
-              <input class="cf-input" id="cf-first" name="first_name" type="text" placeholder="First name" autocomplete="given-name" required />
-            </div>
-            <div class="cf-group">
-              <label class="cf-label" for="cf-last">Last Name</label>
-              <input class="cf-input" id="cf-last" name="last_name" type="text" placeholder="Last name" autocomplete="family-name" required />
-            </div>
-          </div>
-
-          <div class="cf-group">
-            <label class="cf-label" for="cf-email">Email Address</label>
-            <input class="cf-input" id="cf-email" name="email" type="email" placeholder="you@organization.com" autocomplete="email" required />
-          </div>
-
-          <div class="cf-group">
-            <label class="cf-label" for="cf-type">I am reaching out as</label>
-            <select class="cf-input cf-select" id="cf-type" name="inquiry_type" required>
-              <option value="">Select one…</option>
-              <option value="dfi">DFI / Development Bank</option>
-              <option value="foundation">Impact Foundation</option>
-              <option value="family-office">Family Office / Individual Investor</option>
-              <option value="government">Government / Multilateral</option>
-              <option value="portfolio">Prospective Portfolio Partner</option>
-              <option value="media">Media / Research</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          <div class="cf-group">
-            <label class="cf-label" for="cf-org">Organization</label>
-            <input class="cf-input" id="cf-org" name="organization" type="text" placeholder="Organization name" />
-          </div>
-
-          <div class="cf-group">
-            <label class="cf-label" for="cf-msg">Message</label>
-            <textarea class="cf-input cf-textarea" id="cf-msg" name="message" placeholder="Tell us what you're working on or interested in…"></textarea>
-          </div>
-
-          <!-- Honeypot anti-spam -->
-          <div style="display:none;">
-            <input type="text" name="_honey" id="cf-honey" tabindex="-1" autocomplete="off" />
-          </div>
-
-          <!-- hCaptcha placeholder — developer: uncomment and add site key -->
-          <!-- <div class="h-captcha" data-sitekey="YOUR_HCAPTCHA_SITE_KEY"></div> -->
-
-          <p class="cf-note">This form is protected against spam. Your information is never shared with third parties.</p>
-
-          <button class="cf-submit" type="submit">Send Message →</button>
-
-          <div class="cf-success" id="cf-success">✓ Message received. We'll be in touch shortly.</div>
-          <div class="cf-error" id="cf-error">Please complete all required fields before submitting.</div>
-
-        </form>
+        <div class="contact-cta-box">
+          <p class="cta-mini-text">Direct Inquiry Pathway</p>
+          <button class="btn-primary" onclick="openContactModal()" aria-label="Open contact form">Send an Inquiry →</button>
+          <p class="cta-note">Secure encryption enabled</p>
+        </div>
       </div>
 
     </div>
@@ -1561,7 +1512,79 @@ DEVELOPER HANDOFF CHECKLIST
     });
   }, { threshold: 0.08 });
   reveals.forEach(el => obs.observe(el));
+
+  // ── TRIGGER CONTACT MODAL FROM NAV/FOOTER ──
+  document.addEventListener('click', function(e) {
+    const target = e.target.closest('a[href="#contact"]');
+    if (target) {
+      e.preventDefault();
+      openContactModal();
+    }
+  });
+
 </script>
+
+<!-- CONTACT FORM TEMPLATE (Hidden) -->
+<template id="contact-form-template">
+  <div class="contact-modal-body">
+    <span class="modal-tag">Institutional Inquiry</span>
+    <h3 id="modal-title">Get in Touch</h3>
+    <p class="modal-intro">Please complete the form below. Our partnership team will review your inquiry and respond personally.</p>
+    
+    <form class="contact-form" id="arise-contact-form" novalidate>
+      <div class="cf-row">
+        <div class="cf-group">
+          <label class="cf-label" for="cf-first">First Name</label>
+          <input class="cf-input" id="cf-first" name="first_name" type="text" placeholder="First name" autocomplete="given-name" required />
+        </div>
+        <div class="cf-group">
+          <label class="cf-label" for="cf-last">Last Name</label>
+          <input class="cf-input" id="cf-last" name="last_name" type="text" placeholder="Last name" autocomplete="family-name" required />
+        </div>
+      </div>
+
+      <div class="cf-group">
+        <label class="cf-label" for="cf-email">Email Address</label>
+        <input class="cf-input" id="cf-email" name="email" type="email" placeholder="you@organization.com" autocomplete="email" required />
+      </div>
+
+      <div class="cf-group">
+        <label class="cf-label" for="cf-type">I am reaching out as</label>
+        <select class="cf-input cf-select" id="cf-type" name="inquiry_type" required>
+          <option value="">Select one…</option>
+          <option value="dfi">DFI / Development Bank</option>
+          <option value="foundation">Impact Foundation</option>
+          <option value="family-office">Family Office / Individual Investor</option>
+          <option value="government">Government / Multilateral</option>
+          <option value="portfolio">Prospective Portfolio Partner</option>
+          <option value="media">Media / Research</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="cf-group">
+        <label class="cf-label" for="cf-org">Organization</label>
+        <input class="cf-input" id="cf-org" name="organization" type="text" placeholder="Organization name" />
+      </div>
+
+      <div class="cf-group">
+        <label class="cf-label" for="cf-msg">Message</label>
+        <textarea class="cf-input cf-textarea" id="cf-msg" name="message" placeholder="Tell us what you're working on or interested in…"></textarea>
+      </div>
+
+      <div style="display:none;">
+        <input type="text" name="_honey" id="cf-honey" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <p class="cf-note">This form is protected against spam. Your information is never shared with third parties.</p>
+
+      <button class="cf-submit" type="submit">Send Message →</button>
+
+      <div class="cf-success" id="cf-success">✓ Message received. We'll be in touch shortly.</div>
+      <div class="cf-error" id="cf-error">Please complete all required fields before submitting.</div>
+    </form>
+  </div>
+</template>
 
 <!-- PARTNER MODALS -->
 <div class="partner-modal-overlay" id="partner-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
@@ -1657,6 +1680,10 @@ function openPartnerModal(key) {
   const data = partnerData[key];
   if (!data) return;
   const content = document.getElementById('modal-content');
+  const overlay = document.getElementById('partner-modal-overlay');
+  const modal = overlay.querySelector('.partner-modal');
+  
+  modal.classList.remove('contact-mode');
   content.innerHTML = `
     <span class="modal-tag">${data.tag}</span>
     <h3 id="modal-title">${data.title}</h3>
@@ -1667,15 +1694,84 @@ function openPartnerModal(key) {
         <span class="ms-label">${s.label}</span>
         <span class="ms-sub">${s.sub}</span>
       </div>`).join('')}</div>` : ''}
-    <a class="modal-cta" href="#contact" onclick="closePartnerModal()">Get in Touch →</a>
+    <a class="modal-cta" href="#contact">Get in Touch →</a>
   `;
-  document.getElementById('partner-modal-overlay').classList.add('open');
+  overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
-  document.getElementById('partner-modal-overlay').addEventListener('click', function(e) {
-    if (e.target === this) closePartnerModal();
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closePartnerModal();
+  
+  // Close on clicks outside or Escape
+  overlay.onclick = e => { if (e.target === overlay) closePartnerModal(); };
+  document.onkeydown = e => { if (e.key === 'Escape') closePartnerModal(); };
+}
+
+function openContactModal() {
+  const template = document.getElementById('contact-form-template');
+  if (!template) return;
+  
+  const content = document.getElementById('modal-content');
+  const overlay = document.getElementById('partner-modal-overlay');
+  const modal = overlay.querySelector('.partner-modal');
+  
+  content.innerHTML = '';
+  content.appendChild(template.content.cloneNode(true));
+  modal.classList.add('contact-mode');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  
+  setupContactForm();
+  
+  overlay.onclick = e => { if (e.target === overlay) closePartnerModal(); };
+  document.onkeydown = e => { if (e.key === 'Escape') closePartnerModal(); };
+}
+
+function setupContactForm() {
+  const form = document.getElementById('arise-contact-form');
+  if (!form) return;
+  
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const success = document.getElementById('cf-success');
+    const error = document.getElementById('cf-error');
+    const btn = form.querySelector('.cf-submit');
+    
+    success.classList.remove('show');
+    error.classList.remove('show');
+
+    let valid = true;
+    form.querySelectorAll('[required]').forEach(field => {
+      field.classList.remove('error');
+      if (!field.value.trim()) {
+        field.classList.add('error');
+        valid = false;
+      }
+    });
+    if (!valid) return;
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    try {
+      // ── DEVELOPER: Replace this URL with your form endpoint ──
+      const FORM_ENDPOINT = 'YOUR_FORM_ENDPOINT_HERE';
+      const data = new FormData(form);
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        success.classList.add('show');
+        btn.textContent = 'Message Sent';
+        form.reset();
+      } else {
+        throw new Error('Server error');
+      }
+    } catch(err) {
+      error.classList.add('show');
+      btn.disabled = false;
+      btn.textContent = 'Send Message →';
+    }
   });
 }
 
@@ -1697,7 +1793,10 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 // ── SMOOTH NAV SCROLL ──
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
+    const href = a.getAttribute('href');
+    if (href === "#contact") return; // Handled by global click listener
+    
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -44,7 +44,7 @@ const InvestmentThesis = () => {
         >
           <h3 className="text-3xl lg:text-5xl font-bold leading-tight">
             We don&apos;t fund projects.{" "}
-            <span className="text-[#4FB3E8]">We finance infrastructure.</span>
+            <span className="text-[#4FB3E8]">We finance workforce infrastructure.</span>
           </h3>
 
           <div className="space-y-6 text-slate-300 text-sm md:text-base leading-relaxed">
