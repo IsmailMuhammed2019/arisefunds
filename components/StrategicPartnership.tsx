@@ -82,7 +82,7 @@ const StrategicPartnerships = () => {
             <div className="absolute inset-0 bg-black/20" />
 
             {/* Central Play Button */}
-            <button 
+            <button
               onClick={() => setIsVideoModalOpen(true)}
               className="absolute inset-0 m-auto w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform z-10"
             >
@@ -97,7 +97,7 @@ const StrategicPartnerships = () => {
             <div>
               <h3 className="text-3xl md:text-4xl font-bold mb-4">
                 Where talent meets <br />
-                <span className="text-[#4FB3E8]">infrastructure</span>
+                <span className="text-[#4FB3E8]">work infrastructure</span>
               </h3>
               <p className="text-slate-300 text-sm md:text-base leading-relaxed max-w-xl">
                 From security operations centers to data analytics labs — across
