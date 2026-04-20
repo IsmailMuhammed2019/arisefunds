@@ -4,8 +4,10 @@ import {
   MagneticWrapper,
   ParallaxElement,
 } from "./AdvancedEffects";
+import { useModal } from "@/context/ModalContext";
 
 export default function Hero() {
+  const { openContactModal } = useModal();
   return (
     <section className="relative overflow-hidden bg-[#04122c] noise-overlay">
       {/* 5. Background & Visual Effects */}
@@ -99,12 +101,12 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-4">
               <MagneticWrapper>
                 <AnimatedWrapper tap hover type="scale" delay={0.8}>
-                  <a
-                    href="#contact"
+                  <button
+                    onClick={openContactModal}
                     className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400"
                   >
                     Get In Touch
-                  </a>
+                  </button>
                 </AnimatedWrapper>
               </MagneticWrapper>
               <span className="text-slate-400">

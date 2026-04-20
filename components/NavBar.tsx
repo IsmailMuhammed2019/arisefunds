@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useModal } from "@/context/ModalContext";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { openContactModal } = useModal();
 
   return (
     <nav className="relative z-20 bg-[#03112c] border-b border-white/10">
@@ -42,12 +44,12 @@ export default function NavBar() {
                 Partners
               </Link>
             </div>
-            <Link
-              href="/contact"
+            <button
+              onClick={openContactModal}
               className="inline-flex items-center rounded-full bg-cyan-500 px-6 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400 cursor-pointer"
             >
               Contact
-            </Link>
+            </button>
           </div>
 
           <button
@@ -90,13 +92,15 @@ export default function NavBar() {
               >
                 Partners
               </Link>
-              <Link
-                href="/contact"
-                className="block rounded-2xl bg-cyan-500 px-4 py-3 text-slate-950 font-semibold hover:bg-cyan-400 cursor-pointer"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  openContactModal();
+                }}
+                className="w-full text-left block rounded-2xl bg-cyan-500 px-4 py-3 text-slate-950 font-semibold hover:bg-cyan-400 cursor-pointer"
               >
                 Contact
-              </Link>
+              </button>
             </div>
           </div>
         )}
