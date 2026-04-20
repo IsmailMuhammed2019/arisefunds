@@ -31,7 +31,7 @@ const TalentInfrastructure = () => {
         className="max-w-4xl mx-auto relative z-10"
       >
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight">
-          Where talent meets infrastructure.
+          Where talent meets <span className="text-[#4FB3E8]">work infrastructure.</span>
         </h2>
 
         <p className="text-white/90 text-sm md:text-lg leading-relaxed mb-12 max-w-2xl mx-auto font-medium">
