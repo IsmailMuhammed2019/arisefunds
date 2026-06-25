@@ -1,97 +1,107 @@
 "use client";
 
+import React from "react";
 import AnimatedWrapper from "./AnimatedWrapper";
-import { ParallaxImage } from "./AdvancedEffects";
-import VideoModal from "./VideoModal";
-import { useState } from "react";
+
+const outcomes = [
+  { icon: "/young.png", text: "50K Youth Employment Target" },
+  { icon: "/countries.png", text: "8 Countries – Current Footprint" },
+  { icon: "/stage.png", text: "7 Stage Talent Economy Flywheel" },
+  { icon: "/sdk.png", text: "Young Women – Every Cohort" },
+];
 
 export default function PortfolioInvestment() {
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-
   return (
-    <section className="py-24 bg-[#03112c] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedWrapper type="fade-up" className="text-center mb-16">
-          <p className="text-sm uppercase tracking-[0.35em] text-cyan-300/80 mb-4">
-            First Portfolio Investment
-          </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white">
-            The model, proven.
+    <section className="py-24 bg-[#03112c] text-white relative overflow-hidden">
+      {/* Decorative vertical lines on the right (matching screenshot detail) */}
+      <div className="absolute top-0 bottom-0 right-[22%] w-[1px] border-r border-dashed border-cyan-500/10 pointer-events-none hidden lg:block" />
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Header Section */}
+        <AnimatedWrapper type="fade-up" className="text-center mb-16 max-w-4xl mx-auto relative z-10">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+            First Portfolio <span className="text-cyan-400 font-semibold">Investment</span>
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-slate-300 leading-8">
-            Arise Funds led, built, and expanded the employer network that
-            anchors ICBM graduates and demonstrates the value of workforce
-            infrastructure at scale.
+          <p className="text-slate-350 text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-light">
+            Arise Funds actively builds and expands the employer network that
+            absorbs ICBM graduates
           </p>
         </AnimatedWrapper>
 
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
-          <AnimatedWrapper type="slide-in" delay={0.2} className="space-y-8">
-            <div className="rounded-4xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20 backdrop-blur-xl">
-              <p className="text-sm uppercase tracking-[0.35em] text-cyan-300/80 mb-4">
-                Key outcomes
-              </p>
-              <div className="grid gap-6 md:grid-cols-2">
-                {[
-                  { val: "250%", label: "Growth since launch" },
-                  { val: "12+", label: "Employer partners" },
-                  { val: "1,200+", label: "Learners onboarded" },
-                  { val: "3x", label: "Average value creation" },
-                ].map((stat, idx) => (
-                  <AnimatedWrapper
-                    key={idx}
-                    type="fade-up"
-                    delay={0.3 + idx * 0.1}
-                    hover
-                    className="rounded-3xl bg-slate-950/80 p-6 cursor-default"
-                  >
-                    <p className="text-3xl font-semibold text-white">
-                      {stat.val}
-                    </p>
-                    <p className="mt-2 text-slate-400">{stat.label}</p>
-                  </AnimatedWrapper>
-                ))}
+        {/* Content Grid */}
+        <div className="grid gap-12 lg:grid-cols-2 items-center relative z-10">
+          {/* Left Column: Bio Details and Outcomes */}
+          <div className="space-y-6">
+            <AnimatedWrapper type="fade-up" delay={0.2}>
+              <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                The model, <span className="text-cyan-400">proven.</span>
+              </h3>
+            </AnimatedWrapper>
+
+            <AnimatedWrapper type="fade-up" delay={0.3}>
+              <div className="space-y-6 text-slate-300 text-base leading-relaxed mb-8 font-light">
+                <p>
+                  SBTS Group LLC is the first company financed and operationally
+                  supported by Arise Funds &mdash; and the live demonstration that
+                  Workforce Infrastructure Investing works. In January 2026, the first
+                  cohort of ICBM graduates began earning income in verified digital
+                  economy roles.
+                </p>
+                <p>
+                  SBTS Group LLC is the first company financed and operationally
+                  supported by Arise Funds &mdash; and the live demonstration that
+                  Workforce Infrastructure Investing works. In January 2026, the first
+                  cohort of ICBM graduates began earning income in verified digital
+                  economy roles.
+                </p>
+              </div>
+            </AnimatedWrapper>
+
+            {/* Outcomes Row Icons */}
+            <div className="grid gap-4 sm:grid-cols-2 pt-2">
+              {outcomes.map((item, idx) => (
+                <AnimatedWrapper
+                  key={idx}
+                  type="fade-up"
+                  delay={0.4 + idx * 0.1}
+                  hover
+                  tap
+                  className="flex items-center gap-3.5"
+                >
+                  <img
+                    src={item.icon}
+                    alt={item.text}
+                    className="h-10 w-10 object-contain flex-shrink-0"
+                  />
+                  <span className="text-slate-300 text-sm font-medium leading-snug">
+                    {item.text}
+                  </span>
+                </AnimatedWrapper>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column: Facebook Reel Video Iframe Mockup Container */}
+          <AnimatedWrapper type="scale" delay={0.4} className="w-full flex justify-center lg:justify-end">
+            <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-slate-950/80 shadow-[0_30px_70px_rgba(0,0,0,0.5)] shadow-cyan-950/20 p-4 max-w-[300px] w-full flex justify-center">
+              {/* Smartphone Inner Screen Border wrapper */}
+              <div className="w-[267px] h-[476px] rounded-[1.25rem] overflow-hidden relative bg-black border border-white/5 shadow-inner">
+                <iframe
+                  src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F565839646459950%2F&show_text=false&width=267&t=0"
+                  width="267"
+                  height="476"
+                  style={{ border: "none", overflow: "hidden" }}
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
               </div>
             </div>
           </AnimatedWrapper>
-
-          <AnimatedWrapper
-            type="scale"
-            delay={0.4}
-            className="relative overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-slate-950 via-slate-900 to-cyan-950/50 shadow-2xl shadow-black/20"
-          >
-            <ParallaxImage
-              src="/proven-model-thumb.png"
-              alt="Proven model video thumbnail"
-              className="aspect-16/10"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
-            <button
-              onClick={() => setIsVideoModalOpen(true)}
-              aria-label="Play investment video"
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-lg shadow-slate-950/20 z-10"
-            >
-              <svg
-                className="h-10 w-10"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M10 8l6 4-6 4V8z" />
-              </svg>
-            </button>
-          </AnimatedWrapper>
         </div>
       </div>
-
-      <VideoModal
-        isOpen={isVideoModalOpen}
-        onClose={() => setIsVideoModalOpen(false)}
-        videoSrc="/videos/proven-model.mp4"
-      />
     </section>
   );
 }
