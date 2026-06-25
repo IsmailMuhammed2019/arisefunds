@@ -81,6 +81,7 @@ export default function PortfolioInvestment() {
             </div>
           </div>
 
+          {/* Right Column: HTML5 Video Player Container */}
           <AnimatedWrapper type="scale" delay={0.4} className="w-full flex justify-center lg:justify-end">
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-slate-950/80 shadow-[0_20px_50px_rgba(0,0,0,0.4)] shadow-cyan-950/20">
               <video
