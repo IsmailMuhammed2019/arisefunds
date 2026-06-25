@@ -62,7 +62,7 @@ const slides = [
 ];
 
 export default function Hero() {
-  const { openContactModal } = useModal();
+  const { openContactModal, openSpeechModal } = useModal();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
   const [isHovered, setIsHovered] = useState(false);
@@ -207,14 +207,20 @@ export default function Hero() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 gap-4 pt-2">
                   <MagneticWrapper>
                     <button
-                      onClick={openContactModal}
+                      onClick={
+                        slides[currentIndex].tag === "Conference Event"
+                          ? openSpeechModal
+                          : openContactModal
+                      }
                       className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400 cursor-pointer"
                     >
                       Get In Touch
                     </button>
                   </MagneticWrapper>
                   <span className="text-sm text-slate-300">
-                    Schedule a conversation with the team.
+                    {slides[currentIndex].tag === "Conference Event"
+                      ? "Read the panel address from the conference."
+                      : "Schedule a conversation with the team."}
                   </span>
                 </div>
               </div>
