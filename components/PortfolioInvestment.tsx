@@ -11,6 +11,24 @@ const outcomes = [
 ];
 
 export default function PortfolioInvestment() {
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = React.useState(false);
+
+  React.useEffect(() => {
+    if (videoRef.current) {
+      setIsPlaying(!videoRef.current.paused);
+    }
+  }, []);
+
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+    if (videoRef.current.paused) {
+      videoRef.current.play().catch((err) => console.log(err));
+    } else {
+      videoRef.current.pause();
+    }
+  };
+
   return (
     <section className="py-24 bg-[#03112c] text-white relative overflow-hidden">
       {/* Decorative vertical lines on the right (matching screenshot detail) */}
@@ -83,16 +101,35 @@ export default function PortfolioInvestment() {
 
           {/* Right Column: HTML5 Video Player Container */}
           <AnimatedWrapper type="scale" delay={0.4} className="w-full flex justify-center lg:justify-end">
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-slate-950/80 shadow-[0_20px_50px_rgba(0,0,0,0.4)] shadow-cyan-950/20">
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-slate-950/80 shadow-[0_20px_50px_rgba(0,0,0,0.4)] shadow-cyan-950/20 group">
               <video
+                ref={videoRef}
                 src="/test.mp4"
                 controls
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover"
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+                className="w-full h-full object-cover cursor-pointer"
+                onClick={togglePlay}
               />
+              {!isPlaying && (
+                <div 
+                  onClick={togglePlay}
+                  className="absolute inset-0 flex items-center justify-center bg-black/40 cursor-pointer transition-opacity duration-300 z-10 animate-fade-in"
+                >
+                  <button className="h-20 w-20 flex items-center justify-center rounded-full bg-cyan-500/80 hover:bg-cyan-400 text-white shadow-lg transition-transform duration-300 hover:scale-110 active:scale-95 border border-white/20 backdrop-blur-sm">
+                    <svg
+                      className="w-8 h-8 fill-current text-white translate-x-0.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
+                </div>
+              )}
             </div>
           </AnimatedWrapper>
         </div>
