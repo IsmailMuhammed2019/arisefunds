@@ -89,7 +89,7 @@ export default function Hero() {
       y: 0,
       opacity: 1,
       transition: {
-        y: { type: "spring", stiffness: 200, damping: 25 },
+        y: { type: "spring" as const, stiffness: 200, damping: 25 },
         opacity: { duration: 0.5 },
       },
     },
@@ -97,7 +97,7 @@ export default function Hero() {
       y: -20,
       opacity: 0,
       transition: {
-        y: { type: "spring", stiffness: 200, damping: 25 },
+        y: { type: "spring" as const, stiffness: 200, damping: 25 },
         opacity: { duration: 0.3 },
       },
     },
