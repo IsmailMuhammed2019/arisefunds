@@ -1,106 +1,125 @@
 "use client";
 
+import React, { useState } from "react";
 import AnimatedWrapper from "./AnimatedWrapper";
 import { ParallaxImage } from "./AdvancedEffects";
 import VideoModal from "./VideoModal";
-import { useState } from "react";
-import { ShieldCheck, Code2, Database, Play } from "lucide-react";
+
+const items = [
+  {
+    icon: "/security.png",
+    title: "Cybersecurity · SOC Operations",
+    description: "Replace with: mixed-ethnicity SOC team at monitors",
+    subtext: 'Suggested search: "diverse cybersecurity analysts SOC"',
+  },
+  {
+    icon: "/software.png",
+    title: "Software Development · Global Teams",
+    description: "Replace with: South/East Asian professionals, mixed group",
+    subtext: 'Suggested search: "diverse international tech team collaboration"',
+  },
+  {
+    icon: "/data.png",
+    title: "Data Science · AI & Machine Learning",
+    description: "Replace with: Latina/South Asian woman presenting, mixed audience",
+    subtext: 'Suggested search: "woman presenting analytics diverse team"',
+  },
+];
 
 export default function Partnerships() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
-  const items = [
-    {
-      title: "Cybersecurity + SOC Operations",
-      description:
-        "Employer-aligned security operations teams built for ongoing threat response and managed services.",
-    },
-    {
-      title: "Software Development + Global Teams",
-      description:
-        "Distributed engineering teams that deliver product, scale operations, and connect talent with enterprise customers.",
-    },
-    {
-      title: "Data Science + AI & Machine Learning",
-      description:
-        "Applied analytics and machine learning capabilities that power decision making across workforce and infrastructure operations.",
-    },
-  ];
-
   return (
-    <section className="py-24 bg-[#04122c] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedWrapper type="fade-up" className="text-center mb-16">
-          <p className="text-sm uppercase tracking-[0.35em] text-cyan-300/80 mb-4">
-            Strategic Partnerships
-          </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white">
-            The work infrastructure, in practice.
+    <section className="py-24 bg-[#04122c] text-white relative overflow-hidden">
+      {/* Topographic Background Detail (Top-Left) */}
+      <div className="absolute top-0 left-0 w-32 h-32 opacity-20 pointer-events-none">
+        <svg
+          viewBox="0 0 100 100"
+          className="w-full h-full stroke-white fill-none"
+        >
+          <path d="M0,20 Q50,0 100,20 T150,20" strokeWidth="0.5" />
+          <path d="M0,35 Q50,15 100,35 T150,35" strokeWidth="0.5" />
+          <path d="M0,50 Q50,30 100,50 T150,50" strokeWidth="0.5" />
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Header Section */}
+        <AnimatedWrapper type="fade-up" className="text-center mb-16 max-w-4xl mx-auto relative z-10">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+            Strategic The Work, In Practice <span className="text-cyan-400">Partnerships</span>
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-slate-300 leading-8">
-            We partner with employer networks and operating companies to build
-            infrastructure that delivers measurable talent outcomes and
-            investment returns.
+          <p className="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+            We collaborate with leading institutions to create a comprehensive
+            <br className="hidden md:block" />
+            ecosystem for student success
           </p>
         </AnimatedWrapper>
 
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
+        {/* Main Content Grid */}
+        <div className="grid gap-12 lg:grid-cols-2 items-center relative z-10">
+          {/* Left Column: Image Card */}
           <AnimatedWrapper
             type="slide-in"
             delay={0.2}
-            className="relative overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-slate-950 via-slate-900 to-cyan-950/50"
+            className="w-full relative group cursor-pointer"
           >
-            <ParallaxImage
-              src="/partnership-video-thumb.png"
-              alt="Partnership video thumbnail"
-              className="aspect-16/10"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
-            <button
+            <div 
               onClick={() => setIsVideoModalOpen(true)}
-              aria-label="Play partnership video"
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex h-20 w-20 items-center justify-center rounded-full bg-cyan-500/95 text-slate-950 shadow-2xl shadow-cyan-500/20 transition hover:bg-cyan-400 z-10"
+              className="relative overflow-hidden rounded-2xl border border-cyan-500/30 shadow-[0_20px_50px_rgba(0,0,0,0.3)] shadow-cyan-950/20 hover:scale-[1.01] transition-transform duration-300"
             >
-              <svg
-                className="h-10 w-10"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M10 8l6 4-6 4V8z" />
-              </svg>
-            </button>
+              <ParallaxImage
+                src="/strategic.png"
+                alt="Strategic Partnerships"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
           </AnimatedWrapper>
 
+          {/* Right Column: Content List */}
           <div className="space-y-8">
             <AnimatedWrapper type="fade-up" delay={0.4}>
-              <p className="text-slate-300 leading-8">
-                Arise Funds builds partnerships across technology,
-                cybersecurity, and AI to turn workforce infrastructure into
-                operationally sustainable, investor-ready businesses.
-              </p>
+              <div>
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                  Where talent meets <br />
+                  <span className="text-cyan-400">infrastructure</span>
+                </h3>
+                <p className="text-slate-300 text-sm md:text-base leading-relaxed max-w-xl">
+                  From security operations centers to data analytics labs &mdash; across
+                  Nigeria, Sierra Leone, the United States and beyond &mdash; Arise
+                  Funds portfolio companies build the environments where real
+                  careers begin.
+                </p>
+              </div>
             </AnimatedWrapper>
+
+            {/* Icons List */}
             <div className="space-y-6">
-              {items.map((item, index) => (
+              {items.map((item, idx) => (
                 <AnimatedWrapper
-                  key={index}
+                  key={idx}
                   type="fade-up"
-                  delay={0.5 + index * 0.1}
+                  delay={0.5 + idx * 0.1}
                   hover
-                  className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10"
+                  tap
+                  className="flex items-start gap-4"
                 >
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-cyan-500/15 text-cyan-300 font-semibold">
-                    {index + 1}
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="h-12 w-12 object-contain flex-shrink-0"
+                  />
+                  <div>
+                    <h4 className="font-bold text-lg leading-tight text-white">
+                      {item.title}
+                    </h4>
+                    <p className="text-slate-350 text-sm mt-1">
+                      {item.description}
+                    </p>
+                    <p className="text-slate-500 text-xs italic mt-0.5">
+                      {item.subtext}
+                    </p>
                   </div>
-                  <h3 className="mt-4 text-xl font-semibold text-white">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-slate-300 leading-7">
-                    {item.description}
-                  </p>
                 </AnimatedWrapper>
               ))}
             </div>
@@ -111,7 +130,7 @@ export default function Partnerships() {
       <VideoModal
         isOpen={isVideoModalOpen}
         onClose={() => setIsVideoModalOpen(false)}
-        videoSrc="/videos/partnerships-practice.mp4"
+        videoSrc="/videos/strategic-partnerships.mp4"
       />
     </section>
   );
