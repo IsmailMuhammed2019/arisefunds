@@ -81,23 +81,18 @@ export default function PortfolioInvestment() {
             </div>
           </div>
 
-          {/* Right Column: Facebook Reel Video Iframe Mockup Container */}
+          {/* Right Column: HTML5 Video Player Container */}
           <AnimatedWrapper type="scale" delay={0.4} className="w-full flex justify-center lg:justify-end">
-            <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-slate-950/80 shadow-[0_30px_70px_rgba(0,0,0,0.5)] shadow-cyan-950/20 p-4 max-w-[300px] w-full flex justify-center">
-              {/* Smartphone Inner Screen Border wrapper */}
-              <div className="w-[267px] h-[476px] rounded-[1.25rem] overflow-hidden relative bg-black border border-white/5 shadow-inner">
-                <iframe
-                  src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F565839646459950%2F&show_text=false&width=267&t=0"
-                  width="267"
-                  height="476"
-                  style={{ border: "none", overflow: "hidden" }}
-                  scrolling="no"
-                  frameBorder="0"
-                  allowFullScreen={true}
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  className="absolute inset-0 w-full h-full"
-                ></iframe>
-              </div>
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-slate-950/80 shadow-[0_20px_50px_rgba(0,0,0,0.4)] shadow-cyan-950/20">
+              <video
+                src="/test.mp4"
+                controls
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </div>
           </AnimatedWrapper>
         </div>
