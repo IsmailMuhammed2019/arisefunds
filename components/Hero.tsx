@@ -43,6 +43,22 @@ const slides = [
     image: "/slider3_image.png",
     imageAlt: "Building a Stronger Work Foundation",
   },
+  {
+    tag: "Conference Event",
+    title: (
+      <>
+        West Africa Convergence <span className="text-cyan-400 font-bold">Conference</span>
+      </>
+    ),
+    description:
+      "Arise Funds presented the Workforce Capital investment model at WACC, demonstrating how localized talent infrastructure acts as the primary engine for sustainable digital economic growth.",
+    image: "/wacc_slider.jpg",
+    imageAlt: "West Africa Convergence Conference",
+    extraImages: [
+      { src: "/News-Pics-WACC.png", alt: "WACC News Pictures" },
+      { src: "/aisha-portrait.png", alt: "Aisha Saaka Lewis Portrait" },
+    ],
+  },
 ];
 
 export default function Hero() {
@@ -160,7 +176,7 @@ export default function Hero() {
 
       {/* 4. Bottom-Aligned Slide Content */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-16 md:pb-24">
-        <div className="max-w-3xl space-y-6">
+        <div className="w-full">
           <AnimatePresence initial={false} mode="wait">
             <motion.div
               key={currentIndex}
@@ -168,33 +184,62 @@ export default function Hero() {
               animate="center"
               exit="exit"
               variants={textVariants}
-              className="space-y-6"
+              className={`grid gap-10 items-center w-full ${
+                slides[currentIndex].extraImages
+                  ? "lg:grid-cols-[1.1fr_0.9fr]"
+                  : "max-w-3xl"
+              }`}
             >
-              <div className="inline-flex items-center gap-3 rounded-full border border-cyan-400/30 bg-cyan-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-cyan-300 shadow-lg shadow-cyan-500/10">
-                {slides[currentIndex].tag}
+              {/* Left Column: Content */}
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-3 rounded-full border border-cyan-400/30 bg-cyan-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-cyan-300 shadow-lg shadow-cyan-500/10">
+                  {slides[currentIndex].tag}
+                </div>
+
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.15]">
+                  {slides[currentIndex].title}
+                </h1>
+
+                <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl font-light">
+                  {slides[currentIndex].description}
+                </p>
+
+                <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 gap-4 pt-2">
+                  <MagneticWrapper>
+                    <button
+                      onClick={openContactModal}
+                      className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400 cursor-pointer"
+                    >
+                      Get In Touch
+                    </button>
+                  </MagneticWrapper>
+                  <span className="text-sm text-slate-300">
+                    Schedule a conversation with the team.
+                  </span>
+                </div>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.15]">
-                {slides[currentIndex].title}
-              </h1>
-
-              <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl font-light">
-                {slides[currentIndex].description}
-              </p>
-
-              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 gap-4 pt-2">
-                <MagneticWrapper>
-                  <button
-                    onClick={openContactModal}
-                    className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400 cursor-pointer"
-                  >
-                    Get In Touch
-                  </button>
-                </MagneticWrapper>
-                <span className="text-sm text-slate-300">
-                  Schedule a conversation with the team.
-                </span>
-              </div>
+              {/* Right Column: Extra Images (only if present) */}
+              {slides[currentIndex].extraImages && (
+                <div className="flex gap-4 md:gap-6 justify-center lg:justify-end items-center mt-6 lg:mt-0 relative select-none">
+                  {/* First Card: News Pics WACC */}
+                  <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border border-white/10 shadow-2xl rotate-[-4deg] hover:rotate-0 hover:scale-105 transition-all duration-300 bg-slate-950">
+                    <img
+                      src={slides[currentIndex].extraImages![0].src}
+                      alt={slides[currentIndex].extraImages![0].alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Second Card: Aisha Portrait */}
+                  <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border border-white/10 shadow-2xl rotate-[4deg] hover:rotate-0 hover:scale-105 transition-all duration-300 -ml-12 sm:-ml-16 md:-ml-20 z-10 bg-slate-950">
+                    <img
+                      src={slides[currentIndex].extraImages![1].src}
+                      alt={slides[currentIndex].extraImages![1].alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              )}
             </motion.div>
           </AnimatePresence>
         </div>

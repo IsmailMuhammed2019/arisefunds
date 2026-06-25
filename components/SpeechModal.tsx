@@ -164,6 +164,24 @@ export default function SpeechModal() {
                 </div>
               </div>
 
+              {/* Supporting Images Gallery */}
+              <div className="relative z-10 flex gap-3 mt-6">
+                <div className="flex-1 h-20 rounded-xl overflow-hidden border border-white/10 shadow-md">
+                  <img
+                    src="/aisha-portrait.png"
+                    alt="Aisha Saaka Lewis"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1 h-20 rounded-xl overflow-hidden border border-white/10 shadow-md">
+                  <img
+                    src="/News-Pics-WACC.png"
+                    alt="WACC Conference"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
               {/* Core Thesis */}
               <div className="relative z-10 mt-8 p-5 rounded-2xl border border-cyan-500/20 bg-cyan-950/20">
                 <p className="text-[10px] font-mono uppercase tracking-widest text-cyan-400 mb-2 font-bold select-none">
