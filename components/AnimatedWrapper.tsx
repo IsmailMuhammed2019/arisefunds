@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, Variants } from "framer-motion";
 import { ReactNode } from "react";
 
 interface Props {
@@ -29,7 +29,7 @@ export default function AnimatedWrapper({
   const shouldReduceMotion = useReducedMotion();
 
   // 1. Entrance & Scroll Animations (Subtle 300-600ms)
-  const variants = {
+  const variants: Variants = {
     hidden: {
       opacity: 0,
       y: type === "fade-up" ? 20 : 0,
@@ -47,7 +47,7 @@ export default function AnimatedWrapper({
       transition: {
         duration: shouldReduceMotion ? 0 : 1.2,
         delay: delay,
-        ease: [0.16, 1, 0.3, 1] as any, // Custom "Expo" easing for smoother deceleration
+        ease: [0.16, 1, 0.3, 1] as [number, number, number, number], // Custom "Expo" easing for smoother deceleration
       },
     },
   };
@@ -98,7 +98,7 @@ export const AnimatedText = ({ text }: { text: string }) => {
           transition={{
             delay: i * 0.08,
             duration: 0.8,
-            ease: [0.215, 0.61, 0.355, 1] as any,
+            ease: [0.215, 0.61, 0.355, 1] as [number, number, number, number],
           }}
           className="inline-block mr-1"
         >

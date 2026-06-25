@@ -6,7 +6,7 @@ import { useModal } from "@/context/ModalContext";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { openContactModal } = useModal();
+  const { openContactModal, openSpeechModal } = useModal();
 
   return (
     <nav className="relative z-20 bg-[#03112c] border-b border-white/10">
@@ -43,6 +43,12 @@ export default function NavBar() {
               >
                 Partners
               </Link>
+              <button
+                onClick={openSpeechModal}
+                className="hover:text-white transition-colors cursor-pointer text-left font-medium bg-transparent border-0"
+              >
+                WACC Speech
+              </button>
             </div>
             <button
               onClick={openContactModal}
@@ -92,6 +98,15 @@ export default function NavBar() {
               >
                 Partners
               </Link>
+              <button
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  openSpeechModal();
+                }}
+                className="w-full text-left block rounded-2xl px-4 py-3 text-white hover:bg-white/10 cursor-pointer"
+              >
+                WACC Speech
+              </button>
               <button
                 onClick={() => {
                   setIsMenuOpen(false);

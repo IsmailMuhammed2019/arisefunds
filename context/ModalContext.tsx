@@ -6,15 +6,22 @@ interface ModalContextType {
   isContactModalOpen: boolean;
   openContactModal: () => void;
   closeContactModal: () => void;
+  isSpeechModalOpen: boolean;
+  openSpeechModal: () => void;
+  closeSpeechModal: () => void;
 }
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isSpeechModalOpen, setIsSpeechModalOpen] = useState(false);
 
   const openContactModal = () => setIsContactModalOpen(true);
   const closeContactModal = () => setIsContactModalOpen(false);
+
+  const openSpeechModal = () => setIsSpeechModalOpen(true);
+  const closeSpeechModal = () => setIsSpeechModalOpen(false);
 
   return (
     <ModalContext.Provider
@@ -22,6 +29,9 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
         isContactModalOpen,
         openContactModal,
         closeContactModal,
+        isSpeechModalOpen,
+        openSpeechModal,
+        closeSpeechModal,
       }}
     >
       {children}
