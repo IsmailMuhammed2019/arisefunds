@@ -43,12 +43,12 @@ export default function NavBar() {
               >
                 Partners
               </Link>
-              <button
-                onClick={openSpeechModal}
-                className="hover:text-white transition-colors cursor-pointer text-left font-medium bg-transparent border-0"
+              <Link
+                href="/wacc-speech"
+                className="hover:text-white transition-colors"
               >
                 WACC Speech
-              </button>
+              </Link>
             </div>
             <button
               onClick={openContactModal}
@@ -98,15 +98,13 @@ export default function NavBar() {
               >
                 Partners
               </Link>
-              <button
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  openSpeechModal();
-                }}
-                className="w-full text-left block rounded-2xl px-4 py-3 text-white hover:bg-white/10 cursor-pointer"
+              <Link
+                href="/wacc-speech"
+                className="block rounded-2xl px-4 py-3 text-white hover:bg-white/10"
+                onClick={() => setIsMenuOpen(false)}
               >
                 WACC Speech
-              </button>
+              </Link>
               <button
                 onClick={() => {
                   setIsMenuOpen(false);

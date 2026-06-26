@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { X, MapPin, Calendar, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useModal } from "@/context/ModalContext";
+import Link from "next/link";
 
 const PILLARS = [
   {
@@ -328,12 +329,13 @@ export default function SpeechModal() {
                 <p className="text-[10px] text-slate-600 font-mono uppercase tracking-wider">
                   Full transcript available upon request
                 </p>
-                <button
+                <Link
+                  href="/wacc-speech"
                   onClick={closeSpeechModal}
                   className="inline-flex items-center gap-2 text-xs font-semibold text-slate-950 bg-cyan-400 hover:bg-cyan-300 transition-colors px-5 py-2.5 rounded-full"
                 >
-                  Get In Touch
-                </button>
+                  Read Full Transcript
+                </Link>
               </div>
 
             </div>

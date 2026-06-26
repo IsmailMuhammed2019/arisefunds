@@ -2,11 +2,28 @@
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { BackgroundGlow, MagneticWrapper, ParallaxElement } from "./AdvancedEffects";
 import { useModal } from "@/context/ModalContext";
 
 const slides = [
+  {
+    tag: "Conference Event",
+    title: (
+      <>
+        West Africa Convergence <span className="text-cyan-400 font-bold">Conference</span>
+      </>
+    ),
+    description:
+      "Arise Funds presented the Workforce Capital investment model at WACC, demonstrating how localized talent infrastructure acts as the primary engine for sustainable digital economic growth.",
+    image: "/wacc_slider.jpg",
+    imageAlt: "West Africa Convergence Conference",
+    extraImages: [
+      { src: "/News-Pics-WACC.png", alt: "WACC News Pictures" },
+      { src: "/aisha-portrait.png", alt: "Aisha Saaka Lewis Portrait" },
+    ],
+  },
   {
     tag: "Impact-led infrastructure",
     title: (
@@ -42,22 +59,6 @@ const slides = [
       "Arise Funds is an impact investment firm that combines capital and operational expertise to drive growth in workforce development and tech companies. We build the institutional systems that generate returns and create employment at scale.",
     image: "/slider3_image.png",
     imageAlt: "Building a Stronger Work Foundation",
-  },
-  {
-    tag: "Conference Event",
-    title: (
-      <>
-        West Africa Convergence <span className="text-cyan-400 font-bold">Conference</span>
-      </>
-    ),
-    description:
-      "Arise Funds presented the Workforce Capital investment model at WACC, demonstrating how localized talent infrastructure acts as the primary engine for sustainable digital economic growth.",
-    image: "/wacc_slider.jpg",
-    imageAlt: "West Africa Convergence Conference",
-    extraImages: [
-      { src: "/News-Pics-WACC.png", alt: "WACC News Pictures" },
-      { src: "/aisha-portrait.png", alt: "Aisha Saaka Lewis Portrait" },
-    ],
   },
 ];
 
@@ -206,16 +207,21 @@ export default function Hero() {
 
                 <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 gap-4 pt-2">
                   <MagneticWrapper>
-                    <button
-                      onClick={
-                        slides[currentIndex].tag === "Conference Event"
-                          ? openSpeechModal
-                          : openContactModal
-                      }
-                      className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400 cursor-pointer"
-                    >
-                      Get In Touch
-                    </button>
+                    {slides[currentIndex].tag === "Conference Event" ? (
+                      <Link
+                        href="/wacc-speech"
+                        className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400 cursor-pointer"
+                      >
+                        Get In Touch
+                      </Link>
+                    ) : (
+                      <button
+                        onClick={openContactModal}
+                        className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400 cursor-pointer"
+                      >
+                        Get In Touch
+                      </button>
+                    )}
                   </MagneticWrapper>
                   <span className="text-sm text-slate-300">
                     {slides[currentIndex].tag === "Conference Event"
