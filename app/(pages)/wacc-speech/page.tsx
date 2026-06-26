@@ -69,9 +69,12 @@ export default function WaccSpeechPage() {
   };
 
   const handleDownload = () => {
-    if (typeof window !== "undefined") {
-      window.print();
-    }
+    const link = document.createElement("a");
+    link.href = "/Arise Funds WACC Speech.pdf";
+    link.download = "Arise Funds WACC Speech.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
