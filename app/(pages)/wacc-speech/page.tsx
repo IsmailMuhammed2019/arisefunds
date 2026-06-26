@@ -99,71 +99,49 @@ export default function WaccSpeechPage() {
 
         {/* Full Speech Text */}
         <div className="space-y-4 text-sm text-slate-800 leading-relaxed">
-          <p className="italic text-slate-500 text-xs">[Speaker guidance: Use the bracketed pause cues only for delivery. They are not meant to be read aloud.]</p>
 
           <p>Good morning, distinguished Ministers, policymakers, industry leaders, investors, development partners, technology decision makers, members of the private sector, ladies and gentlemen.</p>
           <p>It is a great honour to stand before you this morning at a time when Nigeria, West Africa, and the wider developing world are asking one of the most consequential questions of our generation:</p>
           <p className="font-bold text-slate-950">How do we build economies that are not only digital in ambition, but productive in reality?</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p>Across Nigeria today, we are speaking with increasing confidence about artificial intelligence, cybersecurity, cloud computing, digital infrastructure, innovation, entrepreneurship, and global services.</p>
           <p>These are the right conversations. They reflect the urgency of the moment and the seriousness of the opportunity before us.</p>
           <p>We should also acknowledge that the Federal Government of Nigeria has begun to put important building blocks in place. Initiatives such as the 3 Million Technical Talent programme, the expanding digital economy agenda, and student financing efforts such as NELFUND demonstrate that skills, access, and youth opportunity are now part of the national development conversation.</p>
           <p>These are important steps. They should be recognized. They should be strengthened. And they should be connected to a wider system that produces measurable employment, entrepreneurship, and export outcomes.</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p>This morning, I would like to focus on one idea that sits at the heart of that system.</p>
           <p className="text-2xl font-extrabold text-slate-950 text-center my-4 border-y border-slate-300 py-4">Talent is infrastructure.</p>
-          <p className="text-slate-500 italic text-xs">[Pause for emphasis]</p>
           <p>In the industrial age, nations competed through roads, ports, power stations, factories, and railways.</p>
           <p className="font-semibold">In the digital age, nations compete through the productive capacity of their people.</p>
           <p>A cybersecurity analyst protecting critical systems is infrastructure. A software engineer building products for global markets is infrastructure. An AI-enabled worker improving productivity is infrastructure. A contact centre professional serving international clients from Lagos, Abuja, Enugu, Freetown, Accra, or Monrovia is infrastructure.</p>
           <p>If Nigeria is to compete in the next economy, we must finance human capacity with the same seriousness with which we finance physical infrastructure.</p>
-          <p className="text-slate-500 italic text-xs">[Applause line - pause]</p>
           <p>But let us also face a practical truth.</p>
           <p className="font-semibold">The challenge is not that Nigeria lacks talent. The challenge is not that Africa lacks ambition. The challenge is that workforce development has not yet been properly structured as an investable asset class.</p>
           <p>Too often, we finance education without financing employability. We finance buildings without financing institutional transformation. We finance technology without financing the people capable of using it productively. We finance training without financing the pathway to work.</p>
           <p className="font-bold">And then we are surprised when training alone does not create jobs.</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p>At Arise Funds, we believe the future requires a different framework. We call it Workforce Capital.</p>
           <p>Workforce Capital is the investment framework that connects skills, infrastructure, institutions, technology, and productive employment into one coherent ecosystem. It is not charity. It is not simply student loans. It is not only training. It is the financing of productive capacity.</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p>This matters because the scale of the opportunity is enormous. IFC and World Bank research has estimated that by 2030, more than 230 million jobs in Sub-Saharan Africa will require digital skills, creating roughly 650 million training opportunities and an estimated 130 billion dollar investment opportunity in digital skilling.</p>
           <p>That is not a small training gap. That is a continental investment challenge. It is also a generational opportunity.</p>
-          <p className="text-slate-500 italic text-xs">[Applause line - pause]</p>
           <p>For Nigeria, the implications are profound. If just 100,000 digitally skilled Nigerians earn an average of 5,000 dollars annually through local and international work, that represents half a billion dollars in annual economic activity.</p>
           <p>Now imagine one million. Imagine the foreign exchange. Imagine the tax base. Imagine the innovation.</p>
           <p className="font-semibold">Imagine the dignity restored to young people who no longer see talent as something they must leave Nigeria to express, but something they can use from Nigeria to serve the world.</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p>That is why the real issue before us is not only how to train more people. The more important question is: <strong>How do we finance employability at scale?</strong></p>
-          <p className="text-slate-500 italic text-xs">[Pause for emphasis]</p>
           <p>At Arise Funds, we see Workforce Capital as having five connected layers.</p>
           <p><strong>First, institutional capital.</strong> Training organisations must themselves become stronger. They need governance. They need human resource systems. They need standard operating procedures. They need employer engagement. They need quality assurance. They need modern curricula. They need the capacity to assess whether learners are actually employable, not merely whether they attended class. The old model was simple: train, issue a certificate, and release the graduate. The new model must be different: train, assess, employ, build, export, reinvest, and scale.</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p><strong>Second, infrastructure capital.</strong> Across Nigeria and Africa, there are underutilised buildings, dormant campuses, old training facilities, and abandoned spaces that may not look immediately bankable to a traditional lender. But with the right capital and the right operating model, these spaces can become digital workforce hubs, cybersecurity centres, AI laboratories, BPO facilities, remote-work centres, and innovation campuses. The building is not the outcome. The productivity inside the building is the outcome.</p>
-          <p className="text-slate-500 italic text-xs">[Applause line - pause]</p>
           <p><strong>Third, human capital.</strong> For many young people, the gap between unemployment and opportunity may be a laptop, reliable connectivity, a certification exam, a stipend, or the chance to learn in an environment that looks like the workplace they are being prepared for. To a large institution, that may look like a small request. To that young person, it may be the bridge to a lifetime of productivity.</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p><strong>Fourth, employment capital.</strong> The most powerful workforce systems do not simply train people and send them away. They create productive environments where learners can transition into real work, managed services, remote delivery, entrepreneurship, and export-oriented digital services. A training centre can also become an employment centre. A campus can become a production hub. A classroom can become the beginning of a global service pipeline.</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p><strong>Fifth, product capital.</strong> This is where the conversation becomes even more exciting. Developing countries should not only train workers for global companies. We should also build our own platforms, our own products, our own services, and our own intellectual property. This is why, within the broader ecosystem, platforms such as Aegis360AI matter. Aegis360AI is an example of what can emerge when Nigerian talent, global collaboration, cybersecurity capability, AI thinking, and institutional investment come together around a real product. Nigeria can be globally conscious and locally grounded at the same time.</p>
-          <p className="text-slate-500 italic text-xs">[Applause line - pause]</p>
           <p>This is the model Arise Funds is working to support. Through the Arise Funds Family Office, we have committed well over one million dollars in direct catalytic support. Beyond that, more than four million dollars of digital architecture, platforms, systems, and enabling technology have been deployed across the broader ecosystem to support workforce transformation.</p>
           <p className="font-bold">This is not theory. This is not another conference concept. This is early risk capital being deployed to demonstrate that workforce development can be structured, de-risked, and scaled.</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p>But we are also clear-eyed about the size of the challenge. A family office can demonstrate a model. It cannot finance a continent alone. That is why we need a blended capital architecture.</p>
           <p>Government has a role. Development finance has a role. Commercial banks have a role. Pension funds have a role. Philanthropy and grant makers have a role. Private companies have a role. Training institutions and employers have a role.</p>
           <p>The point is not to force one type of capital to do everything. The point is to design a capital stack where each form of capital does what it is best suited to do.</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p>Many financial institutions hesitate to finance talent because the repayment path is not always immediate. But without those investments, the talent pipeline remains weak. Without those investments, infrastructure remains idle. Without those investments, institutions remain unable to compete globally. <strong>Catalytic capital exists to unlock what traditional capital cannot yet see.</strong></p>
-          <p className="text-slate-500 italic text-xs">[Applause line - pause]</p>
           <p>One of the lessons we have learned is that training institutions must not depend only on tuition. If an institution earns from the success of the people it trains — through employment services, managed services, product development, outsourcing, entrepreneurship support, and long-term value creation — then its incentives change. It begins to care deeply about outcomes. That is how education becomes productivity. That is how training becomes enterprise. That is how human potential becomes Workforce Capital.</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p>This morning, I am pleased to share that Arise Funds is developing a fuller policy publication titled Workforce Capital: A New Investment Framework for Digital Economic Growth. The publication will set out the framework in greater detail and will invite collaboration across government, development finance, philanthropy, commercial capital, family offices, training institutions, employers, and technology companies.</p>
           <p className="font-bold">Our goal is simple: to help make workforce development investable. Because when workforce development becomes investable, talent becomes scalable. And when talent becomes scalable, economies become more competitive.</p>
-          <p className="text-slate-500 italic text-xs">[Pause]</p>
           <p>Nigeria has a unique opportunity. Africa has a unique opportunity. Developing economies everywhere have a unique opportunity. Every generation is remembered by the infrastructure it built. Our generation has the opportunity to build something just as important, and perhaps even more enduring. <strong>We can build Workforce Capital.</strong></p>
-          <p className="text-slate-500 italic text-xs">[Pause for applause]</p>
           <p>Because when nations invest in the productive capacity of their people, they create more than jobs. They create confidence. They create innovation. They create resilience. They create exports. They create prosperity. And they build economies capable of competing for generations to come.</p>
-          <p className="text-slate-500 italic text-xs">[Final pause]</p>
           <p>The question before us is no longer whether Nigeria has talent. The world already knows that we do. The question is whether we can finance that talent into productivity. Whether we can make Workforce Capital one of the defining investment frameworks of Nigeria, Africa, and the developing world.</p>
           <p className="font-bold">At Arise Funds, we believe the answer is yes. And we invite all of you to help build it with us.</p>
           <p className="font-extrabold text-lg mt-4">Thank you.</p>
