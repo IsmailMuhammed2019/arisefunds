@@ -93,7 +93,7 @@ const TeamSection = () => {
 
         {/* Lower Row: LaTonya and Laura Side-by-Side Responsive Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 pt-16 border-t border-white/5">
-          
+
           {/* LaTonya Blakes */}
           <AnimatedWrapper type="fade-up" delay={0.4}>
             <section className="flex flex-col sm:flex-row gap-6">
@@ -149,7 +149,7 @@ const TeamSection = () => {
           </AnimatedWrapper>
 
           {/* Laura C. Rudert */}
-          <AnimatedWrapper type="fade-up" delay={0.6}>
+          {/* <AnimatedWrapper type="fade-up" delay={0.6}>
             <section className="flex flex-col sm:flex-row gap-6">
               <div className="flex-1 order-2 sm:order-1">
                 <h2 className="text-2xl font-bold text-white">Laura C. Rudert</h2>
@@ -198,7 +198,7 @@ const TeamSection = () => {
                 />
               </div>
             </section>
-          </AnimatedWrapper>
+          </AnimatedWrapper> */}
 
         </div>
       </main>
