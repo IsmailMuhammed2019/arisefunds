@@ -71,21 +71,21 @@ const TeamSection = () => {
 
               {/* Aisha Social Media Links */}
               <div className="flex gap-4 mt-6 text-slate-400">
-                <AnimatedWrapper hover tap type="scale" delay={0.3}>
+                {/* <AnimatedWrapper hover tap type="scale" delay={0.3}>
                   <a href="#" aria-label="Facebook">
                     <FaFacebookF className="hover:text-cyan-400 cursor-pointer transition-colors" />
                   </a>
-                </AnimatedWrapper>
+                </AnimatedWrapper> */}
                 <AnimatedWrapper hover tap type="scale" delay={0.35}>
                   <a href="#" aria-label="LinkedIn">
                     <FaLinkedinIn className="hover:text-cyan-400 cursor-pointer transition-colors" />
                   </a>
                 </AnimatedWrapper>
-                <AnimatedWrapper hover tap type="scale" delay={0.4}>
+                {/* <AnimatedWrapper hover tap type="scale" delay={0.4}>
                   <a href="#" aria-label="Twitter">
                     <FaTwitter className="hover:text-cyan-400 cursor-pointer transition-colors" />
                   </a>
-                </AnimatedWrapper>
+                </AnimatedWrapper> */}
               </div>
             </div>
           </section>
@@ -121,21 +121,21 @@ const TeamSection = () => {
                   </p>
                 </div>
                 <div className="flex gap-4 mt-6 text-slate-400">
-                  <AnimatedWrapper hover tap type="scale" delay={0.5}>
+                  {/* <AnimatedWrapper hover tap type="scale" delay={0.5}>
                     <a href="#" aria-label="Facebook">
                       <FaFacebookF className="hover:text-cyan-400 cursor-pointer transition-colors" />
                     </a>
-                  </AnimatedWrapper>
+                  </AnimatedWrapper> */}
                   <AnimatedWrapper hover tap type="scale" delay={0.55}>
                     <a href="#" aria-label="LinkedIn">
                       <FaLinkedinIn className="hover:text-cyan-400 cursor-pointer transition-colors" />
                     </a>
                   </AnimatedWrapper>
-                  <AnimatedWrapper hover tap type="scale" delay={0.6}>
+                  {/* <AnimatedWrapper hover tap type="scale" delay={0.6}>
                     <a href="#" aria-label="Twitter">
                       <FaTwitter className="hover:text-cyan-400 cursor-pointer transition-colors" />
                     </a>
-                  </AnimatedWrapper>
+                  </AnimatedWrapper> */}
                 </div>
               </div>
               <div className="w-full sm:w-1/3 order-1 sm:order-2 flex justify-start items-start">
