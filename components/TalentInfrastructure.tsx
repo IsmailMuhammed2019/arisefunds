@@ -42,7 +42,7 @@ const TalentInfrastructure = () => {
 
         <AnimatedWrapper hover tap type="scale" delay={0.4}>
           <button className="bg-white text-[#1A93D9] font-bold px-10 py-4 text-sm rounded-sm shadow-md hover:bg-slate-50 transition-all active:scale-95">
-            Get Intouch
+            Get in Touch
           </button>
         </AnimatedWrapper>
       </AnimatedWrapper>

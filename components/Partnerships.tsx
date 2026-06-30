@@ -9,20 +9,23 @@ const items = [
   {
     icon: "/security.png",
     title: "Cybersecurity · SOC Operations",
-    description: "Replace with: mixed-ethnicity SOC team at monitors",
-    subtext: 'Suggested search: "diverse cybersecurity analysts SOC"',
+    description:
+      "Building secure digital environments with trained analysts operating across enterprise and government-grade security operations centres.",
+    subtext: "",
   },
   {
     icon: "/software.png",
     title: "Software Development · Global Teams",
-    description: "Replace with: South/East Asian professionals, mixed group",
-    subtext: 'Suggested search: "diverse international tech team collaboration"',
+    description:
+      "Cross-border engineering teams delivering scalable software products and managed technology services from West Africa to the world.",
+    subtext: "",
   },
   {
     icon: "/data.png",
     title: "Data Science · AI & Machine Learning",
-    description: "Replace with: Latina/South Asian woman presenting, mixed audience",
-    subtext: 'Suggested search: "woman presenting analytics diverse team"',
+    description:
+      "Applying machine learning and AI tools to workforce intelligence, service delivery optimisation, and product development pipelines.",
+    subtext: "",
   },
 ];
 
@@ -47,12 +50,12 @@ export default function Partnerships() {
         {/* Header Section */}
         <AnimatedWrapper type="fade-up" className="text-center mb-16 max-w-4xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
-            Strategic The Work, In Practice <span className="text-cyan-400">Partnerships</span>
+            Strategic <span className="text-cyan-400">Partnerships</span>
           </h2>
           <p className="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-            We collaborate with leading institutions to create a comprehensive
+            We partner with employer networks and operating companies to build
             <br className="hidden md:block" />
-            ecosystem for student success
+            infrastructure that delivers measurable talent outcomes and investment returns.
           </p>
         </AnimatedWrapper>
 
@@ -104,20 +107,15 @@ export default function Partnerships() {
                   tap
                   className="flex items-start gap-4"
                 >
-                  <img
-                    src={item.icon}
-                    alt={item.title}
-                    className="h-12 w-12 object-contain flex-shrink-0"
-                  />
+                  <span className="font-mono text-cyan-400 text-sm tracking-widest mt-1 shrink-0">
+                    0{idx + 1}
+                  </span>
                   <div>
                     <h4 className="font-bold text-lg leading-tight text-white">
                       {item.title}
                     </h4>
                     <p className="text-slate-350 text-sm mt-1">
                       {item.description}
-                    </p>
-                    <p className="text-slate-500 text-xs italic mt-0.5">
-                      {item.subtext}
                     </p>
                   </div>
                 </AnimatedWrapper>

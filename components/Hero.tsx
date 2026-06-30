@@ -2,28 +2,18 @@
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { BackgroundGlow, MagneticWrapper, ParallaxElement } from "./AdvancedEffects";
 import { useModal } from "@/context/ModalContext";
 
+const STATS = [
+  { value: "50K+", label: "Employment Target" },
+  { value: "8", label: "Countries" },
+  { value: "50%", label: "Young Women" },
+  { value: "Jan 2026", label: "First Cohort Employed" },
+];
+
 const slides = [
-  {
-    tag: "Conference Event",
-    title: (
-      <>
-        West Africa Convergence <span className="text-cyan-400 font-bold">Conference</span>
-      </>
-    ),
-    description:
-      "Arise Funds presented the Workforce Capital investment model at WACC, demonstrating how localized talent infrastructure acts as the primary engine for sustainable digital economic growth.",
-    image: "/wacc_slider.jpg",
-    imageAlt: "West Africa Convergence Conference",
-    extraImages: [
-      { src: "/News-Pics-WACC.png", alt: "WACC News Pictures" },
-      { src: "/aisha-portrait.png", alt: "Aisha Saaka Lewis Portrait" },
-    ],
-  },
   {
     tag: "Impact-led infrastructure",
     title: (
@@ -185,11 +175,7 @@ export default function Hero() {
               animate="center"
               exit="exit"
               variants={textVariants}
-              className={`grid gap-10 items-center w-full ${
-                slides[currentIndex].extraImages
-                  ? "lg:grid-cols-[1.1fr_0.9fr]"
-                  : "max-w-3xl"
-              }`}
+              className="max-w-3xl"
             >
               {/* Left Column: Content */}
               <div className="space-y-6">
@@ -207,53 +193,34 @@ export default function Hero() {
 
                 <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 gap-4 pt-2">
                   <MagneticWrapper>
-                    {slides[currentIndex].tag === "Conference Event" ? (
-                      <Link
-                        href="/wacc-speech"
-                        className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400 cursor-pointer"
-                      >
-                        Get In Touch
-                      </Link>
-                    ) : (
-                      <button
-                        onClick={openContactModal}
-                        className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400 cursor-pointer"
-                      >
-                        Get In Touch
-                      </button>
-                    )}
+                    <button
+                      onClick={openContactModal}
+                      className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400 cursor-pointer"
+                    >
+                      Get In Touch
+                    </button>
                   </MagneticWrapper>
                   <span className="text-sm text-slate-300">
-                    {slides[currentIndex].tag === "Conference Event"
-                      ? "Read the panel address from the conference."
-                      : "Schedule a conversation with the team."}
+                    Schedule a conversation with the team.
                   </span>
                 </div>
               </div>
-
-              {/* Right Column: Extra Images (only if present) */}
-              {slides[currentIndex].extraImages && (
-                <div className="flex gap-4 md:gap-6 justify-center lg:justify-end items-center mt-6 lg:mt-0 relative select-none">
-                  {/* First Card: News Pics WACC */}
-                  <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border border-white/10 shadow-2xl rotate-[-4deg] hover:rotate-0 hover:scale-105 transition-all duration-300 bg-slate-950">
-                    <img
-                      src={slides[currentIndex].extraImages![0].src}
-                      alt={slides[currentIndex].extraImages![0].alt}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  {/* Second Card: Aisha Portrait */}
-                  <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border border-white/10 shadow-2xl rotate-[4deg] hover:rotate-0 hover:scale-105 transition-all duration-300 -ml-12 sm:-ml-16 md:-ml-20 z-10 bg-slate-950">
-                    <img
-                      src={slides[currentIndex].extraImages![1].src}
-                      alt={slides[currentIndex].extraImages![1].alt}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              )}
             </motion.div>
           </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Stat Bar */}
+      <div className="absolute bottom-0 left-0 right-0 z-20 bg-[#04122c]/80 backdrop-blur-md border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+            {STATS.map((stat, i) => (
+              <div key={i} className="flex flex-col items-center justify-center py-4 px-4">
+                <span className="text-xl sm:text-2xl font-extrabold text-cyan-300 tracking-tight">{stat.value}</span>
+                <span className="text-[10px] sm:text-xs text-slate-400 uppercase tracking-widest mt-0.5 text-center">{stat.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
