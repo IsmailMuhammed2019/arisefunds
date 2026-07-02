@@ -14,7 +14,7 @@ const ARTICLES = [
     title: "Workforce Capital model presented at WACC 2026",
     desc: "Aisha Saaka Lewis addressed the West African Capital Conference, outlining Arise Funds' model for pre-financed training, employer integration, and structural risk-sharing. The keynote presented a shifting paradigm: treating talent development as an investable infrastructure asset class rather than public program spending.",
     link: "/wacc-speech",
-    linkText: "Read key speech",
+    linkText: "Read Conference Address",
     isFeatured: true,
     image: "/News-Pics-WACC.png",
   },
@@ -52,9 +52,9 @@ export default function NewsPage() {
       <main className="flex-grow max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 relative z-10 w-full">
         {/* Header */}
         <AnimatedWrapper type="fade-up" className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-amber-300 mb-6">
+          {/* <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-amber-300 mb-6">
             In the Field
-          </div>
+          </div> */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
             News &amp; <span className="text-cyan-400 font-bold">Insights</span>
           </h1>
@@ -71,9 +71,8 @@ export default function NewsPage() {
                 key={idx}
                 type="fade-up"
                 delay={0.1 * idx}
-                className={`bg-[#071428] hover:bg-[#0a1f3a] rounded-2xl overflow-hidden border border-cyan-900/20 shadow-2xl transition-all duration-350 flex flex-col ${
-                  article.isFeatured ? "lg:flex-row" : "lg:flex-row-reverse"
-                } items-stretch`}
+                className={`bg-[#071428] hover:bg-[#0a1f3a] rounded-2xl overflow-hidden border border-cyan-900/20 shadow-2xl transition-all duration-350 flex flex-col ${article.isFeatured ? "lg:flex-row" : "lg:flex-row-reverse"
+                  } items-stretch`}
               >
                 {/* Photo Column */}
                 <div className="lg:w-1/2 relative min-h-[260px] bg-[#0a1526] overflow-hidden">

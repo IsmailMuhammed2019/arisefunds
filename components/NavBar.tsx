@@ -49,12 +49,6 @@ export default function NavBar() {
               >
                 News
               </Link>
-              <Link
-                href="/wacc-speech"
-                className="hover:text-white transition-colors"
-              >
-                WACC Speech
-              </Link>
             </div>
             <button
               onClick={openContactModal}
@@ -110,13 +104,6 @@ export default function NavBar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 News
-              </Link>
-              <Link
-                href="/wacc-speech"
-                className="block rounded-2xl px-4 py-3 text-white hover:bg-white/10"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                WACC Speech
               </Link>
               <button
                 onClick={() => {

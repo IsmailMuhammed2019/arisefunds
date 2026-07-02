@@ -11,9 +11,9 @@ export default function NewsSection() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-cyan-900/30 pb-6 mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-amber-300 mb-4">
+            {/* <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-amber-300 mb-4">
               In the Field
-            </div>
+            </div> */}
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
               News
             </h2>
@@ -69,7 +69,7 @@ export default function NewsSection() {
                 href="/wacc-speech"
                 className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm uppercase tracking-wider transition-colors"
               >
-                Read the speech &rarr;
+                Read Conference Address &rarr;
               </Link>
             </div>
           </AnimatedWrapper>

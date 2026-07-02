@@ -61,7 +61,7 @@ export default function WACCSection() {
                   href="/wacc-speech"
                   className="inline-flex items-center gap-2 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-7 py-3.5 text-sm shadow-lg shadow-cyan-500/20 transition-all hover:scale-[1.02] active:scale-95"
                 >
-                  Read the Speech
+                  Read Conference Address
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <p className="text-xs text-slate-500 self-center">
