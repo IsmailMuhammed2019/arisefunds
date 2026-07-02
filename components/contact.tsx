@@ -35,11 +35,8 @@ const ContactSection = () => {
       <section className="max-w-6xl mx-auto px-8 py-10">
         <AnimatedWrapper type="fade-up" className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-2">
-            Get in <span className="text-[#00a3ff]">Touch</span>
+            Let's talk about building <span className="text-[#00a3ff]">Workforce Infrastructure</span>
           </h1>
-          <p className="text-gray-400 mx-auto max-w-2xl">
-            Ready to deploy capital into workforce infrastructure?
-          </p>
         </AnimatedWrapper>
 
         <div className="flex flex-col lg:flex-row gap-6">
@@ -50,10 +47,7 @@ const ContactSection = () => {
             className="bg-[#00a3ff] p-10 lg:w-3/5 flex flex-col justify-center"
           >
             <h2 className="text-2xl md:text-3xl font-medium leading-tight mb-8">
-              Arise Funds is actively building partnerships with impact
-              investors, development finance institutions, and government
-              bodies. If that describes you we respond to every serious inquiry
-              personally.
+              Arise Funds is building partnerships with impact investors, development finance institutions, government bodies, and other like-minded entities to finance the future of work. If that describes you, we'd like to hear from you.
             </h2>
             <div className="w-full h-px bg-white/30 mb-8" />
             <div>
@@ -84,7 +78,7 @@ const ContactSection = () => {
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    placeholder="Jane"
+                    placeholder=" "
                     className="bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-[#00a3ff] transition-colors"
                   />
                 </div>
@@ -97,7 +91,7 @@ const ContactSection = () => {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleInputChange}
-                    placeholder="Doe"
+                    placeholder=" "
                     className="bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-[#00a3ff] transition-colors"
                   />
                 </div>
@@ -112,7 +106,7 @@ const ContactSection = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  placeholder="your.email@example.com"
+                  placeholder="you@organization.com"
                   aria-label="Email"
                   className="bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-[#00a3ff] transition-colors"
                 />
@@ -120,7 +114,7 @@ const ContactSection = () => {
 
               <div className="flex flex-col">
                 <label className="text-xs font-bold mb-2 uppercase tracking-wider text-gray-300">
-                  I&apos;m reaching out as?
+                  I&apos;m reaching out as
                 </label>
                 <select
                   name="role"
