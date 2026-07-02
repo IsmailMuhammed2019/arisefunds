@@ -18,26 +18,6 @@ const ARTICLES = [
     isFeatured: true,
     image: "/News-Pics-WACC.png",
   },
-  {
-    tag: "Milestone",
-    date: "Jan 2026",
-    region: "Lagos, Nigeria",
-    title: "First cohort placement begins in Lagos",
-    desc: "Arise Funds portfolio company SBTS Group commences placement of the initial cybersecurity cohort into active enterprise SOC contracts. This milestone marks the first transition from assessment and competency-based training into income-generating tech roles within our verified employer partner network.",
-    link: "#",
-    linkText: "Read update",
-    image: "/strategic.png",
-  },
-  {
-    tag: "Footprint",
-    date: "Dec 2025",
-    region: "Freetown, Sierra Leone",
-    title: "Operations expand to Freetown, Sierra Leone",
-    desc: "Laying local infrastructure for the World Bank-supported digital economy pathways program in collaboration with SLDTP. This expansion sets the stage for scaling cybersecurity, software engineering, and digital support capacity in the country, building localized workforce hubs designed for export service pipelines.",
-    link: "#",
-    linkText: "Read update",
-    image: "/map-footprint.png",
-  },
 ];
 
 export default function NewsPage() {
