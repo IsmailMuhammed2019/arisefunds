@@ -48,9 +48,9 @@ export default function NewsSection() {
                   <span className="bg-amber-950/40 border border-amber-400/30 text-amber-400 px-2.5 py-1 rounded font-semibold uppercase tracking-wider">
                     Address
                   </span>
-                  <span className="text-slate-400 font-mono">Feb 2026</span>
+                  <span className="text-slate-400 font-mono">June 2026</span>
                   <span className="text-slate-500 before:content-['·'] before:mr-2">
-                    Accra, Ghana
+                    Lagos, Nigeria
                   </span>
                 </div>
                 {/* Title */}

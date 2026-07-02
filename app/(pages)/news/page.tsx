@@ -9,10 +9,10 @@ import AnimatedWrapper from "@/components/AnimatedWrapper";
 const ARTICLES = [
   {
     tag: "Address",
-    date: "Feb 2026",
-    region: "Accra, Ghana",
+    date: "June 2026",
+    region: "Lagos, Nigeria",
     title: "Workforce Capital model presented at WACC 2026",
-    desc: "Aisha Saaka Lewis addressed the West African Capital Conference, outlining Arise Funds' model for pre-financed training, employer integration, and structural risk-sharing. The keynote presented a shifting paradigm: treating talent development as an investable infrastructure asset class rather than public program spending.",
+    desc: "Aisha Saaka Lewis addressed the West African Convergence Conference (WACC), outlining Arise Funds' model for pre-financed training, employer integration, and structural risk-sharing. The keynote presented a shifting paradigm: treating talent development as an investable infrastructure asset class rather than public program spending.",
     link: "/wacc-speech",
     linkText: "Read Conference Address",
     isFeatured: true,
@@ -59,7 +59,7 @@ export default function NewsPage() {
             News &amp; <span className="text-cyan-400 font-bold">Insights</span>
           </h1>
           <p className="text-lg text-slate-400 font-light mt-4 leading-relaxed max-w-2xl">
-            Updates and research outcomes from Arise Funds portfolio deployments across West Africa and global markets.
+            Announcements, speaking engagements, and updates from Arise Funds portfolio deployments across global markets.
           </p>
         </AnimatedWrapper>
 
