@@ -129,9 +129,14 @@ const ContactSection = () => {
                   className="bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-[#00a3ff] transition-colors appearance-none cursor-pointer"
                   aria-label="Role"
                 >
-                  <option className="bg-[#001a2c]">Select one</option>
-                  <option className="bg-[#001a2c]">Investor</option>
-                  <option className="bg-[#001a2c]">Partner</option>
+                  <option value="" className="bg-[#001a2c]">Select one...</option>
+                  <option value="dfi" className="bg-[#001a2c]">DFI / Development Bank</option>
+                  <option value="impact-foundation" className="bg-[#001a2c]">Impact Foundation</option>
+                  <option value="family-office" className="bg-[#001a2c]">Family Office / Individual Investor</option>
+                  <option value="government" className="bg-[#001a2c]">Government / Multilateral</option>
+                  <option value="portfolio-partner" className="bg-[#001a2c]">Prospective Portfolio Partner</option>
+                  <option value="media-research" className="bg-[#001a2c]">Media / Research</option>
+                  <option value="other" className="bg-[#001a2c]">Other</option>
                 </select>
               </div>
 

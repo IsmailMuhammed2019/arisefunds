@@ -208,10 +208,12 @@ export default function ContactModal() {
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:bg-white/[0.08] transition-all appearance-none cursor-pointer"
                     >
                       <option value="" className="bg-[#011424]">Select one...</option>
-                      <option value="investor" className="bg-[#011424]">Investor</option>
                       <option value="dfi" className="bg-[#011424]">DFI / Development Bank</option>
+                      <option value="impact-foundation" className="bg-[#011424]">Impact Foundation</option>
+                      <option value="family-office" className="bg-[#011424]">Family Office / Individual Investor</option>
                       <option value="government" className="bg-[#011424]">Government / Multilateral</option>
-                      <option value="partner" className="bg-[#011424]">Prospective Partner</option>
+                      <option value="portfolio-partner" className="bg-[#011424]">Prospective Portfolio Partner</option>
+                      <option value="media-research" className="bg-[#011424]">Media / Research</option>
                       <option value="other" className="bg-[#011424]">Other</option>
                     </select>
                   </div>
