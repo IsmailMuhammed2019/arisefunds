@@ -74,68 +74,6 @@ export default function NewsSection() {
             </div>
           </AnimatedWrapper>
 
-          {/* SECONDARY: Right Column (2 stacked cards) */}
-          <div className="flex flex-col gap-6 lg:gap-8 justify-between">
-            {/* Card 1 */}
-            <AnimatedWrapper
-              type="fade-up"
-              delay={0.1}
-              className="bg-[#071428] hover:bg-[#0a1f3a] p-8 rounded-xl border border-cyan-900/20 shadow-xl shadow-black/10 transition-colors duration-300 flex-1 flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center gap-3 text-xs mb-4">
-                  <span className="bg-cyan-950/40 border border-cyan-400/30 text-cyan-400 px-2.5 py-1 rounded font-semibold uppercase tracking-wider">
-                    Milestone
-                  </span>
-                  <span className="text-slate-400 font-mono">Jan 2026</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 leading-snug text-white hover:text-cyan-400 transition-colors">
-                  First cohort placement begins in Lagos
-                </h3>
-                <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                  Arise Funds portfolio company SBTS Group commences placement of the initial cybersecurity cohort into active enterprise SOC contracts.
-                </p>
-              </div>
-              <div>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm uppercase tracking-wider transition-colors"
-                >
-                  Read update &rarr;
-                </a>
-              </div>
-            </AnimatedWrapper>
-
-            {/* Card 2 */}
-            <AnimatedWrapper
-              type="fade-up"
-              delay={0.2}
-              className="bg-[#071428] hover:bg-[#0a1f3a] p-8 rounded-xl border border-cyan-900/20 shadow-xl shadow-black/10 transition-colors duration-300 flex-1 flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center gap-3 text-xs mb-4">
-                  <span className="bg-cyan-950/40 border border-cyan-400/30 text-cyan-400 px-2.5 py-1 rounded font-semibold uppercase tracking-wider">
-                    Footprint
-                  </span>
-                  <span className="text-slate-400 font-mono">Dec 2025</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 leading-snug text-white hover:text-cyan-400 transition-colors">
-                  Operations expand to Freetown, Sierra Leone
-                </h3>
-                <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                  Laying local infrastructure for the World Bank-supported digital economy pathways program in collaboration with SLDTP.
-                </p>
-              </div>
-              <div>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm uppercase tracking-wider transition-colors"
-                >
-                  Read update &rarr;
-                </a>
-              </div>
-            </AnimatedWrapper>
-          </div>
         </div>
       </div>
     </section>
