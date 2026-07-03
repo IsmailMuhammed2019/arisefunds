@@ -25,7 +25,7 @@ const InvestmentThesis = () => {
 
       {/* Content Grid */}
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-16 relative z-10">
-        
+
         {/* Left: Image Column */}
         <AnimatedWrapper
           type="slide-in"
@@ -63,7 +63,7 @@ const InvestmentThesis = () => {
               demand exists, and worker motivation exists, but structural
               disconnects prevent people from accessing dignified,
               income-generating work at scale. This is true in Lagos. It is
-              equally true in Louisville
+              equally true in Louisville.
             </p>
 
             <p>

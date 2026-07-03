@@ -44,7 +44,7 @@ const ICBM_STAGES: Stage[] = [
       label: "Investor Signal — Stage 02",
       headline: "Infrastructure Access Unlocks Underserved Labour Markets",
       body:
-        "By pre-financing devices and connectivity, the ICBM model reaches talent pools that institutional investors cannot access through conventional channels. This creates a supply-side advantage that is structurally insulated from competitor replication.",
+        "By pre-financing devices and connectivity, the ICBM model reaches talent pools that institutional investors cannot access through conventional channels.",
       metrics: [
         { value: "8", note: "Countries Reached" },
         { value: "50%", note: "Young Women in Cohorts" },
@@ -65,7 +65,7 @@ const ICBM_STAGES: Stage[] = [
       metrics: [
         { value: "5", note: "Digital Pathways" },
         { value: "800+", note: "Courses Delivered" },
-        { value: "Pre-hired", note: "Employer Commitments" },
+        { value: "Verified", note: "Employer Demand" },
       ],
     },
   },
@@ -82,7 +82,7 @@ const ICBM_STAGES: Stage[] = [
       metrics: [
         { value: "Intl.", note: "Recognised Certifications" },
         { value: "Global", note: "Placement Geography" },
-        { value: "Stage 4", note: "Employer Trust Layer" },
+        { value: "Verified", note: "Employer Trust Layer" },
       ],
     },
   },
@@ -90,16 +90,16 @@ const ICBM_STAGES: Stage[] = [
     id: 5,
     tag: "Employment Creation",
     title: "Employ",
-    desc: "Verified employment placement — into BPO operations, government contracts, and private sector partnerships. Training leads directly to income-generating work.",
+    desc: "Verified employment placement — into BPO and SOC operations, government contracts, and private sector partnerships. Training leads directly to income-generating work.",
     featured: true,
     signal: {
       label: "Investor Signal — Stage 05 · Primary Return Event",
       headline: "Employment Is the Revenue Trigger",
       body:
-        "This is the single most important stage for investor return. Verified placement activates income-linked repayments from graduates, triggers employer-side revenue from BPO contracts, and generates the outcome data required by DFIs and development banks for follow-on deployment.",
+        "Verified placement activates income-linked repayments from graduates, triggers employer-side revenue from BPO and SOC contracts, and generates the outcome data required by DFIs and development banks for follow-on deployment",
       metrics: [
         { value: "50K+", note: "Employment Target by 2029" },
-        { value: "Cohort 1", note: "Employment Confirmed" },
+        { value: "Phase 1", note: "Employment Confirmed" },
         { value: "Cohort 2", note: "Active Now" },
       ],
     },
@@ -113,9 +113,9 @@ const ICBM_STAGES: Stage[] = [
       label: "Investor Signal — Stage 06",
       headline: "Career Advancement Increases Repayment Capacity Over Time",
       body:
-        "As graduates move into senior roles, their income — and therefore repayment capacity — increases. The ICBM model tracks 12-month retention as its primary success metric, not training completion rates. This creates a long-duration income stream per graduate.",
+        "As graduates move into senior roles, their income — and therefore repayment capacity — increases. The ICBM model tracks 12-month retention as its primary success metric, not training completion rates. This creates a long-duration income stream per graduate",
       metrics: [
-        { value: "12mo", note: "Retention KPI" },
+        { value: "Long Term", note: "Retention KPI" },
         { value: "↑ Income", note: "Senior Role Advancement" },
         { value: "Long-dur.", note: "Income Stream Per Graduate" },
       ],
@@ -176,25 +176,23 @@ export default function ICBM() {
                     <button
                       onClick={() => setActiveId(stage.id)}
                       aria-label={`Select stage ${stage.id}: ${stage.title}`}
-                      className={`w-10 h-10 rounded-full border flex items-center justify-center font-mono text-xs tracking-widest font-bold shrink-0 transition-all duration-200 cursor-pointer ${
-                        isActive
-                          ? stage.featured
-                            ? "bg-cyan-500 border-cyan-400 text-slate-900 shadow-[0_0_16px_rgba(34,211,238,0.4)]"
-                            : stage.reinvest
+                      className={`w-10 h-10 rounded-full border flex items-center justify-center font-mono text-xs tracking-widest font-bold shrink-0 transition-all duration-200 cursor-pointer ${isActive
+                        ? stage.featured
+                          ? "bg-cyan-500 border-cyan-400 text-slate-900 shadow-[0_0_16px_rgba(34,211,238,0.4)]"
+                          : stage.reinvest
                             ? "bg-cyan-900/60 border-cyan-400/60 text-cyan-300"
                             : "bg-cyan-500/20 border-cyan-400 text-cyan-300 shadow-[0_0_12px_rgba(34,211,238,0.2)]"
-                          : "bg-[#0a1f3a] border-cyan-900/50 text-slate-500 hover:border-cyan-500/40 hover:text-slate-300"
-                      }`}
+                        : "bg-[#0a1f3a] border-cyan-900/50 text-slate-500 hover:border-cyan-500/40 hover:text-slate-300"
+                        }`}
                     >
                       {String(stage.id).padStart(2, "0")}
                     </button>
                     {!isLast && (
                       <div
-                        className={`flex-1 w-px mt-1 mb-1 min-h-[20px] transition-colors duration-200 ${
-                          stage.id < activeId
-                            ? "bg-cyan-500/40"
-                            : "bg-cyan-900/30"
-                        } ${stage.reinvest ? "opacity-50" : ""}`}
+                        className={`flex-1 w-px mt-1 mb-1 min-h-[20px] transition-colors duration-200 ${stage.id < activeId
+                          ? "bg-cyan-500/40"
+                          : "bg-cyan-900/30"
+                          } ${stage.reinvest ? "opacity-50" : ""}`}
                       />
                     )}
                   </div>
@@ -202,15 +200,14 @@ export default function ICBM() {
                   {/* Right: Card */}
                   <button
                     onClick={() => setActiveId(stage.id)}
-                    className={`flex-1 text-left rounded-sm mb-0.5 ml-4 px-6 py-5 border-l-2 border transition-all duration-200 cursor-pointer ${
-                      isActive
-                        ? stage.featured
-                          ? "bg-cyan-950/40 border-cyan-400/50 border-l-cyan-400"
-                          : stage.reinvest
+                    className={`flex-1 text-left rounded-sm mb-0.5 ml-4 px-6 py-5 border-l-2 border transition-all duration-200 cursor-pointer ${isActive
+                      ? stage.featured
+                        ? "bg-cyan-950/40 border-cyan-400/50 border-l-cyan-400"
+                        : stage.reinvest
                           ? "bg-[#0a1f3a]/80 border-cyan-700/40 border-l-cyan-600/50 border-dashed border-l-solid"
                           : "bg-[#0a1f3a] border-cyan-800/40 border-l-cyan-500"
-                        : "bg-[#071428] border-cyan-900/20 border-l-cyan-900/30 hover:bg-[#0a1f3a] hover:border-l-cyan-700/50"
-                    }`}
+                      : "bg-[#071428] border-cyan-900/20 border-l-cyan-900/30 hover:bg-[#0a1f3a] hover:border-l-cyan-700/50"
+                      }`}
                   >
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-mono">
@@ -223,16 +220,14 @@ export default function ICBM() {
                       )}
                     </div>
                     <h3
-                      className={`text-lg font-bold tracking-tight mb-1 transition-colors duration-200 ${
-                        isActive ? "text-white" : "text-slate-300"
-                      }`}
+                      className={`text-lg font-bold tracking-tight mb-1 transition-colors duration-200 ${isActive ? "text-white" : "text-slate-300"
+                        }`}
                     >
                       {stage.title}
                     </h3>
                     <p
-                      className={`text-sm leading-relaxed transition-colors duration-200 ${
-                        isActive ? "text-slate-300" : "text-slate-500"
-                      }`}
+                      className={`text-sm leading-relaxed transition-colors duration-200 ${isActive ? "text-slate-300" : "text-slate-500"
+                        }`}
                     >
                       {stage.desc}
                     </p>
