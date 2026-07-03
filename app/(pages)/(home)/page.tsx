@@ -1,7 +1,6 @@
 import NavBar from "@/components/NavBar";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import Hero from "@/components/Hero";
-import WACCSection from "@/components/WACCSection";
 import InvestmentThesis from "@/components/InvestmentThesis";
 import HowWeWork from "@/components/HowWeWork";
 import TalentInfrastructure from "@/components/TalentInfrastructure";
@@ -20,7 +19,6 @@ export default function HomePage() {
       <NavBar />
       <AnnouncementBanner />
       <Hero />
-      <WACCSection />
       <InvestmentThesis />
       <HowWeWork />
       <TalentInfrastructure />

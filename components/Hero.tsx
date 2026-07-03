@@ -6,12 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BackgroundGlow, MagneticWrapper, ParallaxElement } from "./AdvancedEffects";
 import { useModal } from "@/context/ModalContext";
 
-const STATS = [
-  { value: "50K+", label: "Employment Target" },
-  { value: "8", label: "Countries" },
-  { value: "50%", label: "Young Women" },
-  { value: "Jan 2026", label: "First Cohort Employed" },
-];
+
 
 const slides = [
   {
@@ -210,19 +205,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Stat Bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 bg-[#04122c]/80 backdrop-blur-md border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-            {STATS.map((stat, i) => (
-              <div key={i} className="flex flex-col items-center justify-center py-4 px-4">
-                <span className="text-xl sm:text-2xl font-extrabold text-cyan-300 tracking-tight">{stat.value}</span>
-                <span className="text-[10px] sm:text-xs text-slate-400 uppercase tracking-widest mt-0.5 text-center">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* 5. Minimal Slide Dashboard Indicators (Bottom-Right aligned) */}
       <div className="absolute bottom-16 right-6 sm:right-12 z-30 flex items-center gap-2">
