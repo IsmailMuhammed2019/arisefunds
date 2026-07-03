@@ -7,7 +7,7 @@ const outcomes = [
   { icon: "/young.png", text: "50K Youth Employment Target" },
   { icon: "/countries.png", text: "8 Countries – Current Footprint" },
   { icon: "/stage.png", text: "7 Stage Talent Economy Flywheel" },
-  { icon: "/sdk.png", text: "Young Women – Every Cohort" },
+  { icon: "/sdk.png", text: "50% young women target – Every Cohort" },
 ];
 
 export default function PortfolioInvestment() {
@@ -41,8 +41,7 @@ export default function PortfolioInvestment() {
             First Portfolio <span className="text-cyan-400 font-semibold">Investment</span>
           </h2>
           <p className="text-slate-350 text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-light">
-            Arise Funds actively builds and expands the employer network that
-            absorbs ICBM graduates
+            Arise Funds builds the employer network that hires ICBM graduates.
           </p>
         </AnimatedWrapper>
 
@@ -58,13 +57,6 @@ export default function PortfolioInvestment() {
 
             <AnimatedWrapper type="fade-up" delay={0.3}>
               <div className="space-y-6 text-slate-300 text-base leading-relaxed mb-8 font-light">
-                <p>
-                  SBTS Group LLC is the first company financed and operationally
-                  supported by Arise Funds &mdash; and the live demonstration that
-                  Workforce Infrastructure Investing works. In January 2026, the first
-                  cohort of ICBM graduates began earning income in verified digital
-                  economy roles.
-                </p>
                 <p>
                   SBTS Group LLC is the first company financed and operationally
                   supported by Arise Funds &mdash; and the live demonstration that
@@ -116,7 +108,7 @@ export default function PortfolioInvestment() {
                 onClick={togglePlay}
               />
               {!isPlaying && (
-                <div 
+                <div
                   onClick={togglePlay}
                   className="absolute inset-0 flex items-center justify-center bg-black/40 cursor-pointer transition-opacity duration-300 z-10 animate-fade-in"
                 >
