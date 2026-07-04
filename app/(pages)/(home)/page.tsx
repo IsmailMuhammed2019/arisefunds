@@ -3,7 +3,6 @@ import AnnouncementBanner from "@/components/AnnouncementBanner";
 import Hero from "@/components/Hero";
 import InvestmentThesis from "@/components/InvestmentThesis";
 import HowWeWork from "@/components/HowWeWork";
-import TalentInfrastructure from "@/components/TalentInfrastructure";
 import Partnerships from "@/components/Partnerships";
 import PartnersSection from "@/components/PartnersSection";
 import NewsSection from "@/components/NewsSection";
@@ -21,7 +20,6 @@ export default function HomePage() {
       <Hero />
       <InvestmentThesis />
       <HowWeWork />
-      <TalentInfrastructure />
       <Partnerships />
       <PartnersSection />
       <NewsSection />

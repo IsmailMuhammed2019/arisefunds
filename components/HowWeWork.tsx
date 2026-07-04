@@ -28,7 +28,7 @@ const steps = [
     id: "03 — SCALE",
     title: (
       <>
-        Transition to <em className="text-cyan-450 not-italic text-cyan-400">institutional capital</em> at scale.
+        Transition to <em className="text-cyan-400 not-italic">institutional capital</em> at scale.
       </>
     ),
     description:
