@@ -21,30 +21,6 @@ const slides = [
     image: "/slider1_image.png",
     imageAlt: "Investing in the Infrastructure of Work",
   },
-  {
-    tag: "Capital & Operations",
-    title: (
-      <>
-        Upgrading <span className="text-cyan-400 font-bold">Work</span> Infrastructure
-      </>
-    ),
-    description:
-      "Arise Funds invests in workforce development and tech companies, providing capital and operational support to build scalable businesses that generate returns and create jobs.",
-    image: "/slider2_image.png",
-    imageAlt: "Upgrading Work Infrastructure",
-  },
-  {
-    tag: "Sustainable Scaling",
-    title: (
-      <>
-        Building a Stronger Work <span className="text-cyan-400 font-bold">Foundation</span>
-      </>
-    ),
-    description:
-      "Arise Funds is an impact investment firm that combines capital and operational expertise to drive growth in workforce development and tech companies. We build the institutional systems that generate returns and create employment at scale.",
-    image: "/slider3_image.png",
-    imageAlt: "Building a Stronger Work Foundation",
-  },
 ];
 
 export default function Hero() {
@@ -213,11 +189,10 @@ export default function Hero() {
             key={index}
             onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
-            className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
-              index === currentIndex
+            className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${index === currentIndex
                 ? "w-12 bg-cyan-400 opacity-100 shadow-[0_0_8px_#22d3ee]"
                 : "w-6 bg-white/20 hover:bg-white/40 opacity-60 hover:opacity-100"
-            }`}
+              }`}
           />
         ))}
       </div>
