@@ -200,7 +200,7 @@ export default function Hero() {
       </div>
 
       {/* 6. Premium Glassmorphic Left/Right Navigation Arrows (Desktop overlay only) */}
-      <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 hidden md:flex justify-between pointer-events-none z-30">
+      {/* <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 hidden md:flex justify-between pointer-events-none z-30">
         <button
           onClick={prevSlide}
           className="p-3 rounded-full bg-black/25 hover:bg-black/45 border border-white/10 text-white/70 hover:text-cyan-400 hover:border-cyan-400/30 transition-all pointer-events-auto backdrop-blur-md cursor-pointer"
@@ -215,7 +215,7 @@ export default function Hero() {
         >
           <ChevronRight className="w-6 h-6" />
         </button>
-      </div>
+      </div> */}
 
       {/* 7. Mobile Arrow Controls */}
       {/* <div className="absolute bottom-6 left-6 z-30 flex gap-2 md:hidden">
