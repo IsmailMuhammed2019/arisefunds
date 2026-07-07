@@ -40,11 +40,6 @@ export default function PartnerTop() {
                 employer-integrated model.
               </p>
             </div>
-            <AnimatedWrapper hover tap type="scale" delay={0.4} className="inline-block">
-              <button className="inline-flex items-center gap-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-6 py-3.5 shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:scale-[1.03] active:scale-95 cursor-pointer">
-                Request the Investor Brief
-              </button>
-            </AnimatedWrapper>
           </AnimatedWrapper>
 
           {/* Right side - Image */}
