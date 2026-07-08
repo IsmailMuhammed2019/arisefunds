@@ -56,10 +56,19 @@ export default function ContactModal() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // Construct the mailto link to actually send to monitored inbox
+    const subject = encodeURIComponent(`Arise Funds Inquiry from ${formData.firstName} ${formData.lastName}`);
+    const body = encodeURIComponent(
+      `First Name: ${formData.firstName}\n` +
+      `Last Name: ${formData.lastName}\n` +
+      `Email Address: ${formData.email}\n` +
+      `Reaching out as: ${formData.role}\n` +
+      `Organization: ${formData.organization}\n\n` +
+      `Message:\n${formData.message}`
+    );
     
-    console.log("Form Submitted:", formData);
+    window.location.href = `mailto:info@arisefunds.com?subject=${subject}&body=${body}`;
+    
     setIsSubmitting(false);
     setIsSuccess(true);
     
@@ -114,14 +123,14 @@ export default function ContactModal() {
             <div className="lg:w-2/5 p-8 lg:p-12 bg-gradient-to-br from-cyan-600 to-blue-700 text-white relative overflow-hidden flex flex-col justify-between">
               <div className="relative z-10">
                 <div className="inline-block p-3 bg-white/10 rounded-2xl backdrop-blur-md mb-8">
-                  <img src="/ariseFunds_logoCircle.png" alt="Logo" className="w-10 h-10" />
+                  <img src="/ariseFunds_logoCircle.png" alt="Logo" className="h-10 w-auto object-contain" />
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-bold mb-6 tracking-tight leading-tight">
                   Arise Funds <br />
                   <span className="text-white/70">Institutional Inquiry</span>
                 </h2>
                 <p className="text-lg text-white/80 leading-relaxed mb-8">
-                  We are building the systems that generate returns and create employment at scale. Connect with our partnership team.
+                  We are building the systems that generate returns and create employment at scale. If you’re an investor, institution, or partner financing the future of work, get in touch.
                 </p>
               </div>
 
@@ -246,7 +255,7 @@ export default function ContactModal() {
                     )}
                   </button>
                   <p className="text-[9px] text-center text-slate-500 tracking-wider uppercase">
-                    Your information is protected by secure institutional encryption
+                    Your information is transmitted securely.
                   </p>
                 </form>
               )}

@@ -26,7 +26,19 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
+    
+    // Construct the mailto link to actually send to monitored inbox
+    const subject = encodeURIComponent(`Arise Funds Inquiry from ${formData.firstName} ${formData.lastName}`);
+    const body = encodeURIComponent(
+      `First Name: ${formData.firstName}\n` +
+      `Last Name: ${formData.lastName}\n` +
+      `Email Address: ${formData.email}\n` +
+      `Reaching out as: ${formData.role}\n` +
+      `Organization: ${formData.organization}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:info@arisefunds.com?subject=${subject}&body=${body}`;
   };
 
   return (
