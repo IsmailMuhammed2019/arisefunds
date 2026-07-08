@@ -166,9 +166,7 @@ export default function Hero() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 gap-4 pt-2">
                   <MagneticWrapper>
                     <a
-                      href="https://icbm.dbi.edu.ng"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/howWeWork"
                       className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-8 py-4 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400 cursor-pointer"
                     >
                       See How it Works

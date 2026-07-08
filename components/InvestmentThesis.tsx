@@ -3,6 +3,7 @@
 import React, { useState, useRef } from "react";
 import Link from "next/link";
 import AnimatedWrapper from "./AnimatedWrapper";
+import { useModal } from "@/context/ModalContext";
 
 const portfolioItems = [
   { name: "Vultcore", href: "https://vultcore.com" },
@@ -14,6 +15,7 @@ const portfolioItems = [
 
 export default function InvestmentThesis() {
   const [isPlayClicked, setIsPlayClicked] = useState(false);
+  const { openContactModal } = useModal();
 
   return (
     <section id="investment-thesis" className="bg-[#04122c] text-white py-24 px-6 sm:px-8 lg:px-12 relative overflow-hidden border-t border-cyan-950/20 font-sans">
@@ -43,6 +45,60 @@ export default function InvestmentThesis() {
             </p>
           </AnimatedWrapper>
         </div>
+
+        {/* INSTITUTIONAL RELATIONSHIPS BAR (from screenshot) */}
+        <div className="border-t border-b border-cyan-900/20 py-8">
+          <AnimatedWrapper 
+            type="fade-up" 
+            className="flex flex-col md:flex-row md:items-center justify-between gap-6"
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
+              <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-cyan-400 font-bold">
+                Institutional Relationships
+              </span>
+              <div className="flex flex-wrap items-center gap-6 text-sm md:text-base font-bold text-white">
+                <span>World Bank / SLDTP</span>
+                <span className="text-slate-600 hidden sm:inline">|</span>
+                <span>Digital Bridge Institute</span>
+              </div>
+            </div>
+
+            <div>
+              <Link 
+                href="/partners" 
+                className="text-cyan-400 hover:text-cyan-300 font-semibold text-xs uppercase tracking-wider transition-colors inline-flex items-center gap-1.5"
+              >
+                Meet our partners &rarr;
+              </Link>
+            </div>
+          </AnimatedWrapper>
+        </div>
+
+        {/* CONTACT CTA CARD (from screenshot) */}
+        <AnimatedWrapper 
+          type="fade-up"
+          className="bg-[#05162e]/60 border border-cyan-900/30 p-10 rounded-3xl shadow-2xl relative overflow-hidden text-center space-y-6 max-w-5xl mx-auto"
+        >
+          <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-cyan-500/40 to-transparent" />
+
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white max-w-2xl mx-auto leading-tight">
+            Let&apos;s talk about building workforce infrastructure
+          </h3>
+
+          <p className="text-slate-300 text-sm leading-relaxed max-w-2xl mx-auto font-light">
+            For impact investors, development finance institutions, government bodies, and like-minded partners financing the future of work.
+          </p>
+
+          <div className="pt-2">
+            <button
+              onClick={openContactModal}
+              className="inline-flex items-center justify-center rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-8 py-3 shadow-lg shadow-cyan-500/15 transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer text-xs"
+            >
+              Get in touch &rarr;
+            </button>
+          </div>
+        </AnimatedWrapper>
+
 
         {/* SECTION 2: THE MODEL, IN OPERATION (Left text, right video player) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
