@@ -1,56 +1,33 @@
-// components/TalentInfrastructure.tsx
+"use client";
+
 import React from "react";
 import AnimatedWrapper from "./AnimatedWrapper";
 
-const TalentInfrastructure = () => {
+export default function TalentInfrastructure() {
   return (
-    <section className="bg-[#1A93D9] py-24 px-6 relative overflow-hidden text-center">
-      {/* Topographic Side Decorations 
-        Note: Ensure these images exist in your public folder or use SVGs 
-      */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-32 md:w-56 opacity-40 pointer-events-none">
-        <img
-          src="/topo-left.png"
-          alt=""
-          className="w-full h-auto object-contain"
-        />
-      </div>
+    <section className="bg-[#021526] py-20 px-6 md:px-20 text-center text-white relative overflow-hidden border-t border-cyan-950/20">
+      {/* Subtle Background Glows */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl pointer-events-none" />
 
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-32 md:w-56 opacity-40 pointer-events-none">
-        <img
-          src="/topo-right.png"
-          alt=""
-          className="w-full h-auto object-contain"
-        />
-      </div>
-
-      {/* Main Content Container */}
-      <AnimatedWrapper
-        type="fade-up"
-        delay={0.2}
-        className="max-w-4xl mx-auto relative z-10"
-      >
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight">
-          Where talent meets <span className="text-[#4FB3E8]">work infrastructure.</span>
-        </h2>
-
-        <p className="text-white/90 text-sm md:text-lg leading-relaxed mb-12 max-w-2xl mx-auto font-medium">
-          From security operations centers to data analytics labs — across
-          Nigeria, Sierra Leone, the United States and beyond — Arise Funds
-          portfolio companies build the environments where real careers begin.
-        </p>
-
-        <AnimatedWrapper hover tap type="scale" delay={0.4}>
-          <button className="bg-white text-[#1A93D9] font-bold px-10 py-4 text-sm rounded-sm shadow-md hover:bg-slate-50 transition-all active:scale-95">
-            Get in Touch
-          </button>
+      <div className="max-w-4xl mx-auto relative z-10 space-y-4">
+        <AnimatedWrapper type="fade-up">
+          <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-cyan-400 font-bold">
+            Our Thesis
+          </span>
         </AnimatedWrapper>
-      </AnimatedWrapper>
+
+        <AnimatedWrapper type="fade-up" delay={0.1}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+            Talent is <span className="text-cyan-400">infrastructure.</span>
+          </h2>
+        </AnimatedWrapper>
+
+        <AnimatedWrapper type="fade-up" delay={0.2}>
+          <p className="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-light">
+            Nations that finance human capacity the way they finance physical infrastructure will define the next era of competitiveness.
+          </p>
+        </AnimatedWrapper>
+      </div>
     </section>
   );
-};
-
-/** * THE FIX: This line ensures Next.js can find the component
- * when you import it in your page.tsx
- */
-export default TalentInfrastructure;
+}

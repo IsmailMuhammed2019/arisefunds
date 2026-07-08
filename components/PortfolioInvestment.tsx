@@ -182,12 +182,14 @@ export default function PortfolioInvestment() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <video
-              src="/test.mp4"
-              controls
-              autoPlay
-              playsInline
-              className="w-full h-full object-cover"
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/cppiNLI4eiM?si=SG63WngAFiNxLGwJ&autoplay=1"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             />
           </div>
         </div>

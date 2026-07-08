@@ -1,84 +1,166 @@
-import React from "react";
+"use client";
+
+import React, { useState, useRef } from "react";
+import Link from "next/link";
 import AnimatedWrapper from "./AnimatedWrapper";
-import { ParallaxImage } from "./AdvancedEffects";
 
-const InvestmentThesis = () => {
+const portfolioItems = [
+  { name: "Vultcore", href: "https://vultcore.com" },
+  { name: "Kallmania", href: "https://kallmania.com" },
+  { name: "ICBM Nexus", href: "https://icbm.training" },
+  { name: "Aegis360AI", href: "https://aegis360ai.com" },
+  { name: "C1WT", href: "https://connectonemillionwomen.com" },
+];
+
+export default function InvestmentThesis() {
+  const [isPlayClicked, setIsPlayClicked] = useState(false);
+
   return (
-    <section id="investment-thesis" className="bg-[#021526] text-white py-20 px-6 md:px-20 font-sans relative overflow-hidden">
-      {/* Background Decorative Elements */}
-      {/* Center vertical dashed line */}
-      <div className="absolute top-0 bottom-0 left-1/2 w-[1px] -translate-x-1/2 border-l border-dashed border-cyan-500/20 z-0 pointer-events-none" />
+    <section id="investment-thesis" className="bg-[#04122c] text-white py-24 px-6 sm:px-8 lg:px-12 relative overflow-hidden border-t border-cyan-950/20 font-sans">
+      {/* Background Glows */}
+      <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-blue-500/5 blur-3xl pointer-events-none" />
 
-      {/* Header Section */}
-      <AnimatedWrapper
-        type="fade-up"
-        className="text-center mb-16 max-w-4xl mx-auto relative z-10"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          The Investment <span className="text-cyan-400 font-semibold">Thesis</span>
-        </h2>
-        <p className="text-slate-300 text-sm md:text-base leading-relaxed tracking-wide px-4 max-w-2xl mx-auto">
-          Providing the capital, operational infrastructure, and institutional
-          systems that make early-stage workforce companies investable
-        </p>
-      </AnimatedWrapper>
+      <div className="max-w-6xl mx-auto space-y-32 relative z-10">
+        
+        {/* SECTION 1: OUR THESIS (Centered text block) */}
+        <div className="text-center max-w-4xl mx-auto space-y-6">
+          <AnimatedWrapper type="fade-up">
+            <span className="text-xs font-mono uppercase tracking-[0.25em] text-cyan-400 font-bold">
+              Our Thesis
+            </span>
+          </AnimatedWrapper>
+          
+          <AnimatedWrapper type="fade-up" delay={0.1}>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+              Talent is <span className="text-cyan-400">infrastructure.</span>
+            </h2>
+          </AnimatedWrapper>
 
-      {/* Content Grid */}
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-16 relative z-10">
+          <AnimatedWrapper type="fade-up" delay={0.2}>
+            <p className="text-slate-305 text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-light">
+              Nations that finance human capacity the way they finance physical infrastructure will define the next era of competitiveness.
+            </p>
+          </AnimatedWrapper>
+        </div>
 
-        {/* Left: Image Column */}
-        <AnimatedWrapper
-          type="slide-in"
-          delay={0.2}
-          className="w-full md:w-1/2 relative"
-        >
-          {/* Horizontal dashed line extending to the left edge of the screen */}
-          <div className="absolute right-full w-screen top-1/2 -translate-y-1/2 border-t border-dashed border-cyan-500/25 pointer-events-none hidden md:block" />
-
-          {/* Image container with rounded corners and cyan border */}
-          <div className="relative overflow-hidden rounded-2xl border border-cyan-500/30 shadow-[0_20px_50px_rgba(0,0,0,0.3)] shadow-cyan-950/20 group">
-            <ParallaxImage
-              src="/thesis-infrastructure.png"
-              alt="Workforce Infrastructure"
-              className="aspect-[4/3] w-full object-cover"
-            />
-          </div>
-        </AnimatedWrapper>
-
-        {/* Right: Text Content Column */}
-        <AnimatedWrapper
-          type="fade-up"
-          delay={0.4}
-          className="w-full md:w-1/2 space-y-6"
-        >
-          <h3 className="text-3xl lg:text-5xl font-bold leading-tight">
-            We don&apos;t fund projects.{" "}
-            <span className="text-cyan-400">We finance infrastructure.</span>
-          </h3>
-
-          <div className="space-y-6 text-slate-300 text-sm md:text-base leading-relaxed">
-            <p>
-              The global workforce crisis is not a talent problem. It is a
-              systems coordination failure — training programs exist, employer
-              demand exists, and worker motivation exists, but structural
-              disconnects prevent people from accessing dignified,
-              income-generating work at scale. This is true in Lagos. It is
-              equally true in Louisville.
+        {/* SECTION 2: THE MODEL, IN OPERATION (Left text, right video player) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Text */}
+          <AnimatedWrapper type="slide-in" className="space-y-6">
+            <div className="space-y-2">
+              <span className="text-xs font-mono uppercase tracking-[0.25em] text-cyan-400 font-bold block">
+                The Model, In Operation
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
+                Proof you can watch
+              </h2>
+            </div>
+            
+            <p className="text-slate-300 text-base leading-relaxed font-light">
+              The ICBM model isn&apos;t a projection. Arise Funds capital builds real companies that generate revenue and hire graduates. Watch inside Kallmania &mdash; a portfolio company where ICBM graduates go to work.
             </p>
 
-            <p>
-              Arise Funds finances the infrastructure that resolves this
-              failure: workforce development and technology companies with
-              employer-integrated models, AI-enabled operations, and capital
-              structures designed to generate returns as employer revenue
-              scales. These are not training programs. They are human capital
-              enterprises.
+            <div>
+              <Link 
+                href="/howWeWork" 
+                className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm uppercase tracking-wider transition-colors inline-flex items-center gap-1.5"
+              >
+                See how it works &rarr;
+              </Link>
+            </div>
+          </AnimatedWrapper>
+
+          {/* Right Video Container */}
+          <AnimatedWrapper type="fade-in" delay={0.2}>
+            <div className="relative w-full aspect-[16/10] bg-slate-950/80 rounded-2xl overflow-hidden border border-white/10 shadow-2xl group cursor-pointer">
+              {!isPlayClicked ? (
+                <div 
+                  onClick={() => setIsPlayClicked(true)}
+                  className="absolute inset-0 w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src="https://img.youtube.com/vi/cppiNLI4eiM/maxresdefault.jpg"
+                    alt="Video Preview"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                  <div className="absolute inset-0 bg-black/10 transition-colors duration-300 group-hover:bg-black/25 flex items-center justify-center">
+                    <svg viewBox="0 0 68 48" className="w-16 h-auto text-[#FF0000] fill-current drop-shadow-md transition-transform duration-300 hover:scale-110">
+                      <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,0.15,34,0.15,34,0.15s-21.79,0-27.1,1.4c-2.93,0.78-4.64,3.26-5.42,6.19C0.08,13.05,0.08,24,0.08,24s0,10.95,1.4,16.26c0.78,2.93,2.49,5.41,5.42,6.19C12.21,47.85,34,47.85,34,47.85s21.79,0,27.1-1.4c2.93-0.78,4.64-3.26,5.42-6.19C67.92,34.95,67.92,24,67.92,24S67.92,13.05,66.52,7.74z" />
+                      <polygon points="27.38,34.25 45.08,24 27.38,13.75" fill="#FFF" />
+                    </svg>
+                  </div>
+                </div>
+              ) : (
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/cppiNLI4eiM?si=SG63WngAFiNxLGwJ&autoplay=1"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              )}
+            </div>
+          </AnimatedWrapper>
+        </div>
+
+        {/* SECTION 3: PROVEN DEPLOYMENT (Left text, right 5-button box) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Text */}
+          <AnimatedWrapper type="slide-in" className="space-y-6">
+            <div className="space-y-2">
+              <span className="text-xs font-mono uppercase tracking-[0.25em] text-cyan-400 font-bold block">
+                Proven Deployment
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
+                The model, proven — first portfolio investment
+              </h2>
+            </div>
+
+            <p className="text-slate-300 text-base leading-relaxed font-light">
+              SBTS Group LLC is the first company financed by Arise Funds. Its companies and platforms — Vultcore, Kallmania, ICBM Nexus, Aegis360AI, and C1WT — are real, operating, and hiring ICBM graduates.
             </p>
-          </div>
-        </AnimatedWrapper>
+
+            <div>
+              <Link 
+                href="/#portfolio" 
+                className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm uppercase tracking-wider transition-colors inline-flex items-center gap-1.5"
+              >
+                See the portfolio &rarr;
+              </Link>
+            </div>
+          </AnimatedWrapper>
+
+          {/* Right 5 Buttons Grid */}
+          <AnimatedWrapper type="fade-in" delay={0.2} className="w-full">
+            <div className="grid grid-cols-2 gap-4">
+              {portfolioItems.slice(0, 4).map((item, idx) => (
+                <a
+                  key={idx}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#071428] hover:bg-[#0a1f3a] p-5 text-center rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 block tracking-wide hover:scale-[1.02]"
+                >
+                  {item.name}
+                </a>
+              ))}
+              {/* 5th Card spans across both columns */}
+              <a
+                href={portfolioItems[4].href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="col-span-2 bg-[#071428] hover:bg-[#0a1f3a] p-5 text-center rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 block tracking-wide hover:scale-[1.02]"
+              >
+                {portfolioItems[4].name}
+              </a>
+            </div>
+          </AnimatedWrapper>
+        </div>
+
       </div>
     </section>
   );
-};
-
-export default InvestmentThesis;
+}

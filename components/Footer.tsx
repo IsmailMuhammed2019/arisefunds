@@ -4,13 +4,13 @@ import Link from "next/link";
 import { FaLinkedinIn } from "react-icons/fa";
 
 const navLinks = [
-  { label: "Our Thesis", href: "/#investment-thesis" },
-  { label: "How It Works", href: "/#how-it-works" },
-  { label: "ICBM", href: "/#icbm" },
-  { label: "Investors", href: "/partners" },
-  { label: "News", href: "/#news" },
+  { label: "Home", href: "/" },
+  { label: "How It Works", href: "/howWeWork" },
+  { label: "ICBM", href: "/icbm" },
+  { label: "Portfolio", href: "/#portfolio" },
   { label: "Team", href: "/#team" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Investors", href: "/partners" },
+  { label: "News", href: "/news" },
 ];
 
 const Footer: React.FC = () => {

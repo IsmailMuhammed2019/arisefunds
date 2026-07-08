@@ -10,7 +10,7 @@ import { useModal } from "@/context/ModalContext";
 
 const slides = [
   {
-    tag: "WORKFORCE INFRASTRUCTURE INVESTING.",
+    tag: "WORKFORCE INFRASTRUCTURE INVESTING",
     title: (
       <>
         Investing in the Infrastructure of <span className="text-cyan-400 font-bold">Work</span>
@@ -174,9 +174,9 @@ export default function Hero() {
                       See How it Works
                     </a>
                   </MagneticWrapper>
-                  <span className="text-sm text-slate-300">
+                  {/* <span className="text-sm text-slate-300">
                     Schedule a conversation with the team.
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </motion.div>
