@@ -55,8 +55,8 @@ export default function NewsSection() {
                 Workforce Capital model presented at WACC 2026
               </h3>
               {/* Desc */}
-              <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
-                Aisha Saaka Lewis addressed the West African Capital Conference, outlining Arise Funds&apos; model for pre-financed training, employer integration, and structural risk-sharing.
+              <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-6 font-light">
+                Aisha Saaka Lewis addressed the West Africa Convergence Conference (WACC), outlining Arise Funds&apos; model for pre-financed training, employer integration, and structural risk-sharing.
               </p>
             </div>
 

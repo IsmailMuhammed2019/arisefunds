@@ -1,38 +1,12 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import AnimatedWrapper from "./AnimatedWrapper";
-
-const PARTNERS = [
-  {
-    name: "World Bank / SLDTP",
-    description:
-      "The Sierra Leone Digital Transformation Programme (SLDTP), supported by the World Bank, provides the policy and funding framework within which the ICBM model operates — connecting institutional capital with on-the-ground workforce delivery.",
-    bg: "#002244",
-    accent: "#2BB0ED",
-    abbr: "WB",
-  },
-  {
-    name: "Digital Bridge Institute",
-    description:
-      "DBI is Nigeria's premier ICT training institution under the Federal Ministry of Communications. Arise Funds works alongside DBI to align curriculum standards, certification pathways, and employment pipelines at national scale.",
-    bg: "#003A1A",
-    accent: "#22c55e",
-    abbr: "DBI",
-  },
-  {
-    name: "C1WT",
-    description:
-      "C1WT (Cohort 1 Workforce Technology) is an Arise Funds portfolio company operating the ICBM delivery infrastructure — managing cohort intake, training delivery, employment placement, and outcome verification across Nigeria.",
-    bg: "#1a0a2e",
-    accent: "#a78bfa",
-    abbr: "C1WT",
-  },
-];
 
 export default function PartnersSection() {
   return (
-    <section id="partners" className="bg-[#04122c] py-24 px-6 sm:px-8 lg:px-12">
+    <section id="partners" className="bg-[#04122c] py-24 px-6 sm:px-8 lg:px-12 border-t border-cyan-950/20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <AnimatedWrapper type="fade-up" className="text-center mb-16 max-w-3xl mx-auto">
@@ -40,68 +14,73 @@ export default function PartnersSection() {
             Our Partners
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-            Institutional{" "}
-            <span className="text-cyan-400">Relationships</span>
+            Institutional <span className="text-cyan-400">Relationships</span>
           </h2>
-          <p className="text-slate-400 text-base leading-relaxed mt-4 max-w-2xl mx-auto">
+          <p className="text-slate-350 text-base leading-relaxed mt-4 max-w-2xl mx-auto font-light">
             Arise Funds works alongside globally recognised institutions to
             deploy capital, build infrastructure, and deliver measurable
             workforce outcomes.
           </p>
         </AnimatedWrapper>
 
-        {/* Partner Cards */}
-        <div className="grid gap-6 md:grid-cols-3">
-          {PARTNERS.map((partner, i) => (
+        <div className="max-w-6xl mx-auto space-y-6">
+          {/* Partner Cards: Two Column Grid */}
+          <div className="grid gap-6 md:grid-cols-2">
+            
+            {/* Card 1: World Bank / SLDTP */}
             <AnimatedWrapper
-              key={i}
               type="fade-up"
-              delay={0.15 + i * 0.1}
-              hover
-              className="rounded-2xl overflow-hidden border border-white/5"
+              delay={0.15}
+              className="bg-[#071428] hover:bg-[#0a1f3a] p-8 md:p-10 rounded-2xl border border-cyan-900/20 hover:border-cyan-500/20 transition-all duration-300 flex flex-col justify-start"
             >
-              <div
-                className="flex flex-col h-full"
-                style={{ backgroundColor: partner.bg }}
-              >
-              {/* Card Header Band */}
-              <div
-                className="px-6 py-5 flex items-center gap-4"
-                style={{ borderBottom: `1px solid ${partner.accent}22` }}
-              >
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center font-extrabold text-xs tracking-tight shrink-0"
-                  style={{
-                    backgroundColor: `${partner.accent}20`,
-                    border: `1px solid ${partner.accent}40`,
-                    color: partner.accent,
-                  }}
-                >
-                  {partner.abbr}
-                </div>
-                <h3 className="text-white font-bold text-base leading-tight">
-                  {partner.name}
-                </h3>
-              </div>
-
-              {/* Card Body */}
-              <div className="px-6 py-5 flex-1">
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  {partner.description}
-                </p>
-              </div>
-
-              {/* Accent footer line */}
-              <div
-                className="h-1 w-full"
-                style={{
-                  background: `linear-gradient(to right, ${partner.accent}60, transparent)`,
-                }}
-              />
-              </div>
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#2BB0ED] font-bold mb-3 block">
+                Government / Multilateral
+              </span>
+              <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
+                World Bank / SLDTP
+              </h3>
+              <p className="text-slate-400 text-sm leading-relaxed font-light">
+                SBTS Group is implementing a specialized cybersecurity capacity-building programme under the US$50 million World Bank-supported Sierra Leone Digital Transformation Programme (SLDTP). Arise Funds provides the catalytic funding and digital infrastructure that support programme delivery through the ICBM and Nexus LMS platforms, preparing professionals for globally recognized cybersecurity certifications while strengthening Sierra Leone's national cyber resilience.
+              </p>
             </AnimatedWrapper>
-          ))}
+
+            {/* Card 2: Digital Bridge Institute */}
+            <AnimatedWrapper
+              type="fade-up"
+              delay={0.25}
+              className="bg-[#071428] hover:bg-[#0a1f3a] p-8 md:p-10 rounded-2xl border border-cyan-900/20 hover:border-cyan-500/20 transition-all duration-300 flex flex-col justify-start"
+            >
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-emerald-400 font-bold mb-3 block">
+                Training Institution
+              </span>
+              <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
+                Digital Bridge Institute
+              </h3>
+              <p className="text-slate-400 text-sm leading-relaxed font-light">
+                Arise Funds provides the catalytic capital behind the Intelligent Capacity Building Model (ICBM), supporting SBTS Group's partnership with the Digital Bridge Institute to train 50,000 Nigerians for high-demand digital careers. By de-risking early programme delivery and investing in workforce infrastructure, Arise Funds helps unlock larger institutional investment for national-scale skills development.
+              </p>
+            </AnimatedWrapper>
+
+          </div>
+
+          {/* Bottom Clarification Banner: Partners vs. Portfolio */}
+          <AnimatedWrapper
+            type="fade-up"
+            delay={0.35}
+            className="bg-[#071428] hover:bg-[#0a1f3a] p-8 rounded-2xl border border-cyan-900/20 hover:border-cyan-500/20 transition-all duration-300"
+          >
+            <h4 className="text-base font-bold text-white mb-2">
+              Partners vs. portfolio
+            </h4>
+            <p className="text-slate-400 text-sm leading-relaxed font-light">
+              These are independent institutions Arise Funds works alongside. The companies and products SBTS Group LLC has built with Arise Funds capital &mdash; including Vultcore, Kallmania, ICBM Nexus, Aegis360AI, and C1WT &mdash; are shown separately under{" "}
+              <Link href="/#portfolio" className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold inline-flex items-center gap-1">
+                Portfolio &rarr;
+              </Link>
+            </p>
+          </AnimatedWrapper>
         </div>
+
       </div>
     </section>
   );

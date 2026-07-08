@@ -89,7 +89,7 @@ export default function PortfolioInvestment() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
-    <section className="py-24 bg-[#03112c] text-white relative overflow-hidden border-t border-cyan-950/20">
+    <section id="portfolio" className="py-24 bg-[#03112c] text-white relative overflow-hidden border-t border-cyan-950/20">
       {/* Background gradients */}
       <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl pointer-events-none" />

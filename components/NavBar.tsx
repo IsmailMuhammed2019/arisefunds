@@ -32,16 +32,28 @@ export default function NavBar() {
                 href="/howWeWork"
                 className="hover:text-white transition-colors"
               >
-                How we work
+                How it work
               </Link>
               <Link href="/icbm" className="hover:text-white transition-colors">
                 ICBM
               </Link>
               <Link
+                href="/#portfolio"
+                className="hover:text-white transition-colors"
+              >
+                Portfolio
+              </Link>
+              <Link
+                href="/#team"
+                className="hover:text-white transition-colors"
+              >
+                Team
+              </Link>
+              <Link
                 href="/partners"
                 className="hover:text-white transition-colors"
               >
-                Partners
+                Investors
               </Link>
               <Link
                 href="/news"
@@ -92,11 +104,25 @@ export default function NavBar() {
                 ICBM
               </Link>
               <Link
+                href="/#portfolio"
+                className="block rounded-2xl px-4 py-3 text-white hover:bg-white/10"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Portfolio
+              </Link>
+              <Link
+                href="/#team"
+                className="block rounded-2xl px-4 py-3 text-white hover:bg-white/10"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Team
+              </Link>
+              <Link
                 href="/partners"
                 className="block rounded-2xl px-4 py-3 text-white hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Partners
+                Investors
               </Link>
               <Link
                 href="/news"
