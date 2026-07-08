@@ -84,6 +84,7 @@ const Footer: React.FC = () => {
                   arisefunds.com
                 </a>
               </li>
+              <li>Washington DC, USA.</li>
             </ul>
           </div>
         </div>
