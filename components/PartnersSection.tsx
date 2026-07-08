@@ -17,7 +17,7 @@ export default function PartnersSection() {
             Institutional <span className="text-cyan-400">Relationships</span>
           </h2>
           <p className="text-slate-350 text-base leading-relaxed mt-4 max-w-2xl mx-auto font-light">
-            Arise Funds works alongside globally recognised institutions to
+            Arise Funds works alongside globally recognized institutions to
             deploy capital, build infrastructure, and deliver measurable
             workforce outcomes.
           </p>
@@ -40,7 +40,7 @@ export default function PartnersSection() {
                 World Bank / SLDTP
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed font-light">
-                SBTS Group is implementing a specialized cybersecurity capacity-building programme under the US$50 million World Bank-supported Sierra Leone Digital Transformation Programme (SLDTP). Arise Funds provides the catalytic funding and digital infrastructure that support programme delivery through the ICBM and Nexus LMS platforms, preparing professionals for globally recognized cybersecurity certifications while strengthening Sierra Leone's national cyber resilience.
+                SBTS Group is implementing a specialized cybersecurity capacity-building program under the US$50 million World Bank-supported Sierra Leone Digital Transformation Program (SLDTP). Arise Funds provides the catalytic funding and digital infrastructure that support program delivery through the ICBM and Nexus LMS platforms, preparing professionals for globally recognized cybersecurity certifications while strengthening Sierra Leone's national cyber resilience.
               </p>
             </AnimatedWrapper>
 
@@ -57,7 +57,7 @@ export default function PartnersSection() {
                 Digital Bridge Institute
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed font-light">
-                Arise Funds provides the catalytic capital behind the Intelligent Capacity Building Model (ICBM), supporting SBTS Group's partnership with the Digital Bridge Institute to train 50,000 Nigerians for high-demand digital careers. By de-risking early programme delivery and investing in workforce infrastructure, Arise Funds helps unlock larger institutional investment for national-scale skills development.
+                Arise Funds provides the catalytic capital behind the Intelligent Capacity Building Model (ICBM), supporting SBTS Group's partnership with the Digital Bridge Institute to train 50,000 Nigerians for high-demand digital careers. By de-risking early program delivery and investing in workforce infrastructure, Arise Funds helps unlock larger institutional investment for national-scale skills development.
               </p>
             </AnimatedWrapper>
 

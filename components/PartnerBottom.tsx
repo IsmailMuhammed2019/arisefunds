@@ -26,7 +26,7 @@ export default function PartnerBottom() {
               Seeking <span className="text-cyan-400">Aligned Capital</span> Partners
             </>
           }
-          desc="Arise Funds is currently in active conversation with DFIs, impact foundations, and family offices. We are building a blended capital facility to accelerate the ICBM Nigeria deployment and fund expansion into new markets. Minimum commitment and terms are discussed directly — request the Investor Brief to begin that conversation."
+          desc="Arise Funds is currently in active conversation with DFIs, impact foundations, and family offices. We are building a blended capital facility to accelerate the ICBM Nigeria deployment and fund expansion into new markets. Minimum commitment and terms are discussed directly — get in touch to begin that conversation."
         />
 
         {/* ROW 3 */}
@@ -37,7 +37,7 @@ export default function PartnerBottom() {
               ICBM Nigeria — <span className="text-cyan-400">50,000 Employment</span> Target
             </>
           }
-          desc="Our flagship deployment — currently operating across Abuja and Enugu — is the proof-of-model that anchors our institutional capital raise. ICBM Nigeria — Cohort 1: Phase 1 employment confirmed, Phase 2 in progress. Cohort 2 active. 50,000 target by 2029."
+          desc="Our flagship deployment — currently operating across Abuja and Enugu — is the proof-of-model that anchors our institutional capital raise. ICBM Nigeria — Cohort 1: Phase 1 completed, Phase 2 in progress. Cohort 2 active. 50,000 target by 2029."
         />
 
         {/* ROW 4 */}

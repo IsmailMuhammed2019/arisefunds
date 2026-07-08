@@ -14,14 +14,14 @@ const PILLARS = [
     title: "Institutional Capital",
     sub: "Governance, standards & quality systems",
     detail:
-      "Training organisations must themselves become stronger. They need governance, human resource systems, standard operating procedures, employer engagement, quality assurance, and modern curricula. The measure of success is not enrolment — it is employability. The new model must be: train, assess, employ, build, export, reinvest, and scale.",
+      "Training organizations must themselves become stronger. They need governance, human resource systems, standard operating procedures, employer engagement, quality assurance, and modern curricula. The measure of success is not enrollment — it is employability. The new model must be: train, assess, employ, build, export, reinvest, and scale.",
   },
   {
     num: "02",
     title: "Infrastructure Capital",
     sub: "Dormant assets → productive digital hubs",
     detail:
-      "Across Nigeria and Africa there are underutilised buildings, dormant campuses, old training facilities, and abandoned spaces. With the right capital and operating model, these spaces can become digital workforce hubs, cybersecurity centres, AI laboratories, BPO facilities, and innovation campuses. The building is not the outcome — the productivity inside the building is.",
+      "Across Nigeria and Africa there are underutilized buildings, dormant campuses, old training facilities, and abandoned spaces. With the right capital and operating model, these spaces can become digital workforce hubs, cybersecurity centers, AI laboratories, BPO facilities, and innovation campuses. The building is not the outcome — the productivity inside the building is.",
   },
   {
     num: "03",
@@ -33,9 +33,9 @@ const PILLARS = [
   {
     num: "04",
     title: "Employment Capital",
-    sub: "Training centres become service pipelines",
+    sub: "Training centers become service pipelines",
     detail:
-      "The most powerful workforce systems do not simply train people and send them away. They create productive environments where learners transition into real work — managed services, remote delivery, entrepreneurship, and export-oriented digital services. A training centre can also become an employment centre. A campus can become a production hub. A classroom can become the beginning of a global service pipeline.",
+      "The most powerful workforce systems do not simply train people and send them away. They create productive environments where learners transition into real work — managed services, remote delivery, entrepreneurship, and export-oriented digital services. A training center can also become an employment center. A campus can become a production hub. A classroom can become the beginning of a global service pipeline.",
   },
   {
     num: "05",
@@ -108,13 +108,13 @@ export default function WaccSpeechPage() {
           <p className="font-bold text-slate-950">How do we build economies that are not only digital in ambition, but productive in reality?</p>
           <p>Across Nigeria today, we are speaking with increasing confidence about artificial intelligence, cybersecurity, cloud computing, digital infrastructure, innovation, entrepreneurship, and global services.</p>
           <p>These are the right conversations. They reflect the urgency of the moment and the seriousness of the opportunity before us.</p>
-          <p>We should also acknowledge that the Federal Government of Nigeria has begun to put important building blocks in place. Initiatives such as the 3 Million Technical Talent programme, the expanding digital economy agenda, and student financing efforts such as NELFUND demonstrate that skills, access, and youth opportunity are now part of the national development conversation.</p>
+          <p>We should also acknowledge that the Federal Government of Nigeria has begun to put important building blocks in place. Initiatives such as the 3 Million Technical Talent program, the expanding digital economy agenda, and student financing efforts such as NELFUND demonstrate that skills, access, and youth opportunity are now part of the national development conversation.</p>
           <p>These are important steps. They should be recognized. They should be strengthened. And they should be connected to a wider system that produces measurable employment, entrepreneurship, and export outcomes.</p>
           <p>This morning, I would like to focus on one idea that sits at the heart of that system.</p>
           <p className="text-2xl font-extrabold text-slate-950 text-center my-4 border-y border-slate-300 py-4">Talent is infrastructure.</p>
           <p>In the industrial age, nations competed through roads, ports, power stations, factories, and railways.</p>
           <p className="font-semibold">In the digital age, nations compete through the productive capacity of their people.</p>
-          <p>A cybersecurity analyst protecting critical systems is infrastructure. A software engineer building products for global markets is infrastructure. An AI-enabled worker improving productivity is infrastructure. A contact centre professional serving international clients from Lagos, Abuja, Enugu, Freetown, Accra, or Monrovia is infrastructure.</p>
+          <p>A cybersecurity analyst protecting critical systems is infrastructure. A software engineer building products for global markets is infrastructure. An AI-enabled worker improving productivity is infrastructure. A contact center professional serving international clients from Lagos, Abuja, Enugu, Freetown, Accra, or Monrovia is infrastructure.</p>
           <p>If Nigeria is to compete in the next economy, we must finance human capacity with the same seriousness with which we finance physical infrastructure.</p>
           <p>But let us also face a practical truth.</p>
           <p className="font-semibold">The challenge is not that Nigeria lacks talent. The challenge is not that Africa lacks ambition. The challenge is that workforce development has not yet been properly structured as an investable asset class.</p>
@@ -129,10 +129,10 @@ export default function WaccSpeechPage() {
           <p className="font-semibold">Imagine the dignity restored to young people who no longer see talent as something they must leave Nigeria to express, but something they can use from Nigeria to serve the world.</p>
           <p>That is why the real issue before us is not only how to train more people. The more important question is: <strong>How do we finance employability at scale?</strong></p>
           <p>At Arise Funds, we see Workforce Capital as having five connected layers.</p>
-          <p><strong>First, institutional capital.</strong> Training organisations must themselves become stronger. They need governance. They need human resource systems. They need standard operating procedures. They need employer engagement. They need quality assurance. They need modern curricula. They need the capacity to assess whether learners are actually employable, not merely whether they attended class. The old model was simple: train, issue a certificate, and release the graduate. The new model must be different: train, assess, employ, build, export, reinvest, and scale.</p>
-          <p><strong>Second, infrastructure capital.</strong> Across Nigeria and Africa, there are underutilised buildings, dormant campuses, old training facilities, and abandoned spaces that may not look immediately bankable to a traditional lender. But with the right capital and the right operating model, these spaces can become digital workforce hubs, cybersecurity centres, AI laboratories, BPO facilities, remote-work centres, and innovation campuses. The building is not the outcome. The productivity inside the building is the outcome.</p>
+          <p><strong>First, institutional capital.</strong> Training organizations must themselves become stronger. They need governance. They need human resource systems. They need standard operating procedures. They need employer engagement. They need quality assurance. They need modern curricula. They need the capacity to assess whether learners are actually employable, not merely whether they attended class. The old model was simple: train, issue a certificate, and release the graduate. The new model must be different: train, assess, employ, build, export, reinvest, and scale.</p>
+          <p><strong>Second, infrastructure capital.</strong> Across Nigeria and Africa, there are underutilized buildings, dormant campuses, old training facilities, and abandoned spaces that may not look immediately bankable to a traditional lender. But with the right capital and the right operating model, these spaces can become digital workforce hubs, cybersecurity centers, AI laboratories, BPO facilities, remote-work centers, and innovation campuses. The building is not the outcome. The productivity inside the building is the outcome.</p>
           <p><strong>Third, human capital.</strong> For many young people, the gap between unemployment and opportunity may be a laptop, reliable connectivity, a certification exam, a stipend, or the chance to learn in an environment that looks like the workplace they are being prepared for. To a large institution, that may look like a small request. To that young person, it may be the bridge to a lifetime of productivity.</p>
-          <p><strong>Fourth, employment capital.</strong> The most powerful workforce systems do not simply train people and send them away. They create productive environments where learners can transition into real work, managed services, remote delivery, entrepreneurship, and export-oriented digital services. A training centre can also become an employment centre. A campus can become a production hub. A classroom can become the beginning of a global service pipeline.</p>
+          <p><strong>Fourth, employment capital.</strong> The most powerful workforce systems do not simply train people and send them away. They create productive environments where learners can transition into real work, managed services, remote delivery, entrepreneurship, and export-oriented digital services. A training center can also become an employment center. A campus can become a production hub. A classroom can become the beginning of a global service pipeline.</p>
           <p><strong>Fifth, product capital.</strong> This is where the conversation becomes even more exciting. Developing countries should not only train workers for global companies. We should also build our own platforms, our own products, our own services, and our own intellectual property. This is why, within the broader ecosystem, platforms such as Aegis360AI matter. Aegis360AI is an example of what can emerge when Nigerian talent, global collaboration, cybersecurity capability, AI thinking, and institutional investment come together around a real product. Nigeria can be globally conscious and locally grounded at the same time.</p>
           <p>This is the model Arise Funds is working to support. Through the Arise Funds Family Office, we have committed well over one million dollars in direct catalytic support. Beyond that, more than four million dollars of digital architecture, platforms, systems, and enabling technology have been deployed across the broader ecosystem to support workforce transformation.</p>
           <p className="font-bold">This is not theory. This is not another conference concept. This is early risk capital being deployed to demonstrate that workforce development can be structured, de-risked, and scaled.</p>
@@ -154,7 +154,7 @@ export default function WaccSpeechPage() {
             <p className="text-[9px] font-mono uppercase tracking-wider text-slate-400 mb-3 font-bold">Reference Notes</p>
             <div className="space-y-2 text-[10px] text-slate-500">
               <p><strong className="text-slate-700">IFC / World Bank:</strong> More than 230 million jobs in Sub-Saharan Africa will require digital skills by 2030, creating ~650 million training opportunities and a $130B investment opportunity in digital skilling.</p>
-              <p><strong className="text-slate-700">Nigeria 3MTT:</strong> The 3 Million Technical Talent programme is positioned by the Federal Ministry of Communications, Innovation and Digital Economy / NITDA to build Nigeria's technical talent backbone.</p>
+              <p><strong className="text-slate-700">Nigeria 3MTT:</strong> The 3 Million Technical Talent program is positioned by the Federal Ministry of Communications, Innovation and Digital Economy / NITDA to build Nigeria's technical talent backbone.</p>
               <p><strong className="text-slate-700">NELFUND:</strong> NELFUND provides interest-free loans for eligible Nigerian students.</p>
               <p><strong className="text-slate-700">Arise Funds Figures:</strong> Arise Funds Family Office has committed well over $1M in direct catalytic support, with more than $4M in digital architecture and enabling assets deployed across the broader ecosystem.</p>
               <p className="mt-2 italic">Workforce Capital: A New Investment Framework for Digital Economic Growth | Arise Funds</p>

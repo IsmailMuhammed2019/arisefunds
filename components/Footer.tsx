@@ -5,12 +5,12 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 const navLinks = [
   { label: "Our Thesis", href: "/#investment-thesis" },
-  { label: "How We Work", href: "/#how-we-work" },
+  { label: "How It Works", href: "/#how-it-works" },
   { label: "ICBM", href: "/#icbm" },
-  { label: "Partners", href: "/#partners" },
+  { label: "Investors", href: "/partners" },
   { label: "News", href: "/#news" },
   { label: "Team", href: "/#team" },
-  { label: "For Investors", href: "/#contact" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Footer: React.FC = () => {
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar: Copyright */}
         <div className="border-t border-white/10 mt-16 pt-8 text-center">
           <p className="text-slate-400 text-xs">
-            © 2026 Arise Funds Inc, Powered by SBTS LLC.
+            © 2026 Arise Funds Inc. Powered by SBTS Group LLC.
           </p>
         </div>
       </div>

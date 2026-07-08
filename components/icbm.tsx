@@ -27,11 +27,11 @@ const ICBM_STAGES: Stage[] = [
       label: "Investor Signal — Stage 01",
       headline: "Precise Talent Selection Reduces Dropout Risk",
       body:
-        "AI-powered screening before enrolment eliminates misaligned candidates at zero cost. Every cohort that enters the model has already been validated for pathway fit — reducing training attrition to under 8% and protecting cohort completion rates.",
+        "AI-powered screening before enrollment eliminates misaligned candidates at zero cost. Every cohort that enters the model has already been validated for pathway fit — reducing training attrition to under 8% and protecting cohort completion rates.",
       metrics: [
-        { value: "<8%", note: "Training Attrition Rate" },
+        { value: "<8%", note: "Attrition Rate Goal" },
         { value: "AI", note: "Pathway Matching Engine" },
-        { value: "Stage 1", note: "Zero-Cost Filter" },
+        { value: "Aptitude", note: "Zero-Cost Fit Filter" },
       ],
     },
   },
@@ -42,13 +42,13 @@ const ICBM_STAGES: Stage[] = [
     desc: "Removing structural barriers to participation — devices, connectivity, financing — before training begins.",
     signal: {
       label: "Investor Signal — Stage 02",
-      headline: "Infrastructure Access Unlocks Underserved Labour Markets",
+      headline: "Infrastructure Access Unlocks Underserved Labor Markets",
       body:
         "By pre-financing devices and connectivity, the ICBM model reaches talent pools that institutional investors cannot access through conventional channels.",
       metrics: [
         { value: "8", note: "Countries Reached" },
-        { value: "50%", note: "Young Women in Cohorts" },
-        { value: "Pre-fin.", note: "Device Access Model" },
+        { value: "50%", note: "Young Women in Cohorts (Target)" },
+        { value: "Pre-funded", note: "Device Access Model" },
       ],
     },
   },
@@ -78,9 +78,9 @@ const ICBM_STAGES: Stage[] = [
       label: "Investor Signal — Stage 04",
       headline: "Global Credentials Create Cross-Border Employment Pipeline",
       body:
-        "Graduates hold internationally recognised certifications — CompTIA, ISC², PMI, and Microsoft — creating employment placement reach beyond Nigeria and Sierra Leone into US, UK, and Gulf markets. This extends the investable revenue geography significantly.",
+        "Graduates hold internationally recognized certifications — CompTIA, ISC², PMI, and Microsoft — creating employment placement reach beyond Nigeria and Sierra Leone into US, UK, and Gulf markets. This extends the investable revenue geography significantly.",
       metrics: [
-        { value: "Intl.", note: "Recognised Certifications" },
+        { value: "Intl.", note: "Recognized Certifications" },
         { value: "Global", note: "Placement Geography" },
         { value: "Verified", note: "Employer Trust Layer" },
       ],
@@ -99,8 +99,8 @@ const ICBM_STAGES: Stage[] = [
         "Verified placement activates income-linked repayments from graduates, triggers employer-side revenue from BPO and SOC contracts, and generates the outcome data required by DFIs and development banks for follow-on deployment",
       metrics: [
         { value: "50K+", note: "Employment Target by 2029" },
-        { value: "Phase 1", note: "Employment Confirmed" },
-        { value: "Cohort 2", note: "Active Now" },
+        { value: "Phase 1", note: "Completed" },
+        { value: "Phase 2", note: "In Progress" },
       ],
     },
   },
@@ -115,9 +115,9 @@ const ICBM_STAGES: Stage[] = [
       body:
         "As graduates move into senior roles, their income — and therefore repayment capacity — increases. The ICBM model tracks 12-month retention as its primary success metric, not training completion rates. This creates a long-duration income stream per graduate",
       metrics: [
-        { value: "Long Term", note: "Retention KPI" },
-        { value: "↑ Income", note: "Senior Role Advancement" },
-        { value: "Long-dur.", note: "Income Stream Per Graduate" },
+        { value: "12-Month", note: "Retention KPI" },
+        { value: "Progression", note: "Senior Role Advancement" },
+        { value: "Stable Yield", note: "Income Stream Per Graduate" },
       ],
     },
   },

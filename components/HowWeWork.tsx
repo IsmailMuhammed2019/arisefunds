@@ -38,7 +38,7 @@ const steps = [
 
 export default function HowWeWork() {
   return (
-    <section id="work" className="bg-[#04112a] text-white py-24 px-6 relative overflow-hidden">
+    <section id="how-it-works" className="bg-[#04112a] text-white py-24 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <AnimatedWrapper
@@ -46,7 +46,7 @@ export default function HowWeWork() {
           className="text-left max-w-4xl mb-16 relative z-10"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-cyan-300 mb-6">
-            How We Work
+            How It Works
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
             An active investor model<br />built for <span className="text-cyan-400">global markets.</span>

@@ -10,14 +10,14 @@ import { useModal } from "@/context/ModalContext";
 
 const slides = [
   {
-    tag: "Impact-led infrastructure",
+    tag: "WORKFORCE INFRASTRUCTURE INVESTING.",
     title: (
       <>
         Investing in the Infrastructure of <span className="text-cyan-400 font-bold">Work</span>
       </>
     ),
     description:
-      "Arise Funds is an impact investment firm. We deploy blended capital and operational infrastructure into workforce development and technology companies – building the institutional systems that generate returns and create employment at scale.",
+      "Arise Funds is an impact investment firm. We deploy blended capital and operational infrastructure into workforce development and technology companies — building the institutional systems that generate returns and create employment at scale.",
     image: "/slider1_image.png",
     imageAlt: "Investing in the Infrastructure of Work",
   },
@@ -110,6 +110,7 @@ export default function Hero() {
       {/* 2. Dark Vignette / Gradient Overlays (Guarantees AAA accessibility contrast) */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#04122c] via-[#04122c]/70 to-[#04122c]/10 z-10 pointer-events-none" />
       <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-[#04122c]/60 to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-full md:w-3/4 bg-gradient-to-r from-[#04122c]/95 via-[#04122c]/75 to-transparent z-10 pointer-events-none" />
 
       {/* 3. Subtle Parallax Decorative Lines layered over overlay but behind content */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-15 opacity-30">

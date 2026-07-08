@@ -12,14 +12,14 @@ const PILLARS = [
     title: "Institutional Capital",
     sub: "Governance, standards & quality systems",
     detail:
-      "Training organisations must themselves become stronger. They need governance, human resource systems, standard operating procedures, employer engagement, quality assurance, and modern curricula. The measure of success is not enrolment — it is employability. The new model must be: train, assess, employ, build, export, reinvest, and scale.",
+      "Training organizations must themselves become stronger. They need governance, human resource systems, standard operating procedures, employer engagement, quality assurance, and modern curricula. The measure of success is not enrollment — it is employability. The new model must be: train, assess, employ, build, export, reinvest, and scale.",
   },
   {
     num: "02",
     title: "Infrastructure Capital",
     sub: "Dormant assets → productive digital hubs",
     detail:
-      "Across Nigeria and Africa there are underutilised buildings, dormant campuses, old training facilities, and abandoned spaces. With the right capital and operating model, these spaces can become digital workforce hubs, cybersecurity centres, AI laboratories, BPO facilities, and innovation campuses. The building is not the outcome — the productivity inside the building is.",
+      "Across Nigeria and Africa there are underutilized buildings, dormant campuses, old training facilities, and abandoned spaces. With the right capital and operating model, these spaces can become digital workforce hubs, cybersecurity centers, AI laboratories, BPO facilities, and innovation campuses. The building is not the outcome — the productivity inside the building is.",
   },
   {
     num: "03",
@@ -31,9 +31,9 @@ const PILLARS = [
   {
     num: "04",
     title: "Employment Capital",
-    sub: "Training centres become service pipelines",
+    sub: "Training centers become service pipelines",
     detail:
-      "The most powerful workforce systems do not simply train people and send them away. They create productive environments where learners transition into real work — managed services, remote delivery, entrepreneurship, and export-oriented digital services. A training centre can also become an employment centre. A campus can become a production hub. A classroom can become the beginning of a global service pipeline.",
+      "The most powerful workforce systems do not simply train people and send them away. They create productive environments where learners transition into real work — managed services, remote delivery, entrepreneurship, and export-oriented digital services. A training center can also become an employment center. A campus can become a production hub. A classroom can become the beginning of a global service pipeline.",
   },
   {
     num: "05",

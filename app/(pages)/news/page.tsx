@@ -12,7 +12,7 @@ const ARTICLES = [
     date: "June 2026",
     region: "Lagos, Nigeria",
     title: "Workforce Capital model presented at WACC 2026",
-    desc: "Aisha Saaka Lewis addressed the West African Convergence Conference (WACC), outlining Arise Funds' model for pre-financed training, employer integration, and structural risk-sharing. The keynote presented a shifting paradigm: treating talent development as an investable infrastructure asset class rather than public program spending.",
+    desc: "Aisha Saaka Lewis addressed the West Africa Convergence Conference (WACC), outlining Arise Funds' model for pre-financed training, employer integration, and structural risk-sharing. The keynote presented a shifting paradigm: treating talent development as an investable infrastructure asset class rather than public program spending.",
     link: "/wacc-speech",
     linkText: "Read Conference Address",
     isFeatured: true,

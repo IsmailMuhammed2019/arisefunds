@@ -4,7 +4,7 @@ import { ParallaxImage } from "./AdvancedEffects";
 
 const InvestmentThesis = () => {
   return (
-    <section className="bg-[#021526] text-white py-20 px-6 md:px-20 font-sans relative overflow-hidden">
+    <section id="investment-thesis" className="bg-[#021526] text-white py-20 px-6 md:px-20 font-sans relative overflow-hidden">
       {/* Background Decorative Elements */}
       {/* Center vertical dashed line */}
       <div className="absolute top-0 bottom-0 left-1/2 w-[1px] -translate-x-1/2 border-l border-dashed border-cyan-500/20 z-0 pointer-events-none" />
@@ -59,7 +59,7 @@ const InvestmentThesis = () => {
           <div className="space-y-6 text-slate-300 text-sm md:text-base leading-relaxed">
             <p>
               The global workforce crisis is not a talent problem. It is a
-              systems coordination failure &ndash; training programs exist, employer
+              systems coordination failure — training programs exist, employer
               demand exists, and worker motivation exists, but structural
               disconnects prevent people from accessing dignified,
               income-generating work at scale. This is true in Lagos. It is

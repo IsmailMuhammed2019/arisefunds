@@ -32,7 +32,7 @@ export default function NavBar() {
                 href="/howWeWork"
                 className="hover:text-white transition-colors"
               >
-                How it work
+                How It Works
               </Link>
               <Link href="/icbm" className="hover:text-white transition-colors">
                 ICBM
@@ -94,7 +94,7 @@ export default function NavBar() {
                 className="block rounded-2xl px-4 py-3 text-white hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
-                How we work
+                How It Works
               </Link>
               <Link
                 href="/icbm"
