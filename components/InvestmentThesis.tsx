@@ -137,11 +137,9 @@ export default function InvestmentThesis() {
               </Link>
             </div>
           </AnimatedWrapper>
-
-          {/* Right 5-Button Grid */}
           <AnimatedWrapper type="fade-in" delay={0.2} className="w-full">
             <div className="grid grid-cols-2 gap-4">
-              {portfolioItems.slice(0, 4).map((item, idx) => (
+              {portfolioItems.map((item, idx) => (
                 <a
                   key={idx}
                   href={item.href}
@@ -155,17 +153,6 @@ export default function InvestmentThesis() {
                   <span>{item.name}</span>
                 </a>
               ))}
-              <a
-                href={portfolioItems[4].href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="col-span-2 bg-[#071428] hover:bg-[#0a1f3a] p-3 rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 flex items-center justify-start gap-4 tracking-wide hover:scale-[1.02]"
-              >
-                <div className={`p-2 rounded-xl ${portfolioItems[4].gradient} w-10 h-10 shrink-0 flex items-center justify-center`}>
-                  <img src={portfolioItems[4].logo} alt="" className="w-full h-full object-contain" />
-                </div>
-                <span>{portfolioItems[4].name}</span>
-              </a>
             </div>
           </AnimatedWrapper>
         </div>

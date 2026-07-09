@@ -56,21 +56,26 @@ export default function ContactModal() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Construct the mailto link to actually send to monitored inbox
-    const subject = encodeURIComponent(`Arise Funds Inquiry from ${formData.firstName} ${formData.lastName}`);
-    const body = encodeURIComponent(
-      `First Name: ${formData.firstName}\n` +
-      `Last Name: ${formData.lastName}\n` +
-      `Email Address: ${formData.email}\n` +
-      `Reaching out as: ${formData.role}\n` +
-      `Organization: ${formData.organization}\n\n` +
-      `Message:\n${formData.message}`
-    );
-    
-    window.location.href = `mailto:info@arisefunds.com?subject=${subject}&body=${body}`;
-    
-    setIsSubmitting(false);
-    setIsSuccess(true);
+    try {
+      const response = await fetch("/send-email.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (response.ok) {
+        setIsSuccess(true);
+      } else {
+        alert("Failed to send message. Please email us directly at info@arisefunds.com.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send message. Please email us directly at info@arisefunds.com.");
+    } finally {
+      setIsSubmitting(false);
+    }
     
     // Close after delay on success
     setTimeout(() => {

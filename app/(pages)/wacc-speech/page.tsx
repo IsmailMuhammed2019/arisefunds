@@ -62,7 +62,7 @@ function formatDate(date: Date) {
 
 export default function WaccSpeechPage() {
   const [activePillar, setActivePillar] = useState<number | null>(null);
-  const today = formatDate(new Date());
+  const today = "25th June, 2026";
 
   const togglePillar = (index: number) => {
     setActivePillar((prev) => (prev === index ? null : index));

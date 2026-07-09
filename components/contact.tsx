@@ -11,6 +11,8 @@ const ContactSection = () => {
     organization: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -24,21 +26,39 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Construct the mailto link to actually send to monitored inbox
-    const subject = encodeURIComponent(`Arise Funds Inquiry from ${formData.firstName} ${formData.lastName}`);
-    const body = encodeURIComponent(
-      `First Name: ${formData.firstName}\n` +
-      `Last Name: ${formData.lastName}\n` +
-      `Email Address: ${formData.email}\n` +
-      `Reaching out as: ${formData.role}\n` +
-      `Organization: ${formData.organization}\n\n` +
-      `Message:\n${formData.message}`
-    );
-    
-    window.location.href = `mailto:info@arisefunds.com?subject=${subject}&body=${body}`;
+    try {
+      const response = await fetch("/send-email.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (response.ok) {
+        setIsSuccess(true);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          role: "",
+          organization: "",
+          message: "",
+        });
+        setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        alert("Failed to send message. Please email us directly at info@arisefunds.com.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send message. Please email us directly at info@arisefunds.com.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -182,9 +202,10 @@ const ContactSection = () => {
 
               <button
                 type="submit"
-                className="w-full md:w-auto bg-cyan-500 hover:bg-cyan-400 text-slate-955 font-bold px-12 py-3.5 rounded-full shadow-lg shadow-cyan-500/10 transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer text-slate-950"
+                disabled={isSubmitting}
+                className="w-full md:w-auto bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-12 py-3.5 rounded-full shadow-lg shadow-cyan-500/10 transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : isSuccess ? "Message Sent!" : "Send Message"}
               </button>
             </form>
           </AnimatedWrapper>
