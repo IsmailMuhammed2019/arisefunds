@@ -61,9 +61,9 @@ const ContactSection = () => {
             {/* Top decorative gradient bar */}
             <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-cyan-500/40 to-transparent" />
             
-            <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-8 text-white">
+            <p className="text-lg md:text-xl font-light leading-relaxed mb-8 text-slate-200">
               Arise Funds is building partnerships with impact investors, development finance institutions, government bodies, and other like-minded entities to finance the future of work. If that describes you, we'd like to hear from you.
-            </h2>
+            </p>
             <div className="w-full h-px bg-cyan-500/10 mb-8" />
             <div>
               <p className="text-xs uppercase tracking-[0.2em] font-bold text-slate-400 mb-2">Or reach us directly</p>
