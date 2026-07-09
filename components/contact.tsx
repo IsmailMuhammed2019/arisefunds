@@ -67,7 +67,7 @@ const ContactSection = ({ isPage = false }: { isPage?: boolean }) => {
       {/* Contact Form Container */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-24">
         {isPage && (
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-start mb-8">
             <Breadcrumbs items={[{ label: "Contact" }]} />
           </div>
         )}

@@ -40,4 +40,4 @@ EXPOSE 3000
 ENV PORT=3000
 
 # Serve static files on port 3000
-CMD ["serve", "-s", "out", "-l", "3000"]
+CMD ["serve", "out", "-l", "3000"]

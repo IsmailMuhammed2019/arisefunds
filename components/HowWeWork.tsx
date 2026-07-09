@@ -81,7 +81,7 @@ export default function HowWeWork() {
 
           {/* Breadcrumbs */}
           <AnimatedWrapper type="fade-up">
-            <div className="flex justify-center mb-2">
+            <div className="flex justify-start mb-2">
               <Breadcrumbs items={[{ label: "About" }, { label: "How It Works" }]} />
             </div>
           </AnimatedWrapper>

@@ -101,7 +101,7 @@ export default function PortfolioInvestment() {
         {/* Eyebrow & Title */}
         <div className="text-center space-y-4">
           <AnimatedWrapper type="fade-up">
-            <div className="flex justify-center mb-2">
+            <div className="flex justify-start mb-2">
               <Breadcrumbs items={[{ label: "Portfolio" }]} />
             </div>
           </AnimatedWrapper>
