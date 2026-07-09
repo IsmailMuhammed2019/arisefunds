@@ -165,7 +165,7 @@ export default function PortfolioInvestment() {
                 fallbackText="KM"
                 gradient="bg-gradient-to-tr from-teal-500 to-emerald-400"
                 title="Kallmania"
-                desc="BPO operations hiring ICBM graduates. See it in action."
+                desc="BPO operations hiring ICBM graduates. See It In Action."
                 linkText="kallmania.com"
                 linkHref="https://kallmania.com"
                 hasPlayIcon={true}
@@ -209,7 +209,7 @@ export default function PortfolioInvestment() {
         <div className="border-t border-cyan-900/20 pt-16 space-y-10">
           <div className="space-y-4 max-w-4xl">
             <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
-              Where talent meets <span className="text-cyan-400">infrastructure</span>
+              Where Talent Meets <span className="text-cyan-400">Infrastructure</span>
             </h3>
             <p className="text-slate-300 text-sm leading-relaxed font-light">
               From security operations centers to data analytics labs &mdash; across Nigeria, Sierra Leone, the United States, and beyond &mdash; Arise Funds portfolio companies build the environments where real careers begin.
@@ -252,14 +252,14 @@ export default function PortfolioInvestment() {
             className="bg-[#05162e]/40 border border-cyan-900/20 p-8 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-6"
           >
             <div className="space-y-1">
-              <h4 className="text-white font-bold text-base md:text-lg">See the model in operation</h4>
+              <h4 className="text-white font-bold text-base md:text-lg">See The Model In Operation</h4>
               <p className="text-slate-400 text-xs font-light">Watch inside Kallmania &mdash; real graduates in real roles.</p>
             </div>
             <button
               onClick={() => setIsVideoOpen(true)}
               className="inline-flex items-center gap-2 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-6 py-3 text-xs shadow-lg shadow-cyan-500/15 transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer"
             >
-              <span>&#9654;</span> How it works
+              <span>&#9654;</span> How It Works
             </button>
           </AnimatedWrapper>
         </div>

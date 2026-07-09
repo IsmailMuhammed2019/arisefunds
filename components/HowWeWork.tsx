@@ -88,15 +88,15 @@ export default function HowWeWork() {
           {/* Heading */}
           <AnimatedWrapper type="fade-up" delay={0.1}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-              The model,{" "}
-              <span className="text-cyan-400">in operation</span>
+              The Model,{" "}
+              <span className="text-cyan-400">In Operation</span>
             </h1>
           </AnimatedWrapper>
 
           {/* Cyan subtitle */}
           <AnimatedWrapper type="fade-up" delay={0.15}>
             <p className="text-cyan-400 font-semibold text-base md:text-lg">
-              An active investor model built for global markets.
+              An Active Investor Model Built For Global Markets.
             </p>
           </AnimatedWrapper>
 
@@ -136,8 +136,8 @@ export default function HowWeWork() {
                       <polygon points="27.38,34.25 45.08,24 27.38,13.75" fill="#FFF" />
                     </svg>
                     <div className="text-center">
-                      <p className="font-bold text-white text-sm md:text-base">Inside Kallmania — where ICBM graduates go to work</p>
-                      <p className="text-slate-300 text-xs mt-1">Real BPO operations · real employees · a portfolio company in action</p>
+                      <p className="font-bold text-white text-sm md:text-base">Inside Kallmania — Where ICBM Graduates Go To Work</p>
+                      <p className="text-slate-300 text-xs mt-1">Real BPO Operations · Real Employees · A Portfolio Company In Action</p>
                     </div>
                   </div>
                 </div>
@@ -155,9 +155,6 @@ export default function HowWeWork() {
             </div>
 
             {/* Caption under video */}
-            <p className="text-xs text-slate-500 mt-3 font-mono italic">
-              [Embedded Kallmania video — YouTube embed]
-            </p>
           </AnimatedWrapper>
         </div>
       </section>
@@ -209,8 +206,8 @@ export default function HowWeWork() {
           {/* Header */}
           <AnimatedWrapper type="fade-up" className="space-y-4 max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
-              An active investor model built for{" "}
-              <span className="text-cyan-400">global markets</span>
+              An Active Investor Model Built For{" "}
+              <span className="text-cyan-400">Global Markets</span>
             </h2>
             <p className="text-slate-300 text-base leading-relaxed font-light">
               We don&apos;t write checks and wait. We deploy capital and operational infrastructure together — because in workforce markets anywhere in the world, one without the other rarely works.
@@ -247,7 +244,7 @@ export default function HowWeWork() {
           >
             <div className="space-y-1">
               <h4 className="text-white font-bold text-lg md:text-xl">
-                Want the full talent journey?
+                Want The Full Talent Journey?
               </h4>
               <p className="text-slate-400 text-sm">
                 See all 7 stages and the investor signal behind each one.

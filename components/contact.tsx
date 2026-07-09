@@ -66,7 +66,7 @@ const ContactSection = () => {
             </p>
             <div className="w-full h-px bg-cyan-500/10 mb-8" />
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] font-bold text-slate-400 mb-2">Or reach us directly</p>
+              <p className="text-xs uppercase tracking-[0.2em] font-bold text-slate-400 mb-2">Or Reach Us Directly</p>
               <a
                 href="mailto:info@arisefunds.com"
                 className="text-xl md:text-2xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors underline underline-offset-4"

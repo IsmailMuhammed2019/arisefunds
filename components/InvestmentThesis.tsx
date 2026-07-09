@@ -59,7 +59,7 @@ export default function InvestmentThesis() {
                 The Model, In Operation
               </span>
               <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
-                Proof you can watch
+                Proof You Can Watch
               </h3>
             </div>
             <p className="text-slate-300 text-base leading-relaxed font-light">
@@ -70,7 +70,7 @@ export default function InvestmentThesis() {
                 href="/how-it-works"
                 className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm uppercase tracking-wider transition-colors inline-flex items-center gap-1.5"
               >
-                See how it works &rarr;
+                See How It Works &rarr;
               </Link>
             </div>
           </AnimatedWrapper>
@@ -122,7 +122,7 @@ export default function InvestmentThesis() {
                 Proven Deployment
               </span>
               <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
-                The model, proven — first portfolio investment
+                The Model, Proven — First Portfolio Investment
               </h3>
             </div>
             <p className="text-slate-300 text-base leading-relaxed font-light">
@@ -133,7 +133,7 @@ export default function InvestmentThesis() {
                 href="/portfolio"
                 className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm uppercase tracking-wider transition-colors inline-flex items-center gap-1.5"
               >
-                See the portfolio &rarr;
+                See The Portfolio &rarr;
               </Link>
             </div>
           </AnimatedWrapper>
@@ -149,7 +149,7 @@ export default function InvestmentThesis() {
                   rel="noopener noreferrer"
                   className="bg-[#071428] hover:bg-[#0a1f3a] p-5 rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 flex items-center justify-center gap-3 tracking-wide hover:scale-[1.02]"
                 >
-                  <img src={item.logo} alt="" className="w-5 h-5 object-contain" />
+                  <img src={item.logo} alt="" className="h-7 md:h-8 w-auto object-contain" />
                   <span>{item.name}</span>
                 </a>
               ))}
@@ -159,7 +159,7 @@ export default function InvestmentThesis() {
                 rel="noopener noreferrer"
                 className="col-span-2 bg-[#071428] hover:bg-[#0a1f3a] p-5 rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 flex items-center justify-center gap-3 tracking-wide hover:scale-[1.02]"
               >
-                <img src={portfolioItems[4].logo} alt="" className="w-5 h-5 object-contain" />
+                <img src={portfolioItems[4].logo} alt="" className="h-7 md:h-8 w-auto object-contain" />
                 <span>{portfolioItems[4].name}</span>
               </a>
             </div>
@@ -191,7 +191,7 @@ export default function InvestmentThesis() {
                   href="/partners"
                   className="text-cyan-400 hover:text-cyan-300 font-semibold text-xs uppercase tracking-wider transition-colors inline-flex items-center gap-1.5 whitespace-nowrap"
                 >
-                  Meet our partners &rarr;
+                  Meet Our Partners &rarr;
                 </Link>
               </div>
             </div>
@@ -205,10 +205,10 @@ export default function InvestmentThesis() {
         <div className="pb-24">
           <AnimatedWrapper
             type="fade-up"
-            className="border border-cyan-900/30 p-10 rounded-2xl relative overflow-hidden text-center space-y-6"
+            className="bg-gradient-to-br from-[#071428] to-[#0a1f3a] border border-cyan-500/20 shadow-2xl p-10 rounded-2xl relative overflow-hidden text-center space-y-6"
           >
             <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white max-w-2xl mx-auto leading-tight">
-              Let&apos;s talk about building workforce infrastructure
+              Let&apos;s Talk About Building Workforce Infrastructure
             </h3>
             <p className="text-slate-300 text-sm leading-relaxed max-w-2xl mx-auto font-light">
               For impact investors, development finance institutions, government bodies, and like-minded partners financing the future of work.
@@ -218,7 +218,7 @@ export default function InvestmentThesis() {
                 onClick={openContactModal}
                 className="inline-flex items-center justify-center rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-8 py-3 shadow-lg shadow-cyan-500/15 transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer text-sm"
               >
-                Get in touch &rarr;
+                Get In Touch &rarr;
               </button>
             </div>
           </AnimatedWrapper>

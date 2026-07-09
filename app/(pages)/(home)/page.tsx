@@ -13,7 +13,6 @@ export default function HomePage() {
       <AnnouncementBanner />
       <Hero />
       <InvestmentThesis />
-      <NewsSection />
       <ContactSection />
       <Footer />
     </div>
