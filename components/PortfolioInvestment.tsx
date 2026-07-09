@@ -11,20 +11,20 @@ interface CardProps {
   desc: string;
   linkText: string;
   linkHref: string;
-  videoTrigger?: boolean;
-  onVideoClick?: () => void;
+  hasPlayIcon?: boolean;
+  onPlayClick?: () => void;
 }
 
 const TileIcon = ({ src, fallbackText, gradient }: { src: string; fallbackText: string; gradient: string }) => {
   const [hasError, setHasError] = useState(false);
   return (
-    <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 shadow-md ${gradient} relative overflow-hidden`}>
+    <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 shadow-md ${gradient} relative overflow-hidden`}>
       {!hasError ? (
         <img
           src={src}
           alt={fallbackText}
           onError={() => setHasError(true)}
-          className="w-8 h-8 object-contain filter brightness-100"
+          className="w-6 h-6 object-contain filter brightness-100"
         />
       ) : (
         <span className="text-white font-bold text-xs tracking-tight font-mono">{fallbackText}</span>
@@ -33,7 +33,7 @@ const TileIcon = ({ src, fallbackText, gradient }: { src: string; fallbackText: 
   );
 };
 
-const PortfolioCard = ({
+const PortfolioGridCard = ({
   logoSrc,
   fallbackText,
   gradient,
@@ -41,45 +41,46 @@ const PortfolioCard = ({
   desc,
   linkText,
   linkHref,
-  videoTrigger,
-  onVideoClick,
+  hasPlayIcon,
+  onPlayClick,
 }: CardProps) => {
   return (
     <AnimatedWrapper
       type="fade-up"
-      className="bg-[#071428] hover:bg-[#0a1f3a] p-6 md:p-8 rounded-2xl border border-cyan-900/20 hover:border-cyan-500/20 transition-all duration-300 flex flex-col justify-between"
+      className="bg-[#05162e]/50 hover:bg-[#071d3a] p-6 rounded-2xl border border-cyan-900/20 hover:border-cyan-500/30 transition-all duration-300 flex flex-col justify-between"
     >
       <div>
-        {/* Logo Tile & Title */}
-        <div className="flex items-center gap-4 mb-4">
+        <div className="flex items-center gap-3 mb-3">
           <TileIcon src={logoSrc} fallbackText={fallbackText} gradient={gradient} />
-          <h3 className="text-xl font-bold text-white tracking-tight">{title}</h3>
+          <h4 className="text-base font-bold text-white tracking-tight flex items-center gap-1.5">
+            {title}
+            {hasPlayIcon && (
+              <span
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  if (onPlayClick) onPlayClick();
+                }}
+                className="inline-flex items-center justify-center text-xs text-cyan-400 hover:text-cyan-300 cursor-pointer transition-transform hover:scale-110"
+              >
+                &#9654;
+              </span>
+            )}
+          </h4>
         </div>
-
-        {/* Description */}
-        <p className="text-slate-400 text-sm leading-relaxed mb-6 font-light">
+        <p className="text-slate-300 text-xs leading-relaxed mb-4 font-light">
           {desc}
         </p>
       </div>
-
-      {/* Links Row */}
-      <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-2">
+      <div>
         <a
           href={linkHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-cyan-400 hover:text-cyan-300 font-semibold text-xs uppercase tracking-wider transition-colors inline-flex items-center"
+          className="text-cyan-400 hover:text-cyan-300 text-[11px] font-semibold tracking-wider transition-colors inline-flex items-center"
         >
           {linkText} &rarr;
         </a>
-        {videoTrigger && onVideoClick && (
-          <button
-            onClick={onVideoClick}
-            className="text-cyan-400 hover:text-cyan-300 font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer inline-flex items-center gap-1 border-l border-cyan-900/40 pl-6"
-          >
-            See it in action &rarr;
-          </button>
-        )}
       </div>
     </AnimatedWrapper>
   );
@@ -89,84 +90,180 @@ export default function PortfolioInvestment() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
-    <section id="portfolio" className="py-24 bg-[#03112c] text-white relative overflow-hidden border-t border-cyan-950/20">
+    <section id="portfolio" className="py-24 bg-[#04122c] text-white relative overflow-hidden border-t border-cyan-950/20">
       {/* Background gradients */}
       <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-blue-500/5 blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Main Section Card */}
-        <div className="bg-[#05162e]/50 border border-cyan-900/10 p-8 md:p-12 rounded-3xl shadow-2xl relative z-10">
-          
-          {/* Header */}
-          <div className="mb-12">
-            <span className="text-xs uppercase tracking-[0.25em] text-cyan-400 font-bold font-mono block mb-3">
-              Built with Arise Funds Capital
-            </span>
-            <h2 className="text-xl md:text-2xl lg:text-3xl text-slate-200 leading-relaxed font-light max-w-4xl">
-              The companies and platforms <strong className="text-white font-semibold">SBTS Group LLC</strong> has built with Arise Funds capital &mdash; real, operating products that generate revenue and hire ICBM graduates.
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 space-y-20">
+        
+        {/* Eyebrow & Title */}
+        <div className="text-center space-y-4">
+          <AnimatedWrapper type="fade-up">
+            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-cyan-300 mb-2">
+              Proven Deployment
+            </div>
+          </AnimatedWrapper>
+          <AnimatedWrapper type="fade-up" delay={0.1}>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+              First Portfolio <span className="text-cyan-400">Investment</span>
             </h2>
-          </div>
+          </AnimatedWrapper>
+          <AnimatedWrapper type="fade-up" delay={0.2}>
+            <p className="text-slate-300 text-base md:text-lg max-w-2xl mx-auto font-light">
+              Arise Funds builds the employer network that hires ICBM graduates.
+            </p>
+          </AnimatedWrapper>
+        </div>
 
-          {/* Grid Layout Container */}
+        {/* Section 1: Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-8 lg:gap-12 items-start">
+          
+          {/* Left Column: Portfolio Case Study Card */}
+          <AnimatedWrapper type="slide-in" className="h-full">
+            <div className="bg-[#05162e]/50 border border-cyan-900/20 p-8 rounded-2xl space-y-4 h-full">
+              <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-cyan-400 font-bold block">
+                Portfolio Case Study
+              </span>
+              <h3 className="text-2xl font-bold text-white tracking-tight">
+                SBTS Group LLC
+              </h3>
+              <div className="text-slate-300 text-sm leading-relaxed font-light space-y-4">
+                <p>
+                  SBTS Group LLC is the first company financed and operationally supported by Arise Funds &mdash; and the live demonstration that Workforce Infrastructure Investing works.
+                </p>
+                <p>
+                  In January 2026, the first ICBM graduates &mdash; Cohort 1, Phase 1 &mdash; began earning income in verified digital economy roles, with Phase 2 now in progress.
+                </p>
+              </div>
+            </div>
+          </AnimatedWrapper>
+
+          {/* Right Column: Built with Arise Capital Stack */}
           <div className="space-y-6">
-            {/* Row 1: Two Column Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <PortfolioCard
+            <div className="space-y-2">
+              <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-cyan-400 font-bold block">
+                Built with Arise Funds Capital
+              </span>
+              <p className="text-slate-300 text-sm leading-relaxed font-light">
+                The companies and products SBTS Group LLC has built with Arise Funds capital &mdash; real, operating, and hiring ICBM graduates.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <PortfolioGridCard
                 logoSrc="/vultcore.png"
                 fallbackText="VC"
                 gradient="bg-gradient-to-tr from-blue-600 to-indigo-500"
                 title="Vultcore"
-                desc="Security operations (SOC) platform — where ICBM cybersecurity graduates are placed into live enterprise and government security roles."
+                desc="SOC platform — where cyber graduates are placed into live security roles."
                 linkText="vultcore.com"
                 linkHref="https://vultcore.com"
               />
-              <PortfolioCard
+              <PortfolioGridCard
                 logoSrc="/kalmania.png"
                 fallbackText="KM"
                 gradient="bg-gradient-to-tr from-teal-500 to-emerald-400"
                 title="Kallmania"
-                desc="BPO operations company — hiring ICBM graduates into live business-process and customer-operations roles."
+                desc="BPO operations hiring ICBM graduates. See it in action."
                 linkText="kallmania.com"
                 linkHref="https://kallmania.com"
-                videoTrigger={true}
-                onVideoClick={() => setIsVideoOpen(true)}
+                hasPlayIcon={true}
+                onPlayClick={() => setIsVideoOpen(true)}
               />
-            </div>
-
-            {/* Row 2: Three Column Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <PortfolioCard
+              <PortfolioGridCard
                 logoSrc="/nexus.png"
                 fallbackText="NX"
                 gradient="bg-gradient-to-tr from-blue-500 to-cyan-400"
                 title="ICBM Nexus"
-                desc="The operational platform behind ICBM — 850+ courses plus exams, assessments, and full campus operations. In operational use by the World Bank–supported SLDTP in Sierra Leone."
+                desc="The LMS — 850+ courses, in use by the SLDTP in Sierra Leone."
                 linkText="icbm.training"
                 linkHref="https://icbm.training"
               />
-              <PortfolioCard
+              <PortfolioGridCard
                 logoSrc="/aegis360.png"
                 fallbackText="A360"
                 gradient="bg-gradient-to-tr from-indigo-500 to-purple-500"
                 title="Aegis360AI"
-                desc="An automated GRC suite that integrates with SOC and GRC teams, turning static compliance into real-time operational resilience."
+                desc="Automated GRC suite integrating SOC and GRC teams."
                 linkText="aegis360ai.com"
                 linkHref="https://aegis360ai.com"
               />
-              <PortfolioCard
-                logoSrc="/c1wt.svg"
-                fallbackText="C1WT"
-                gradient="bg-gradient-to-tr from-purple-500 to-pink-500"
-                title="C1WT"
-                desc="Connect One Million Women in Technology — a platform expanding digital skills, career pathways, and employment for women across the global digital economy."
-                linkText="connectonemillionwomen.com"
-                linkHref="https://connectonemillionwomen.com"
-              />
+              <div className="sm:col-span-2">
+                <PortfolioGridCard
+                  logoSrc="/c1wt.svg"
+                  fallbackText="C1WT"
+                  gradient="bg-gradient-to-tr from-purple-500 to-pink-500"
+                  title="C1WT"
+                  desc="Connect One Million Women in Technology — expanding digital skills, career pathways, and employment for women across the global digital economy."
+                  linkText="connectonemillionwomen.com"
+                  linkHref="https://connectonemillionwomen.com"
+                />
+              </div>
             </div>
           </div>
 
         </div>
+
+        {/* Section 2: Where Talent Meets Infrastructure */}
+        <div className="border-t border-cyan-900/20 pt-16 space-y-10">
+          <div className="space-y-4 max-w-4xl">
+            <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
+              Where talent meets <span className="text-cyan-400">infrastructure</span>
+            </h3>
+            <p className="text-slate-300 text-sm leading-relaxed font-light">
+              From security operations centers to data analytics labs &mdash; across Nigeria, Sierra Leone, the United States, and beyond &mdash; Arise Funds portfolio companies build the environments where real careers begin.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {/* Column 1 */}
+            <div className="space-y-2">
+              <span className="text-xs font-bold text-white block tracking-wide">
+                <span className="text-cyan-400">01</span> Cybersecurity &middot; SOC Operations
+              </span>
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
+                Secure digital environments with trained analysts across enterprise and government-grade security operations centers.
+              </p>
+            </div>
+            {/* Column 2 */}
+            <div className="space-y-2">
+              <span className="text-xs font-bold text-white block tracking-wide">
+                <span className="text-cyan-400">02</span> Software Development &middot; Global Teams
+              </span>
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
+                Cross-border engineering teams delivering scalable software products and managed technology services worldwide.
+              </p>
+            </div>
+            {/* Column 3 */}
+            <div className="space-y-2">
+              <span className="text-xs font-bold text-white block tracking-wide">
+                <span className="text-cyan-400">03</span> Data Science &middot; AI &amp; ML
+              </span>
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
+                Machine learning and AI applied to workforce intelligence, service delivery optimization, and product pipelines.
+              </p>
+            </div>
+          </div>
+
+          {/* Bottom Card CTA */}
+          <AnimatedWrapper
+            type="fade-up"
+            className="bg-[#05162e]/40 border border-cyan-900/20 p-8 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-6"
+          >
+            <div className="space-y-1">
+              <h4 className="text-white font-bold text-base md:text-lg">See the model in operation</h4>
+              <p className="text-slate-400 text-xs font-light">Watch inside Kallmania &mdash; real graduates in real roles.</p>
+            </div>
+            <button
+              onClick={() => setIsVideoOpen(true)}
+              className="inline-flex items-center gap-2 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-6 py-3 text-xs shadow-lg shadow-cyan-500/15 transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer"
+            >
+              <span>&#9654;</span> How it works
+            </button>
+          </AnimatedWrapper>
+        </div>
+
       </div>
 
       {/* Video Modal popup for Kallmania */}
