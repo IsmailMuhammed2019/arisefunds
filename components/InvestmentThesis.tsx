@@ -6,11 +6,11 @@ import AnimatedWrapper from "./AnimatedWrapper";
 import { useModal } from "@/context/ModalContext";
 
 const portfolioItems = [
-  { name: "Vultcore", href: "https://vultcore.com", logo: "/vultcore.png" },
-  { name: "Kallmania", href: "https://kallmania.com", logo: "/kalmania.png" },
-  { name: "ICBM Nexus", href: "https://icbm.training", logo: "/nexus.png" },
-  { name: "Aegis360AI", href: "https://aegis360ai.com", logo: "/aegis360.png" },
-  { name: "C1WT", href: "https://connectonemillionwomen.com", logo: "/c1wt.svg" },
+  { name: "Vultcore", href: "https://vultcore.com", logo: "/vultcore.png", gradient: "bg-gradient-to-tr from-blue-600 to-indigo-500" },
+  { name: "Kallmania", href: "https://kallmania.com", logo: "/kalmania.png", gradient: "bg-gradient-to-tr from-teal-500 to-emerald-400" },
+  { name: "ICBM Nexus", href: "https://icbm.training", logo: "/nexus.png", gradient: "bg-gradient-to-tr from-blue-500 to-cyan-400" },
+  { name: "Aegis360AI", href: "https://aegis360ai.com", logo: "/aegis360.png", gradient: "bg-gradient-to-tr from-indigo-500 to-purple-500" },
+  { name: "C1WT", href: "https://connectonemillionwomen.com", logo: "/c1wt.svg", gradient: "bg-gradient-to-tr from-purple-500 to-pink-500" },
 ];
 
 export default function InvestmentThesis() {
@@ -147,9 +147,11 @@ export default function InvestmentThesis() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#071428] hover:bg-[#0a1f3a] p-5 rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 flex items-center justify-center gap-3 tracking-wide hover:scale-[1.02]"
+                  className="bg-[#071428] hover:bg-[#0a1f3a] p-3 rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 flex items-center justify-start gap-4 tracking-wide hover:scale-[1.02]"
                 >
-                  <img src={item.logo} alt="" className="h-7 md:h-8 w-auto object-contain" />
+                  <div className={`p-2 rounded-xl ${item.gradient} w-10 h-10 shrink-0 flex items-center justify-center`}>
+                    <img src={item.logo} alt="" className="w-full h-full object-contain" />
+                  </div>
                   <span>{item.name}</span>
                 </a>
               ))}
@@ -157,9 +159,11 @@ export default function InvestmentThesis() {
                 href={portfolioItems[4].href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="col-span-2 bg-[#071428] hover:bg-[#0a1f3a] p-5 rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 flex items-center justify-center gap-3 tracking-wide hover:scale-[1.02]"
+                className="col-span-2 bg-[#071428] hover:bg-[#0a1f3a] p-3 rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 flex items-center justify-start gap-4 tracking-wide hover:scale-[1.02]"
               >
-                <img src={portfolioItems[4].logo} alt="" className="h-7 md:h-8 w-auto object-contain" />
+                <div className={`p-2 rounded-xl ${portfolioItems[4].gradient} w-10 h-10 shrink-0 flex items-center justify-center`}>
+                  <img src={portfolioItems[4].logo} alt="" className="w-full h-full object-contain" />
+                </div>
                 <span>{portfolioItems[4].name}</span>
               </a>
             </div>
