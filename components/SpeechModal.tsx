@@ -147,7 +147,7 @@ export default function SpeechModal() {
                       <span className="text-cyan-400 text-[8px] font-bold">A</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-white text-sm">Aisha Saaka</p>
+                      <p className="font-semibold text-white text-sm">Aisha Saaka Lewis</p>
                       <p className="text-slate-500">Arise Funds</p>
                     </div>
                   </div>
@@ -236,11 +236,10 @@ export default function SpeechModal() {
                         initial={{ opacity: 0, x: -12 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.18 + i * 0.06 }}
-                        className={`rounded-xl border transition-all duration-300 overflow-hidden ${
-                          isOpen
+                        className={`rounded-xl border transition-all duration-300 overflow-hidden ${isOpen
                             ? "border-cyan-500/30 bg-cyan-950/20"
                             : "border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10"
-                        }`}
+                          }`}
                       >
                         {/* Pillar Header — clickable row */}
                         <button
@@ -249,17 +248,15 @@ export default function SpeechModal() {
                           aria-expanded={isOpen}
                         >
                           <span
-                            className={`text-[11px] font-mono font-bold w-5 shrink-0 transition-colors ${
-                              isOpen ? "text-cyan-400" : "text-cyan-500/60"
-                            }`}
+                            className={`text-[11px] font-mono font-bold w-5 shrink-0 transition-colors ${isOpen ? "text-cyan-400" : "text-cyan-500/60"
+                              }`}
                           >
                             {p.num}
                           </span>
                           <div className="flex-1 min-w-0">
                             <p
-                              className={`text-sm font-semibold transition-colors ${
-                                isOpen ? "text-white" : "text-slate-200"
-                              }`}
+                              className={`text-sm font-semibold transition-colors ${isOpen ? "text-white" : "text-slate-200"
+                                }`}
                             >
                               {p.title}
                             </p>
@@ -273,9 +270,8 @@ export default function SpeechModal() {
                             className="shrink-0"
                           >
                             <ChevronDown
-                              className={`w-4 h-4 transition-colors ${
-                                isOpen ? "text-cyan-400" : "text-white/20"
-                              }`}
+                              className={`w-4 h-4 transition-colors ${isOpen ? "text-cyan-400" : "text-white/20"
+                                }`}
                             />
                           </motion.div>
                         </button>

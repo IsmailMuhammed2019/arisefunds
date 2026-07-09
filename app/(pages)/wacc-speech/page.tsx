@@ -91,7 +91,7 @@ export default function WaccSpeechPage() {
               <p className="text-base text-slate-600 font-light mt-1">A New Investment Framework for Digital Economic Growth</p>
             </div>
             <div className="text-right text-[10px] text-slate-500 font-mono space-y-0.5">
-              <p>Speaker: Aisha Saaka</p>
+              <p>Speaker: Aisha Saaka Lewis</p>
               <p>Publisher: Arise Funds</p>
               <p>Event: West Africa Convergence Conference</p>
               <p>Date: {today}</p>
@@ -221,7 +221,7 @@ export default function WaccSpeechPage() {
                     <span className="text-cyan-400 text-sm font-bold">A</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-white">Aisha Saaka</p>
+                    <p className="font-semibold text-white">Aisha Saaka Lewis</p>
                     <p className="text-xs text-slate-500">Arise Funds</p>
                   </div>
                 </div>
@@ -276,11 +276,10 @@ export default function WaccSpeechPage() {
                         key={i}
                         type="fade-up"
                         delay={0.25 + i * 0.05}
-                        className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
-                          isOpen
-                            ? "border-cyan-500/30 bg-cyan-950/20"
-                            : "border-white/5 bg-slate-950/30 hover:bg-slate-950/50 hover:border-white/10"
-                        }`}
+                        className={`rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen
+                          ? "border-cyan-500/30 bg-cyan-950/20"
+                          : "border-white/5 bg-slate-950/30 hover:bg-slate-950/50 hover:border-white/10"
+                          }`}
                       >
                         <button
                           onClick={() => togglePillar(i)}
@@ -328,7 +327,7 @@ export default function WaccSpeechPage() {
                 <p className="text-base text-slate-200 leading-relaxed font-light italic">
                   &ldquo;When workforce development becomes investable, talent becomes scalable. And when talent becomes scalable, economies become more competitive. At Arise Funds, we believe the answer is yes — and we invite all of you to help build it with us.&rdquo;
                 </p>
-                <p className="text-xs text-slate-500 mt-4 font-mono">— Aisha Saaka, Arise Funds</p>
+                <p className="text-xs text-slate-500 mt-4 font-mono">— Aisha Saaka Lewis, Arise Funds</p>
               </AnimatedWrapper>
             </div>
           </div>

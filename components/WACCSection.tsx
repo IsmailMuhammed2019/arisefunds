@@ -65,7 +65,7 @@ export default function WACCSection() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <p className="text-xs text-slate-500 self-center">
-                  Keynote by Aisha Saaka · Arise Funds
+                  Keynote by Aisha Saaka Lewis· Arise Funds
                 </p>
               </div>
             </AnimatedWrapper>

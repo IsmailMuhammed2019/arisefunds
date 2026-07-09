@@ -29,7 +29,7 @@ export default function NavBar() {
                 Home
               </Link>
               <Link
-                href="/howWeWork"
+                href="/how-it-works"
                 className="hover:text-white transition-colors"
               >
                 How It Works
@@ -90,7 +90,7 @@ export default function NavBar() {
                 Home
               </Link>
               <Link
-                href="/howWeWork"
+                href="/how-it-works"
                 className="block rounded-2xl px-4 py-3 text-white hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >

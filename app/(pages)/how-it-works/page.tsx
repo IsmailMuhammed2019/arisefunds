@@ -8,7 +8,7 @@ import PortfolioInvestment from "@/components/PortfolioInvestment";
 import YouthEmpowerment from "@/components/YouthEmpowerment";
 import TalentEconomy from "@/components/TalentEconomy";
 
-export default function HowWeWorkPage() {
+export default function HowItWorksPage() {
   return (
     <div className="min-h-screen bg-[#04122c] text-slate-100 flex flex-col">
       <NavBar />

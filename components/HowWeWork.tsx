@@ -43,7 +43,7 @@ export default function HowWeWork() {
         {/* Header */}
         <AnimatedWrapper
           type="fade-up"
-          className="text-left max-w-4xl mb-16 relative z-10"
+          className="text-center max-w-7xl mb-16 relative z-10"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-cyan-300 mb-6">
             How It Works
@@ -51,7 +51,7 @@ export default function HowWeWork() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
             An active investor model<br />built for <span className="text-cyan-400">global markets.</span>
           </h2>
-          <p className="text-slate-350 text-base md:text-lg leading-relaxed max-w-3xl">
+          <p className="text-slate-350 text-base md:text-lg leading-relaxed max-w-7xl text-center">
             We don&apos;t write checks and wait. We deploy capital and operational
             infrastructure together — because in workforce markets anywhere in the
             world, one without the other rarely works.
