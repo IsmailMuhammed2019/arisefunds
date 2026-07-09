@@ -99,8 +99,8 @@ const ICBM_STAGES: Stage[] = [
         "Verified placement activates income-linked repayments from graduates, triggers employer-side revenue from BPO and SOC contracts, and generates the outcome data required by DFIs and development banks for follow-on deployment",
       metrics: [
         { value: "50K+", note: "Employment Target by 2029" },
-        { value: "Phase 1", note: "Completed" },
-        { value: "Phase 2", note: "In Progress" },
+        { value: "Cohort 1", note: "Phase 1 Confirmed" },
+        { value: "Cohort 2", note: "Active Now" },
       ],
     },
   },
@@ -278,19 +278,11 @@ export default function ICBM() {
                 </div>
               </div>
 
-              {/* Panel Footer */}
-              <div className="border-t border-cyan-900/20 px-6 py-4 bg-[#071428]">
-                <p className="text-[11px] text-slate-600 font-mono italic">
-                  &ldquo;Training doesn&apos;t cost — it pays. Every cohort generates
-                  employer revenue, graduate repayments, and tax contribution.
-                  That is not a program outcome. That is a return.&rdquo;
-                </p>
-              </div>
             </div>
 
             {/* Pathways list */}
             <div className="mt-4 border border-cyan-900/30 rounded-xl bg-[#071428] px-6 py-5">
-              <div className="text-[10px] uppercase tracking-[0.2em] text-cyan-400 font-mono mb-3">
+              <div className="text-[10px] uppercase tracking-[0.25em] text-cyan-400 font-mono mb-3">
                 Digital Economy Pathways
               </div>
               <ul className="space-y-2">
@@ -309,6 +301,18 @@ export default function ICBM() {
               </ul>
             </div>
           </div>
+        </div>
+
+        {/* Full-width Quote Card at the Bottom */}
+        <div className="mt-12 border border-cyan-900/35 rounded-xl bg-[#05162e]/50 px-8 py-8 text-center max-w-7xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-200 leading-relaxed italic mb-4 font-light">
+            &ldquo;Training doesn&apos;t cost — it pays. Every cohort generates
+            employer revenue, graduate repayments, and tax contribution.
+            That is not a program outcome. That is a return.&rdquo;
+          </p>
+          <p className="text-xs text-cyan-400 font-mono tracking-wider">
+            &mdash; Aisha Saaka Lewis, Arise Funds
+          </p>
         </div>
       </div>
 
