@@ -6,11 +6,11 @@ import AnimatedWrapper from "./AnimatedWrapper";
 import { useModal } from "@/context/ModalContext";
 
 const portfolioItems = [
-  { name: "Vultcore", href: "https://vultcore.com" },
-  { name: "Kallmania", href: "https://kallmania.com" },
-  { name: "ICBM Nexus", href: "https://icbm.training" },
-  { name: "Aegis360AI", href: "https://aegis360ai.com" },
-  { name: "C1WT", href: "https://connectonemillionwomen.com" },
+  { name: "Vultcore", href: "https://vultcore.com", logo: "/vultcore.png" },
+  { name: "Kallmania", href: "https://kallmania.com", logo: "/kalmania.png" },
+  { name: "ICBM Nexus", href: "https://icbm.training", logo: "/nexus.png" },
+  { name: "Aegis360AI", href: "https://aegis360ai.com", logo: "/aegis360.png" },
+  { name: "C1WT", href: "https://connectonemillionwomen.com", logo: "/c1wt.svg" },
 ];
 
 export default function InvestmentThesis() {
@@ -147,18 +147,20 @@ export default function InvestmentThesis() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#071428] hover:bg-[#0a1f3a] p-5 text-center rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 block tracking-wide hover:scale-[1.02]"
+                  className="bg-[#071428] hover:bg-[#0a1f3a] p-5 rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 flex items-center justify-center gap-3 tracking-wide hover:scale-[1.02]"
                 >
-                  {item.name}
+                  <img src={item.logo} alt="" className="w-5 h-5 object-contain" />
+                  <span>{item.name}</span>
                 </a>
               ))}
               <a
                 href={portfolioItems[4].href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="col-span-2 bg-[#071428] hover:bg-[#0a1f3a] p-5 text-center rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 block tracking-wide hover:scale-[1.02]"
+                className="col-span-2 bg-[#071428] hover:bg-[#0a1f3a] p-5 rounded-xl border border-cyan-900/30 hover:border-cyan-500/40 text-sm font-bold text-white transition-all duration-300 flex items-center justify-center gap-3 tracking-wide hover:scale-[1.02]"
               >
-                {portfolioItems[4].name}
+                <img src={portfolioItems[4].logo} alt="" className="w-5 h-5 object-contain" />
+                <span>{portfolioItems[4].name}</span>
               </a>
             </div>
           </AnimatedWrapper>
