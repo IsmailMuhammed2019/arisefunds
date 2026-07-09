@@ -10,7 +10,6 @@ export default function IcbmPage() {
     <div className="min-h-screen bg-[#04122c] text-slate-100 flex flex-col">
       <NavBar />
       <Icbm />
-      <InvestmentThesis />
       <ContactSection />
       <Footer />
     </div>
