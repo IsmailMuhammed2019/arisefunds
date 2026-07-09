@@ -172,10 +172,14 @@ export default function Hero() {
                       See How it Works
                     </a>
                   </MagneticWrapper>
-                  {/* <span className="text-sm text-slate-300">
-                    Schedule a conversation with the team.
-                  </span> */}
+                  <a
+                    href="/how-it-works"
+                    className="inline-flex items-center justify-center rounded-full border border-white/25 px-8 py-4 text-base font-semibold text-white hover:border-cyan-400/60 hover:text-cyan-300 transition cursor-pointer"
+                  >
+                    How It Works &rarr;
+                  </a>
                 </div>
+
               </div>
             </motion.div>
           </AnimatePresence>

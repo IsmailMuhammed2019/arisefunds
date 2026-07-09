@@ -2,7 +2,7 @@ import NavBar from "@/components/NavBar";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import Hero from "@/components/Hero";
 import InvestmentThesis from "@/components/InvestmentThesis";
-import HowWeWork from "@/components/HowWeWork";
+import HowWeWorkPreview from "@/components/HowWeWorkPreview";
 import Partnerships from "@/components/Partnerships";
 import PartnersSection from "@/components/PartnersSection";
 import NewsSection from "@/components/NewsSection";
@@ -19,7 +19,7 @@ export default function HomePage() {
       <AnnouncementBanner />
       <Hero />
       <InvestmentThesis />
-      <HowWeWork />
+      <HowWeWorkPreview />
       <Partnerships />
       <PartnersSection />
       <NewsSection />

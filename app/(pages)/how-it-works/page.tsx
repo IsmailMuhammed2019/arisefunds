@@ -1,24 +1,14 @@
 import NavBar from "@/components/NavBar";
 import HowWeWork from "@/components/HowWeWork";
-import Partnerships from "@/components/Partnerships";
 import ContactSection from "@/components/contact";
 import Footer from "@/components/Footer";
-import InvestmentThesis from "@/components/InvestmentThesis";
-import PortfolioInvestment from "@/components/PortfolioInvestment";
-import YouthEmpowerment from "@/components/YouthEmpowerment";
-import TalentEconomy from "@/components/TalentEconomy";
 
 export default function HowItWorksPage() {
   return (
-    <div className="min-h-screen bg-[#04122c] text-slate-100 flex flex-col">
+    <div className="min-h-screen bg-[#04112a] text-slate-100 flex flex-col">
       <NavBar />
       <main>
         <HowWeWork />
-        <InvestmentThesis />
-        <PortfolioInvestment />
-        <YouthEmpowerment />
-        <TalentEconomy />
-        <Partnerships />
         <ContactSection />
       </main>
       <Footer />
