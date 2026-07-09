@@ -2,6 +2,7 @@
 
 import React from "react";
 import AnimatedWrapper from "./AnimatedWrapper";
+import Breadcrumbs from "./Breadcrumbs";
 
 const teamMembers = [
   {
@@ -68,6 +69,7 @@ export default function TeamSection() {
           type="fade-up"
           className="text-left max-w-4xl mb-16 relative z-10"
         >
+          <Breadcrumbs items={[{ label: "About" }, { label: "Team" }]} />
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-cyan-300 mb-6">
             The Team
           </div>

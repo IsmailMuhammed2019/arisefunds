@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import AnimatedWrapper from "./AnimatedWrapper";
+import Breadcrumbs from "./Breadcrumbs";
 
-const ContactSection = () => {
+const ContactSection = ({ isPage = false }: { isPage?: boolean }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -65,6 +66,11 @@ const ContactSection = () => {
     <div className="bg-[#04122c] text-white font-sans border-t border-cyan-950/20">
       {/* Contact Form Container */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-24">
+        {isPage && (
+          <div className="flex justify-center mb-8">
+            <Breadcrumbs items={[{ label: "Contact" }]} />
+          </div>
+        )}
         <AnimatedWrapper type="fade-up" className="text-center mb-16">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
             Let's talk about building <span className="text-cyan-400">Workforce Infrastructure</span>

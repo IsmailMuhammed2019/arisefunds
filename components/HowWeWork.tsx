@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import AnimatedWrapper from "./AnimatedWrapper";
+import Breadcrumbs from "./Breadcrumbs";
 
 /* ── Capital-to-Employment 4-step flow ── */
 const flow = [
@@ -77,6 +78,13 @@ export default function HowWeWork() {
       <section id="how-it-works" className="py-24 px-6 sm:px-8 lg:px-12 text-center relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl pointer-events-none" />
         <div className="max-w-3xl mx-auto relative z-10 space-y-6">
+
+          {/* Breadcrumbs */}
+          <AnimatedWrapper type="fade-up">
+            <div className="flex justify-center mb-2">
+              <Breadcrumbs items={[{ label: "About" }, { label: "How It Works" }]} />
+            </div>
+          </AnimatedWrapper>
 
           {/* Badge */}
           <AnimatedWrapper type="fade-up">

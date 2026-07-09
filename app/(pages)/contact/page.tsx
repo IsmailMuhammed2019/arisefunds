@@ -8,7 +8,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-[#04122c] text-slate-100 flex flex-col">
       <NavBar />
       <TalentInfrastructure />
-      <ContactSection />
+      <ContactSection isPage={true} />
       <Footer />
     </div>
   );

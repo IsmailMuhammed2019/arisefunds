@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import AnimatedWrapper from "@/components/AnimatedWrapper";
 import { MapPin, Calendar, ChevronDown, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const PILLARS = [
   {
@@ -172,6 +173,11 @@ export default function WaccSpeechPage() {
         <NavBar />
 
         <main className="flex-grow max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 relative z-10">
+          {/* Breadcrumbs */}
+          <AnimatedWrapper type="fade-up" className="mb-2">
+            <Breadcrumbs items={[{ label: "News", href: "/news" }, { label: "Conference Address" }]} />
+          </AnimatedWrapper>
+
           {/* Tag + Download Button Row */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
             <AnimatedWrapper type="fade-up">

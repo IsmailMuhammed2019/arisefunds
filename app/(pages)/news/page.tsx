@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import ContactSection from "@/components/contact";
 import Footer from "@/components/Footer";
 import AnimatedWrapper from "@/components/AnimatedWrapper";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const ARTICLES = [
   {
@@ -32,9 +33,7 @@ export default function NewsPage() {
       <main className="flex-grow max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 relative z-10 w-full">
         {/* Header */}
         <AnimatedWrapper type="fade-up" className="max-w-3xl mb-16">
-          {/* <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-amber-300 mb-6">
-            In the Field
-          </div> */}
+          <Breadcrumbs items={[{ label: "News" }]} />
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
             News &amp; <span className="text-cyan-400 font-bold">Insights</span>
           </h1>

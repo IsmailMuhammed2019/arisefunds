@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import AnimatedWrapper from "./AnimatedWrapper";
+import Breadcrumbs from "./Breadcrumbs";
 
 interface CardProps {
   logoSrc: string;
@@ -99,6 +100,11 @@ export default function PortfolioInvestment() {
 
         {/* Eyebrow & Title */}
         <div className="text-center space-y-4">
+          <AnimatedWrapper type="fade-up">
+            <div className="flex justify-center mb-2">
+              <Breadcrumbs items={[{ label: "Portfolio" }]} />
+            </div>
+          </AnimatedWrapper>
           <AnimatedWrapper type="fade-up">
             <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-cyan-300 mb-2">
               Proven Deployment

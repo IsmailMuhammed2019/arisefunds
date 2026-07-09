@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import AnimatedWrapper from "@/components/AnimatedWrapper";
 import { useModal } from "@/context/ModalContext";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function InvestorsPage() {
   const { openContactModal } = useModal();
@@ -25,6 +26,10 @@ export default function InvestorsPage() {
             
             {/* Left Side: Badge, Title & Paragraphs */}
             <div className="space-y-6">
+              <AnimatedWrapper type="fade-up">
+                <Breadcrumbs items={[{ label: "About" }, { label: "Investors" }]} />
+              </AnimatedWrapper>
+
               <AnimatedWrapper type="fade-up">
                 <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-cyan-300 mb-2">
                   For Investors
