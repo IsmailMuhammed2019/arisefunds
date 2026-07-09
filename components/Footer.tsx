@@ -5,10 +5,10 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "How It Works", href: "/howWeWork" },
+  { label: "How It Works", href: "/how-it-works" },
   { label: "ICBM", href: "/icbm" },
-  { label: "Portfolio", href: "/#portfolio" },
-  { label: "Team", href: "/#team" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Team", href: "/team" },
   { label: "Investors", href: "/partners" },
   { label: "News", href: "/news" },
 ];

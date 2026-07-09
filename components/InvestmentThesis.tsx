@@ -130,7 +130,7 @@ export default function InvestmentThesis() {
             </p>
             <div>
               <Link
-                href="/#portfolio"
+                href="/portfolio"
                 className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm uppercase tracking-wider transition-colors inline-flex items-center gap-1.5"
               >
                 See the portfolio &rarr;

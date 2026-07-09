@@ -74,7 +74,7 @@ export default function PartnersSection() {
             </h4>
             <p className="text-slate-400 text-sm leading-relaxed font-light">
               These are independent institutions Arise Funds works alongside. The companies and products SBTS Group LLC has built with Arise Funds capital &mdash; including Vultcore, Kallmania, ICBM Nexus, Aegis360AI, and C1WT &mdash; are shown separately under{" "}
-              <Link href="/#portfolio" className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold inline-flex items-center gap-1">
+              <Link href="/portfolio" className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold inline-flex items-center gap-1">
                 Portfolio &rarr;
               </Link>
             </p>

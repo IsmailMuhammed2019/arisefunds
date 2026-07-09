@@ -38,13 +38,13 @@ export default function NavBar() {
                 ICBM
               </Link>
               <Link
-                href="/#portfolio"
+                href="/portfolio"
                 className="hover:text-white transition-colors"
               >
                 Portfolio
               </Link>
               <Link
-                href="/#team"
+                href="/team"
                 className="hover:text-white transition-colors"
               >
                 Team
@@ -104,14 +104,14 @@ export default function NavBar() {
                 ICBM
               </Link>
               <Link
-                href="/#portfolio"
+                href="/portfolio"
                 className="block rounded-2xl px-4 py-3 text-white hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Portfolio
               </Link>
               <Link
-                href="/#team"
+                href="/team"
                 className="block rounded-2xl px-4 py-3 text-white hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
