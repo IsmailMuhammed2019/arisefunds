@@ -96,7 +96,7 @@ export default function PortfolioInvestment() {
       <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-blue-500/5 blur-3xl pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 space-y-20">
-        
+
         {/* Eyebrow & Title */}
         <div className="text-center space-y-4">
           <AnimatedWrapper type="fade-up">
@@ -118,7 +118,7 @@ export default function PortfolioInvestment() {
 
         {/* Section 1: Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-8 lg:gap-12 items-start">
-          
+
           {/* Left Column: Portfolio Case Study Card */}
           <AnimatedWrapper type="slide-in" className="h-full">
             <div className="bg-[#05162e]/50 border border-cyan-900/20 p-8 rounded-2xl space-y-4 h-full">
@@ -220,7 +220,7 @@ export default function PortfolioInvestment() {
             {/* Column 1 */}
             <div className="space-y-2">
               <span className="text-xs font-bold text-white block tracking-wide">
-                <span className="text-cyan-400">01</span> Cybersecurity &middot; SOC Operations
+                <span className="text-cyan-400">01 </span> Cybersecurity &middot; SOC Operations
               </span>
               <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
                 Secure digital environments with trained analysts across enterprise and government-grade security operations centers.
@@ -229,7 +229,7 @@ export default function PortfolioInvestment() {
             {/* Column 2 */}
             <div className="space-y-2">
               <span className="text-xs font-bold text-white block tracking-wide">
-                <span className="text-cyan-400">02</span> Software Development &middot; Global Teams
+                <span className="text-cyan-400">02 </span> Software Development &middot; Global Teams
               </span>
               <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
                 Cross-border engineering teams delivering scalable software products and managed technology services worldwide.
@@ -238,7 +238,7 @@ export default function PortfolioInvestment() {
             {/* Column 3 */}
             <div className="space-y-2">
               <span className="text-xs font-bold text-white block tracking-wide">
-                <span className="text-cyan-400">03</span> Data Science &middot; AI &amp; ML
+                <span className="text-cyan-400">03 </span> Data Science &middot; AI &amp; ML
               </span>
               <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
                 Machine learning and AI applied to workforce intelligence, service delivery optimization, and product pipelines.
