@@ -170,29 +170,34 @@ export default function InvestmentThesis() {
         <div className="border-t border-cyan-900/25" />
 
         {/* ── INSTITUTIONAL RELATIONSHIPS bar ── */}
-        <div className="py-8">
+        <div className="py-8 border-t border-cyan-900/25">
           <AnimatedWrapper
             type="fade-up"
-            className="flex flex-col md:flex-row md:items-center justify-between gap-6"
+            className="space-y-4"
           >
-            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10">
-              <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-cyan-400 font-bold whitespace-nowrap">
-                Institutional Relationships
-              </span>
-              <div className="flex flex-wrap items-center gap-6 text-sm md:text-base font-bold text-white">
-                <span>World Bank / SLDTP</span>
-                <span className="text-slate-600 hidden sm:inline">|</span>
-                <span>Digital Bridge Institute</span>
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10">
+                <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-cyan-400 font-bold whitespace-nowrap">
+                  Institutional Relationships
+                </span>
+                <div className="flex flex-wrap items-center gap-6 text-sm md:text-base font-bold text-white">
+                  <span>World Bank / SLDTP</span>
+                  <span className="text-slate-600 hidden sm:inline">|</span>
+                  <span>Digital Bridge Institute</span>
+                </div>
+              </div>
+              <div>
+                <Link
+                  href="/partners"
+                  className="text-cyan-400 hover:text-cyan-300 font-semibold text-xs uppercase tracking-wider transition-colors inline-flex items-center gap-1.5 whitespace-nowrap"
+                >
+                  Meet our partners &rarr;
+                </Link>
               </div>
             </div>
-            <div>
-              <Link
-                href="/partners"
-                className="text-cyan-400 hover:text-cyan-300 font-semibold text-xs uppercase tracking-wider transition-colors inline-flex items-center gap-1.5 whitespace-nowrap"
-              >
-                Meet our partners &rarr;
-              </Link>
-            </div>
+            <p className="text-slate-400 text-xs sm:text-sm font-light max-w-4xl leading-relaxed">
+              Arise Funds collaborates with leading global institutions to deploy catalytic capital and digital learning systems, strengthening local ecosystems and scaling employment outcomes.
+            </p>
           </AnimatedWrapper>
         </div>
 

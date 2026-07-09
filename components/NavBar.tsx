@@ -50,7 +50,7 @@ export default function NavBar() {
                 Team
               </Link>
               <Link
-                href="/partners"
+                href="/investors"
                 className="hover:text-white transition-colors"
               >
                 Investors
@@ -118,7 +118,7 @@ export default function NavBar() {
                 Team
               </Link>
               <Link
-                href="/partners"
+                href="/investors"
                 className="block rounded-2xl px-4 py-3 text-white hover:bg-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
