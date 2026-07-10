@@ -209,7 +209,7 @@ export default function InvestmentThesis() {
                 onClick={openContactModal}
                 className="inline-flex items-center justify-center rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-8 py-3 shadow-lg shadow-cyan-500/15 transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer text-sm"
               >
-                Get In Touch &rarr;
+                Get in Touch &rarr;
               </button>
             </div>
           </AnimatedWrapper>

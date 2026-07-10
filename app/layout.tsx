@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   title: "Arise Funds",
   description:
     "Arise Funds is an impact investment firm financing workforce infrastructure.",
+  icons: {
+    icon: "/ariseFunds_logoCircle.png",
+    shortcut: "/ariseFunds_logoCircle.png",
+    apple: "/ariseFunds_logoCircle.png",
+  },
 };
 
 export default function RootLayout({

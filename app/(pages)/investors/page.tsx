@@ -20,10 +20,10 @@ export default function InvestorsPage() {
         <div className="absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-blue-500/5 blur-3xl pointer-events-none" />
 
         <div className="max-w-6xl mx-auto space-y-8 relative z-10">
-          
+
           {/* Badge & Title Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-12">
-            
+
             {/* Left Side: Badge, Title & Paragraphs */}
             <div className="space-y-6">
               <AnimatedWrapper type="fade-up">
@@ -71,7 +71,7 @@ export default function InvestorsPage() {
 
           {/* Cards Stack */}
           <div className="space-y-6">
-            
+
             {/* Card 1: Seeking Aligned Capital Partners */}
             <AnimatedWrapper type="fade-up" delay={0.1}>
               <div className="bg-[#05162e]/50 border border-cyan-900/25 p-8 rounded-2xl shadow-lg space-y-3">
@@ -152,7 +152,7 @@ export default function InvestorsPage() {
                     onClick={openContactModal}
                     className="inline-flex items-center justify-center rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-8 py-3 shadow-lg shadow-cyan-500/15 transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer text-sm"
                   >
-                    Get in touch &rarr;
+                    Get in Touch &rarr;
                   </button>
                 </div>
               </div>
