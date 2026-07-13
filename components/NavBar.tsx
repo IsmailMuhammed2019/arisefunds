@@ -15,7 +15,7 @@ export default function NavBar() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3">
             <img
-              src="/ariseFunds_logoCircle.png"
+              src="/newlogo.png"
               alt="Arise Funds"
               className="h-10 w-auto"
             />

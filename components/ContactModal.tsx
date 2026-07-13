@@ -128,7 +128,7 @@ export default function ContactModal() {
             <div className="lg:w-2/5 p-8 lg:p-12 bg-gradient-to-br from-cyan-600 to-blue-700 text-white relative overflow-hidden flex flex-col justify-between">
               <div className="relative z-10">
                 <div className="inline-block p-3 bg-white rounded-2xl mb-8 shadow-sm">
-                  <img src="/ariseFunds_logoCircle.png" alt="Logo" className="h-10 w-auto object-contain" />
+                  <img src="/newlogo.png" alt="Logo" className="h-10 w-auto object-contain" />
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-bold mb-6 tracking-tight leading-tight">
                   Arise Funds <br />

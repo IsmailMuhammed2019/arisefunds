@@ -99,6 +99,11 @@ const ContactSection = ({ isPage = false }: { isPage?: boolean }) => {
               >
                 info@arisefunds.com
               </a>
+              <p className="text-sm text-slate-500 mt-4 leading-relaxed">
+                1717 Pennsylvania Avenue NW<br />
+                Suite 1025<br />
+                Washington, DC 20006
+              </p>
             </div>
           </AnimatedWrapper>
 

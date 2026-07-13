@@ -123,7 +123,7 @@ export default function SpeechModal() {
                 {/* Logo + tag */}
                 <div className="flex items-center gap-3 mb-8">
                   <div className="p-2 bg-white/5 rounded-xl border border-white/10">
-                    <img src="/ariseFunds_logoCircle.png" alt="Arise Funds" className="w-8 h-8" />
+                    <img src="/newlogo.png" alt="Arise Funds" className="w-8 h-8" />
                   </div>
                   <span className="text-[10px] font-mono uppercase tracking-[0.22em] text-cyan-400 font-semibold">
                     Panel Address

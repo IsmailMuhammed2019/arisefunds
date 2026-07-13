@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         {/* Left: Logo & Brand */}
         <div className="flex items-center gap-2">
           <Image
-            src="/ariseFunds_logoCircle.png"
+            src="/newlogo.png"
             alt="Arise Funds Logo"
             width={20}
             height={20}
@@ -18,9 +18,10 @@ const Footer: React.FC = () => {
           <span className="font-semibold tracking-tight text-white">Arise Funds</span>
         </div>
 
-        {/* Center: Copyright */}
-        <div className="text-[10px] text-slate-400 text-center sm:text-left">
-          © 2026 Arise Funds Inc. Powered by SBTS Group LLC.
+        {/* Center: Copyright & Address */}
+        <div className="text-[10px] text-slate-400 text-center sm:text-left space-y-0.5">
+          <div>© 2026 Arise Funds Inc. Powered by SBTS Group LLC.</div>
+          <div className="text-slate-500">1717 Pennsylvania Avenue NW, Suite 1025, Washington, DC 20006</div>
         </div>
 
         {/* Right: Contact & Socials */}
