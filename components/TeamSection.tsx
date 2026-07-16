@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import AnimatedWrapper from "./AnimatedWrapper";
 import Breadcrumbs from "./Breadcrumbs";
-import { X } from "lucide-react";
+import { X, Plus } from "lucide-react";
+import { FaLinkedinIn } from "react-icons/fa";
 
 interface TeamMember {
   role: string;
@@ -15,11 +16,11 @@ interface TeamMember {
   linkedin?: string;
 }
 
-const teamMembers: TeamMember[] = [
+const leadership: TeamMember[] = [
   {
     role: "Arise Funds Inc.",
     name: "Aisha Saaka Lewis",
-    title: "Chief Executive Officer",
+    title: "Founder & Chief Executive Officer",
     image: "/aisha-portrait.png",
     bio: "Most impact investors come from finance. Aisha Saaka Lewis comes from technology. As a Data & AI Strategist at Accenture Federal Services — where she led analytics transformation for public sector clients, including enterprise reporting oversight for PEPFAR — and a management consultant at Booz Allen Hamilton, she spent her career applying data and analytics to the hardest problems in government and global development. What she kept seeing was a gap: the infrastructure to connect capital, technology, and workforce development existed in pieces, but never as a coherent investment thesis. Arise Funds is her response to that gap — and the Harvard Kennedy School MPP she holds is why the policy architecture matches the investment one. Born in Ghana and based in Washington, D.C., she leads a firm built on the conviction that the infrastructure of work — and the capital to finance it — must reach every market where talent exists.",
     creds: [
@@ -30,6 +31,9 @@ const teamMembers: TeamMember[] = [
     ],
     linkedin: "https://linkedin.com",
   },
+];
+
+const teamMembers: TeamMember[] = [
   {
     role: "Arise Funds Inc.",
     name: "LaTonya Blakes",
@@ -46,9 +50,98 @@ const teamMembers: TeamMember[] = [
   },
 ];
 
+const advisors: TeamMember[] = [
+  {
+    role: "Strategic Advisor · Arise Funds Inc.",
+    name: "Laura C. Rudert",
+    title: "Global Strategy & Delivery Leader",
+    image: "/laura.jpeg",
+    bio: "Laura C. Rudert brings more than two decades of experience across federal government, global development, and philanthropy. As a senior executive at the U.S. Millennium Challenge Corporation, she worked on multi-billion-dollar infrastructure and economic-reform programs — spanning education, vocational training, and transport — that link economic growth to good governance. She later supported global advocacy strategy and operations at the Bill & Melinda Gates Foundation, and founded Partners for Reimagined Economies, advising governments, philanthropies, and companies on economic resilience and equity. As Chief Operating Officer for the sovereign Muckleshoot Indian Tribe, she oversees government services spanning health, education, infrastructure, and natural resources. She holds a master's in political and economic development from the Harvard Kennedy School.",
+    creds: [
+      "Harvard Kennedy School",
+      "Millennium Challenge Corporation",
+      "Bill & Melinda Gates Foundation",
+      "Partners for Reimagined Economies",
+      "Muckleshoot Indian Tribe · COO",
+    ],
+    linkedin: "https://www.linkedin.com/in/laura-c-rudert/",
+  },
+];
+
+/* ── Section label with horizontal rule ── */
+function SectionLabel({ label }: { label: string }) {
+  return (
+    <div className="flex items-center gap-4 mb-7">
+      <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-slate-500">
+        {label}
+      </span>
+      <div className="flex-1 h-px bg-slate-700/60" />
+    </div>
+  );
+}
+
+/* ── Placeholder card (future staff) ── */
+function PlaceholderCard() {
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="relative rounded-xl overflow-hidden aspect-[3/4] bg-[#0b1c38] border border-slate-700/30 border-dashed flex items-center justify-center">
+        <span className="text-[11px] font-mono text-slate-600 italic">[ future staff ]</span>
+      </div>
+    </div>
+  );
+}
+
+/* ── Filled member card ── */
+function MemberCard({
+  member,
+  large = false,
+  onClick,
+}: {
+  member: TeamMember;
+  large?: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <div className="flex flex-col gap-3">
+      <div
+        className={`relative rounded-xl overflow-hidden bg-[#0b1c38] group cursor-pointer ${
+          large ? "aspect-[4/5]" : "aspect-[3/4]"
+        }`}
+        onClick={onClick}
+      >
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#04112a]/70 via-transparent to-transparent" />
+
+        {/* + button bottom-left */}
+        <button
+          onClick={(e) => { e.stopPropagation(); onClick(); }}
+          className="absolute bottom-4 left-4 w-8 h-8 rounded-full bg-white/10 hover:bg-cyan-500/80 backdrop-blur-sm border border-white/20 hover:border-cyan-400 flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+          aria-label={`View ${member.name}'s profile`}
+        >
+          <Plus className="w-4 h-4 text-white" />
+        </button>
+      </div>
+
+      {/* Name & title below card */}
+      <div>
+        <h3 className={`font-bold text-white leading-tight ${large ? "text-xl" : "text-sm"}`}>
+          {member.name}
+        </h3>
+        <p className={`text-slate-400 mt-0.5 ${large ? "text-sm" : "text-xs"}`}>
+          {member.title}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function TeamSection() {
   const [selected, setSelected] = useState<TeamMember | null>(null);
-
   const closeModal = () => setSelected(null);
 
   return (
@@ -62,14 +155,14 @@ export default function TeamSection() {
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <AnimatedWrapper type="fade-up" className="text-left max-w-4xl mb-16 relative z-10">
+      <div className="max-w-5xl mx-auto">
+        {/* Page header */}
+        <AnimatedWrapper type="fade-up" className="text-left max-w-4xl mb-14 relative z-10">
           <Breadcrumbs items={[{ label: "About" }, { label: "Team" }]} />
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-950/40 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-[0.35em] text-cyan-300 mb-6">
             The Team
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-5 tracking-tight">
             Built by practitioners,<br />
             <span className="text-cyan-400">not theorists.</span>
           </h2>
@@ -79,118 +172,119 @@ export default function TeamSection() {
           </p>
         </AnimatedWrapper>
 
-        {/* Team Grid — minimal cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 relative z-10">
-          {teamMembers.map((member, index) => (
-            <AnimatedWrapper key={index} type="fade-up" delay={0.1 * index}>
-              <button
-                onClick={() => setSelected(member)}
-                className="group w-full text-left bg-[#071428] hover:bg-[#0c1f3d] border border-cyan-900/20 hover:border-cyan-500/40 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-cyan-500/10 hover:shadow-xl cursor-pointer"
-              >
-                {/* Photo */}
-                <div className="relative overflow-hidden aspect-[4/5] bg-[#050e22]">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
-                  />
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#04112a]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-cyan-400 font-bold">
-                      View Profile →
-                    </span>
-                  </div>
-                </div>
+        {/* ── LEADERSHIP ── */}
+        <AnimatedWrapper type="fade-up" delay={0.05} className="mb-14 relative z-10">
+          <SectionLabel label="Leadership" />
+          {/* Large single featured card — ~40% width on desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_3fr] gap-6">
+            <MemberCard member={leadership[0]} large onClick={() => setSelected(leadership[0])} />
+          </div>
+        </AnimatedWrapper>
 
-                {/* Minimal info */}
-                <div className="p-4">
-                  <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-cyan-400 mb-1">
-                    {member.role}
-                  </p>
-                  <h3 className="text-sm font-bold text-white leading-snug mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-[11px] text-slate-400 leading-tight">
-                    {member.title}
-                  </p>
-                </div>
-              </button>
-            </AnimatedWrapper>
-          ))}
-        </div>
+        {/* ── TEAM ── */}
+        <AnimatedWrapper type="fade-up" delay={0.1} className="mb-14 relative z-10">
+          <SectionLabel label="Team" />
+          {/* 4-column row — 1 filled + 3 placeholders */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
+            {teamMembers.map((m, i) => (
+              <MemberCard key={i} member={m} onClick={() => setSelected(m)} />
+            ))}
+            {/* Hidden until future staff are added:
+            <PlaceholderCard />
+            <PlaceholderCard />
+            <PlaceholderCard />
+            */}
+          </div>
+        </AnimatedWrapper>
+
+        {/* ── STRATEGIC ADVISORS ── */}
+        <AnimatedWrapper type="fade-up" delay={0.15} className="relative z-10">
+          <SectionLabel label="Strategic Advisors" />
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
+            {advisors.map((m, i) => (
+              <MemberCard key={i} member={m} onClick={() => setSelected(m)} />
+            ))}
+          </div>
+        </AnimatedWrapper>
       </div>
 
-      {/* ── MODAL / RIGHT DRAWER ── */}
+      {/* ── RIGHT DRAWER MODAL ── */}
       {selected && (
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity duration-300"
+            className="fixed inset-0 bg-black/65 backdrop-blur-sm z-50"
             onClick={closeModal}
           />
 
           {/* Drawer panel */}
-          <div className="fixed top-0 right-0 h-full w-full max-w-lg bg-[#04112a] border-l border-cyan-900/30 shadow-2xl z-50 overflow-y-auto flex flex-col animate-slide-in-right">
+          <div className="fixed top-0 right-0 h-full w-full max-w-[520px] bg-[#04112a] border-l border-cyan-900/30 shadow-2xl z-50 overflow-y-auto flex flex-col animate-slide-in-right">
             {/* Close button */}
             <button
               onClick={closeModal}
-              className="absolute top-5 right-5 p-2 rounded-full bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-all"
+              className="absolute top-5 right-5 p-2 rounded-full bg-white/5 hover:bg-white/15 text-white/50 hover:text-white transition-all z-10"
               aria-label="Close"
             >
               <X className="w-5 h-5" />
             </button>
 
-            {/* Drawer content */}
-            <div className="p-8 pt-16 flex flex-col gap-6">
-              {/* Avatar + Name header */}
-              <div className="flex items-center gap-5">
+            {/* Hero image strip */}
+            <div className="relative w-full h-56 bg-[#050e22] overflow-hidden shrink-0">
+              <img
+                src={selected.image}
+                alt={selected.name}
+                className="w-full h-full object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#04112a] via-[#04112a]/30 to-transparent" />
+            </div>
+
+            {/* Content */}
+            <div className="px-8 pb-10 -mt-10 relative flex flex-col gap-5">
+              {/* Avatar + name */}
+              <div className="flex items-end gap-4">
                 <img
                   src={selected.image}
                   alt={selected.name}
-                  className="w-20 h-20 rounded-full object-cover object-top border-2 border-cyan-500/40 shrink-0"
+                  className="w-20 h-20 rounded-full object-cover object-top border-2 border-cyan-500/50 shadow-xl shrink-0 bg-[#04112a]"
                 />
-                <div>
-                  <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-cyan-400 mb-1">
+                <div className="pb-1">
+                  <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-cyan-400 mb-0.5">
                     {selected.role}
                   </p>
-                  <h3 className="text-2xl font-bold text-white leading-tight">
+                  <h3 className="text-xl font-bold text-white leading-tight">
                     {selected.name}
                   </h3>
-                  <p className="text-sm text-slate-400 mt-0.5">
-                    {selected.title}
-                  </p>
+                  <p className="text-sm text-slate-400 mt-0.5">{selected.title}</p>
                 </div>
               </div>
 
-              {/* Divider */}
               <div className="h-px bg-cyan-900/30" />
 
               {/* Bio */}
-              <p className="text-slate-300 text-sm leading-relaxed">
-                {selected.bio}
-              </p>
+              <p className="text-slate-300 text-sm leading-relaxed">{selected.bio}</p>
 
               {/* Credentials */}
               <div className="flex flex-wrap gap-2">
                 {selected.creds.map((cred, idx) => (
                   <span
                     key={idx}
-                    className="text-[10px] font-mono text-slate-400 border border-slate-700/60 px-2.5 py-1 rounded uppercase tracking-wider"
+                    className="text-[10px] font-mono text-slate-400 border border-slate-700/60 px-2.5 py-1 rounded-md uppercase tracking-wider"
                   >
                     {cred}
                   </span>
                 ))}
               </div>
 
-              {/* LinkedIn button */}
+              {/* LinkedIn */}
               {selected.linkedin && (
                 <a
                   href={selected.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-slate-600 hover:border-cyan-500 text-slate-300 hover:text-cyan-400 text-xs font-semibold uppercase tracking-widest px-5 py-3 rounded-full transition-all duration-300 w-fit"
+                  className="inline-flex items-center gap-2.5 border border-slate-600 hover:border-cyan-500 hover:bg-cyan-500/5 text-slate-300 hover:text-cyan-400 text-xs font-semibold uppercase tracking-widest px-5 py-3 rounded-full transition-all duration-300 w-fit mt-1"
                 >
-                  LinkedIn →
+                  <FaLinkedinIn className="w-3.5 h-3.5" />
+                  LinkedIn
                 </a>
               )}
             </div>
