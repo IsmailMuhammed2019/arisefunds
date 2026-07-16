@@ -56,7 +56,7 @@ const advisors: TeamMember[] = [
     {
         role: "Strategic Advisor · Arise Funds Inc.",
         name: "Laura C. Rudert",
-        title: "Global Strategy & Delivery Leader",
+        title: "Global Strategy & Delivery Leader · Formerly Gates Foundation & MCC",
         image: "/laura.jpeg",
         bio: "Laura C. Rudert brings more than two decades of experience across federal government, global development, and philanthropy. As a senior executive at the U.S. Millennium Challenge Corporation, she worked on multi-billion-dollar infrastructure and economic-reform programs — spanning education, vocational training, and transport — that link economic growth to good governance. She later supported global advocacy strategy and operations at the Bill & Melinda Gates Foundation, and founded Partners for Reimagined Economies, advising governments, philanthropies, and companies on economic resilience and equity. As Chief Operating Officer for the sovereign Muckleshoot Indian Tribe, she oversees government services spanning health, education, infrastructure, and natural resources. She holds a master's in political and economic development from the Harvard Kennedy School.",
         creds: [
