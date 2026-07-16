@@ -11,6 +11,7 @@ interface TeamMember {
   name: string;
   title: string;
   image: string;
+  imagePosition?: string;
   bio: string;
   creds: string[];
   linkedin?: string;
@@ -39,6 +40,7 @@ const teamMembers: TeamMember[] = [
     name: "LaTonya Blakes",
     title: "Vice President, Human Resources",
     image: "/latonya.png",
+    imagePosition: "center 20%",
     bio: "When Arise Funds deploys capital into a portfolio company, LaTonya Blakes is the person who goes in to build it. Seconded from Arise Funds to SBTS Group LLC, she leads the HR infrastructure, compliance frameworks, talent systems, and organizational design that turn an operating company into an institutionally investable one — the people side of the active-investor model in practice. Her career spans more than three decades in human capital leadership, including a decade at Booz Allen Hamilton, where she directed HR supporting the National Defense University, led the firmwide Veterans Recruiting program, and built early-career talent pipelines across the DMV region. A George Mason University alumna with certifications in Human Capital Strategy, she leads people strategy, governance, and workforce compliance across Arise Funds' multi-country portfolio operations.",
     creds: [
       "30+ Years HR Leadership",
@@ -46,7 +48,7 @@ const teamMembers: TeamMember[] = [
       "National Defense University",
       "George Mason University",
     ],
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/latonyablakes/",
   },
 ];
 
@@ -112,7 +114,8 @@ function MemberCard({
         <img
           src={member.image}
           alt={member.name}
-          className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+          style={{ objectPosition: member.imagePosition ?? "center top" }}
         />
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#04112a]/70 via-transparent to-transparent" />
